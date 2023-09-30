@@ -3,6 +3,7 @@ var Projectile = load("res://projectile.tscn")
 var Projectiles = Array()
 var player
 var enemy
+#onready var camera = get_node("Camera2D")
 #var sight
 #onready var space = get_viewport().world.direct_space_state
 #onready var vision = get_node("Enemy/Sight")
@@ -56,10 +57,11 @@ func _physics_process(delta):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	#camera.position = player.position
+	
 	if Input.is_action_just_pressed("Shoot"):
 		#enemy.target = player.global_position
 		#print(enemy.target, "=", player.global_position, enemy.global_position)
-		
 		
 		var projectile = Projectile.instance()
 		var mouse_pos = get_viewport().get_mouse_position()
