@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ETW Logo.png-00158c466c6266aaec5bbb769629fe1d.stex"
+path="res://.import/ETW Logo - Transparent.png-8bbc5ec2081bea738e0cde6a2bd9450e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Logo/ETW Logo.png"
-dest_files=[ "res://.import/ETW Logo.png-00158c466c6266aaec5bbb769629fe1d.stex" ]
+source_file="res://Assets/Logo/ETW Logo - Transparent.png"
+dest_files=[ "res://.import/ETW Logo - Transparent.png-8bbc5ec2081bea738e0cde6a2bd9450e.stex" ]
 
 [params]
 
