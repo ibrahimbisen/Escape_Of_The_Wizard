@@ -3,6 +3,8 @@ var Projectile = load("res://projectile.tscn")
 var Projectiles = Array()
 var player
 var enemy
+signal spawned
+onready var archer = get_node("ArcherEnemy")
 #onready var camera = get_node("Camera2D")
 #var sight
 #onready var space = get_viewport().world.direct_space_state
@@ -14,10 +16,15 @@ var enemy
 func _ready():
 	player = get_node("Player")
 	enemy = get_node("Enemy")
+	#var archer = get_node("ArcherEnemy")
 	enemy.player = player
+	archer.player = player
+	archer.connect("spawned", self, "_on_Main_spawned")
+	player.connect("spawned", self, "_on_Main_spawned")
 
 
 func _physics_process(delta):
+	pass
 	#print("*",player.global_position)
 	#print(enemy.position)
 	
@@ -46,30 +53,38 @@ func _physics_process(delta):
 			Projectiles.erase(p)
 			remove_child(p)
 			continue
-		
+#		
 		var collided = p.move_and_collide(p.speed * delta * p.direction)
 		if collided:
 			var collider = collided.get_collider()
 			p.emit_signal("projectile_hit")
 			Projectiles.erase(p)
 			remove_child(p)
+			archer.see_thru.erase(p)
+			#print("*")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	pass
 	#camera.position = player.position
 	
-	if Input.is_action_just_pressed("Shoot"):
+#	if Input.is_action_just_pressed("Shoot"):
 		#enemy.target = player.global_position
 		#print(enemy.target, "=", player.global_position, enemy.global_position)
 		
-		var projectile = Projectile.instance()
-		var mouse_pos = get_viewport().get_mouse_position()
+#		var projectile = Projectile.instance()
+#		var mouse_pos = get_viewport().get_mouse_position()
 		
-		projectile.position = player.position
-		var dir1 = Vector2(mouse_pos.x, mouse_pos.y)
-		var dir2 = Vector2(player.position)
-		projectile.direction = Vector2(dir1.x-dir2.x, dir1.y-dir2.y).normalized()
-		Projectiles.append(projectile)
-		add_child(projectile)
+#		projectile.position = player.position
+#		var dir1 = Vector2(mouse_pos.x, mouse_pos.y)
+#		var dir2 = Vector2(player.position)
+#		projectile.direction = Vector2(dir1.x-dir2.x, dir1.y-dir2.y).normalized()
+#		Projectiles.append(projectile)
+#		add_child(projectile)
 
+
+func _on_Main_spawned(x):
+	print(x)
+	add_child(x)
+	Projectiles.append(x)

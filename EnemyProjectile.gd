@@ -2,9 +2,9 @@ extends KinematicBody2D
 var speed = 500
 var direction = Vector2.ZERO
 signal projectile_hit
+#var Projectile = load("res://EnemyProjectile.tscn")
 var ticks = 0
 signal spawned
-#var Projectile = load("res://Projectile.tscn")
 
 
 # Called when the node enters the scene tree for the first time.
@@ -36,12 +36,12 @@ func _on_Projectile_projectile_hit():
 	queue_free()
 	
 
-func arrow():
-	get_node("EnergyBall").hide()
-	get_node("Arrow").show()
+#func arrow():
+	#get_node("EnergyBall").hide()
+	#get_node("Arrow").show()
 	
 
 func shift_collision_2():
-	set_collision_layer_bit(4, true)
-	set_collision_mask_bit(4, true)
-	#print(self.get_collision_layer(), self.get_collision_mask())
+	self.set_collision_layer(2)
+	self.set_collision_mask(2)
+	print(self.get_collision_layer(), self.get_collision_mask())
