@@ -6,6 +6,7 @@ var target = Vector2.ZERO
 #onready var player : PhysicsBody = $"res://Player.tscn"
 #onready var player = preload("res://Player.tscn").instance()
 onready var player
+var see_thru = [self]
 
 var Projectile = load("res://EnemyProjectile.tscn")
 #var Projectile = load("res://projectile.tscn")
@@ -50,7 +51,7 @@ func _physics_process(delta):
 	# KinematicBody2D for some reason
 	var space = get_world_2d().direct_space_state
 	var enemy_vision = space.intersect_ray(global_transform.origin,
-							player.global_transform.origin, [self])
+							player.global_transform.origin, see_thru)
 	#print(enemy_vision)
 	
 	if enemy_vision:
@@ -65,9 +66,10 @@ func _physics_process(delta):
 			if (dist) < 1000:
 				var arrow = Projectile.instance()
 				arrow.global_transform.origin = self.global_transform.origin
-				#arrow.speed = 500
+				##arrow.speed = 500
 				arrow.direction = self.direction
-				#arrow.arrow()
+				see_thru.append(arrow)
+				##arrow.arrow()
 				#arrow.shift_collision_2()
 				#arrow.texture = load("res://Assets/PNG/Default (64px)/arrow.png")
 				#arrow.spawned.connect(_on_Main_spawned.bind(arrow))
@@ -77,7 +79,6 @@ func _physics_process(delta):
 			target = self.position
 			direction = Vector2.ZERO
 	else:
-		#print("****")
 		target = self.position
 		direction = Vector2.ZERO
 

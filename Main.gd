@@ -4,6 +4,7 @@ var Projectiles = Array()
 var player
 var enemy
 signal spawned
+onready var archer = get_node("ArcherEnemy")
 #onready var camera = get_node("Camera2D")
 #var sight
 #onready var space = get_viewport().world.direct_space_state
@@ -15,7 +16,7 @@ signal spawned
 func _ready():
 	player = get_node("Player")
 	enemy = get_node("Enemy")
-	var archer = get_node("ArcherEnemy")
+	#var archer = get_node("ArcherEnemy")
 	enemy.player = player
 	archer.player = player
 	archer.connect("spawned", self, "_on_Main_spawned")
@@ -59,6 +60,7 @@ func _physics_process(delta):
 			p.emit_signal("projectile_hit")
 			Projectiles.erase(p)
 			remove_child(p)
+			archer.see_thru.erase(p)
 			#print("*")
 
 

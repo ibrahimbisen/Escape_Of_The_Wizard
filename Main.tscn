@@ -18,7 +18,7 @@ position = Vector2( 75, 46 )
 position = Vector2( 624, 88 )
 
 [node name="ArcherEnemy" parent="." instance=ExtResource( 5 )]
-position = Vector2( 720, 80 )
+position = Vector2( 616, 488 )
 collision_layer = 3
 collision_mask = 3
 
