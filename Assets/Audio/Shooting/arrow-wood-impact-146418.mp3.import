@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/arrow-wood-impact-146418.mp3-823ee856179a71daaa32f9f562aaaf44.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Shooting/arrow-wood-impact-146418.mp3"
+dest_files=[ "res://.import/arrow-wood-impact-146418.mp3-823ee856179a71daaa32f9f562aaaf44.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

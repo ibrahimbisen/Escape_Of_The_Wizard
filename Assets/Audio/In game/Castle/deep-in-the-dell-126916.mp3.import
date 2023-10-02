@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/deep-in-the-dell-126916.mp3-69ceb84eff2f01ee9774360535ad216f.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/In game/Castle/deep-in-the-dell-126916.mp3"
+dest_files=[ "res://.import/deep-in-the-dell-126916.mp3-69ceb84eff2f01ee9774360535ad216f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

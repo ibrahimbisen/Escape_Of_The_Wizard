@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/inspiring-cinematic-ambient-116199.mp3-e3f4cc7482ef28fd720476d1a07c7128.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Menu/Story Music/inspiring-cinematic-ambient-116199.mp3"
+dest_files=[ "res://.import/inspiring-cinematic-ambient-116199.mp3-e3f4cc7482ef28fd720476d1a07c7128.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

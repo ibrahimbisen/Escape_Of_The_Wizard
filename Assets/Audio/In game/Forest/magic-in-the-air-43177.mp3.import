@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/magic-in-the-air-43177.mp3-c84d1b17e4860fa7b049b9e79ca4552f.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/In game/Forest/magic-in-the-air-43177.mp3"
+dest_files=[ "res://.import/magic-in-the-air-43177.mp3-c84d1b17e4860fa7b049b9e79ca4552f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
