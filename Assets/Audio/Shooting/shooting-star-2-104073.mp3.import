@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/shooting-star-2-104073.mp3-a2fdb00cd2f1724382841b21f66651da.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Shooting/shooting-star-2-104073.mp3"
+dest_files=[ "res://.import/shooting-star-2-104073.mp3-a2fdb00cd2f1724382841b21f66651da.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

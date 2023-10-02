@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/lone-wolf-10374.mp3-8796109f5800f2591dc8e9ade230f5b7.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Menu/lone-wolf-10374.mp3"
+dest_files=[ "res://.import/lone-wolf-10374.mp3-8796109f5800f2591dc8e9ade230f5b7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
