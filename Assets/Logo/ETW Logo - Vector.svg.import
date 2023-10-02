@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/scribbleDungeons_characters.svg-8b34dd95012c3831427828038353a95c.stex"
+path="res://.import/ETW Logo - Vector.svg-52bb721c6ea2f8631855101c997d87d5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Vector/scribbleDungeons_characters.svg"
-dest_files=[ "res://.import/scribbleDungeons_characters.svg-8b34dd95012c3831427828038353a95c.stex" ]
+source_file="res://Assets/Logo/ETW Logo - Vector.svg"
+dest_files=[ "res://.import/ETW Logo - Vector.svg-52bb721c6ea2f8631855101c997d87d5.stex" ]
 
 [params]
 
