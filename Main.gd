@@ -83,6 +83,8 @@ func _process(delta):
 #		Projectiles.append(projectile)
 #		add_child(projectile)
 
+#testing for github
+
 
 func _on_Main_spawned(x):
 	print(x)
