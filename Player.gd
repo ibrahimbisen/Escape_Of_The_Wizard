@@ -39,5 +39,9 @@ func _process(delta):
 	
 	position += velocity
 	velocity = Vector2.ZERO
-			
-			
+	
+	
+	
+	
+	# This part below is for it fallow the mouse it is temp.
+	

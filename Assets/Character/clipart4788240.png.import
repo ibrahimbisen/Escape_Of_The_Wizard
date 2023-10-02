@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Orcs.png-b46538ab221d9d2a19911c6f20e0b595.stex"
+path="res://.import/clipart4788240.png-588618463a788bfe0c88ca050f974e66.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Character/Orcs/Orcs.png"
-dest_files=[ "res://.import/Orcs.png-b46538ab221d9d2a19911c6f20e0b595.stex" ]
+source_file="res://Assets/Character/clipart4788240.png"
+dest_files=[ "res://.import/clipart4788240.png-588618463a788bfe0c88ca050f974e66.stex" ]
 
 [params]
 
