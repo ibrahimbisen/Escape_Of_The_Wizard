@@ -20,4 +20,6 @@ func _process(delta):
 	
 	movement_direction = movement_direction.normalized()
 	move_and_slide(movement_direction * speed)
+	
+	look_at(get_global_mouse_position())
 
