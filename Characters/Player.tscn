@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Character/Temp Wizard.png" type="Texture" id=2]
+[ext_resource path="res://Projectiles/FireBall.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 15.5, 21 )
+
+[node name="Player" type="KinematicBody2D"]
+position = Vector2( 56, 142 )
+script = ExtResource( 1 )
+Fireball = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+rotation = 1.5708
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="EndofGun" type="Position2D" parent="."]
+position = Vector2( 26, 20 )

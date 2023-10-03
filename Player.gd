@@ -1,6 +1,10 @@
 extends KinematicBody2D
 
+
+export (PackedScene) var Fireball
 export (int) var speed = 100
+
+onready var end_of_gun = $EndofGun
 
 func _ready():
 	pass
@@ -29,4 +33,6 @@ func _unhandled_input(event: InputEvent):
 
 
 func Shoot():
-	print("player Shot")
+	var fireball_instance = Fireball.instance()
+	add_child(fireball_instance)
+	fireball_instance.global_position = end_of_gun.global_position
