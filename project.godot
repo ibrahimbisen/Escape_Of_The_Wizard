@@ -11,7 +11,6 @@ config_version=4
 [application]
 
 config/name="Escape Of The Wizard"
-run/main_scene="res://Main.tscn"
 config/icon="res://Assets/LOGO.png"
 
 [autoload]
@@ -64,4 +63,3 @@ common/enable_pause_aware_picking=true
 quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
-environment/default_environment="res://default_env.tres"
