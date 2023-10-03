@@ -23,3 +23,10 @@ func _process(delta):
 	
 	look_at(get_global_mouse_position())
 
+func _unhandled_input(event: InputEvent):
+	if event.is_action_released("Shoot"):
+		Shoot()
+
+
+func Shoot():
+	print("player Shot")
