@@ -36,3 +36,6 @@ func Shoot():
 	var fireball_instance = Fireball.instance()
 	add_child(fireball_instance)
 	fireball_instance.global_position = end_of_gun.global_position
+	var target = get_global_mouse_position()
+	var direction_to_mouse = fireball_instance.global_position.direction_to(target).normalized()
+	fireball_instance.set_direction(direction_to_mouse)
