@@ -11,8 +11,9 @@ config_version=4
 [application]
 
 config/name="Escape Of The Wizard"
+config/description="A wizard escaping the island where he is stuck"
 run/main_scene="res://Main.tscn"
-config/icon="res://Assets/LOGO.png"
+config/icon="res://Assets/Logo/ETW Logo.png"
 
 [autoload]
 
