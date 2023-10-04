@@ -6,7 +6,7 @@
 [ext_resource path="res://Assets/Audio/Shooting/shooting-star-2-104073.mp3" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 15.5, 21 )
+extents = Vector2( 15.5, 15 )
 
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( 56, 142 )
@@ -30,3 +30,7 @@ position = Vector2( 23, 19 )
 [node name="Magic_Shoot" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 pitch_scale = 1.92
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 1.2, 1.2 )
