@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "FireBall",
 "language": "GDScript",
 "path": "res://Projectiles/FireBall.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Player",
+"language": "GDScript",
+"path": "res://Characters/Player.gd"
 } ]
 _global_script_class_icons={
-"FireBall": ""
+"FireBall": "",
+"Player": ""
 }
 
 [application]

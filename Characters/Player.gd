@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+class_name Player
+
 signal player_fired_bullet(bullet, position, direction)
 
 
@@ -17,7 +19,7 @@ func _ready():
 
 
 
-func _process(delta):
+func _physics_process(delta):
 	var movement_direction := Vector2.ZERO
 	if Input.is_action_pressed("move_up"):
 		movement_direction.y -= 1
