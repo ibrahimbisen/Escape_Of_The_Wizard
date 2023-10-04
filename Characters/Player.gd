@@ -8,6 +8,7 @@ export (int) var speed = 100
 
 onready var end_of_gun = $EndofGun
 onready var gundirection = $GunDirection
+onready var magic_shot = $Magic_Shoot
 
 func _ready():
 	pass
@@ -32,6 +33,8 @@ func _process(delta):
 
 func _unhandled_input(event: InputEvent):
 	if event.is_action_released("Shoot"):
+		#THis needs to be fixed it is audio of the gunshot but it crashes as soon as you shoot
+		#magic_shot.play()
 		Shoot()
 
 
@@ -40,6 +43,7 @@ func Shoot():
 	var direction = gundirection.global_position - end_of_gun.global_position.normalized()
 	emit_signal("player_fired_bullet", fireball_instance,end_of_gun.global_position, direction)
 	print("Player shotted")
+	
 	
 	
 	
