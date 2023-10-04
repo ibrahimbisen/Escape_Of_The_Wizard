@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Area2D",
+"class": "FireBall",
+"language": "GDScript",
+"path": "res://Projectiles/FireBall.gd"
+} ]
+_global_script_class_icons={
+"FireBall": ""
+}
+
 [application]
 
 config/name="Escape Of The Wizard"
@@ -18,10 +28,6 @@ config/icon="res://Assets/Logo/ETW Logo.png"
 [autoload]
 
 BgMusic="*res://bg_music.tscn"
-
-[display]
-
-window/stretch/mode="2d"
 
 [gui]
 

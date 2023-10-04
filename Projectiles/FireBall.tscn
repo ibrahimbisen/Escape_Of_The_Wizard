@@ -17,3 +17,8 @@ shape = SubResource( 1 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 293, 212, 22, 8 )
+
+[node name="KillTimer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="timeout" from="KillTimer" to="." method="_on_KillTimer_timeout"]
