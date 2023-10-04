@@ -27,3 +27,13 @@ func set_direction(direction: Vector2):
 
 func _on_KillTimer_timeout():
 	queue_free()
+
+
+# as well as body entered we also need to do area entered from the node
+#class of the fireball scene because body entered is only for 2d knimeatic bodies
+#but area entered is also for collisisons with wall and etc
+
+func _on_FireBall_body_entered(body):
+	if body.has_method("handle_hit"):
+		body.handle_hit()
+		queue_free()

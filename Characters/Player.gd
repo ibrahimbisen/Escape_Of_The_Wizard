@@ -10,6 +10,8 @@ onready var end_of_gun = $EndofGun
 onready var gundirection = $GunDirection
 onready var magic_shot = $Magic_Shoot
 
+var health: int = 100
+
 func _ready():
 	pass
 
@@ -44,6 +46,11 @@ func Shoot():
 	emit_signal("player_fired_bullet", fireball_instance,end_of_gun.global_position, direction)
 	print("Player shotted")
 	
-	
-	
-	
+
+
+func handle_hit():
+	health -= 20
+	print("player hit", health)
+
+
+

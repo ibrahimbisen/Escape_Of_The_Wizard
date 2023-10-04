@@ -21,4 +21,5 @@ region_rect = Rect2( 293, 212, 22, 8 )
 [node name="KillTimer" type="Timer" parent="."]
 wait_time = 2.0
 
+[connection signal="body_entered" from="." to="." method="_on_FireBall_body_entered"]
 [connection signal="timeout" from="KillTimer" to="." method="_on_KillTimer_timeout"]
