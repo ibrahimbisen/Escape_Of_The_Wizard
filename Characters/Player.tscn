@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Characters/Player.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Character/Temp Wizard.png" type="Texture" id=2]
+[ext_resource path="res://Projectiles/FireBall.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Audio/Shooting/shooting-star-2-104073.mp3" type="AudioStream" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 15.5, 21 )
+
+[node name="Player" type="KinematicBody2D"]
+position = Vector2( 56, 142 )
+script = ExtResource( 1 )
+Fireball = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+rotation = 1.5708
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="EndofGun" type="Position2D" parent="."]
+position = Vector2( 13, 19 )
+
+[node name="GunDirection" type="Position2D" parent="."]
+position = Vector2( 23, 19 )
+
+[node name="Magic_Shoot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+pitch_scale = 1.92
