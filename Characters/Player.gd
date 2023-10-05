@@ -6,7 +6,7 @@ signal player_fired_bullet(bullet, position, direction)
 
 
 export (PackedScene) var Fireball
-export (int) var speed = 900
+export (int) var speed = 9900
 
 onready var end_of_gun = $EndofGun
 onready var gundirection = $GunDirection
