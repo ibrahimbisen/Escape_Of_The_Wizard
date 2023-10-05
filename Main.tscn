@@ -11,7 +11,7 @@
 position = Vector2( 860, 229 )
 
 [node name="Enemy" parent="." instance=ExtResource( 3 )]
-position = Vector2( 527, 145 )
+position = Vector2( 567, 174 )
 
 [node name="Bullet_Manager" type="Node2D" parent="."]
 script = ExtResource( 1 )
