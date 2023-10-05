@@ -3,7 +3,7 @@
 [ext_resource path="res://Projectiles/Bullet_Manager.gd" type="Script" id=1]
 [ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Characters/Enemy.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Map/Tile Map.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Map/Testing Map.tscn" type="PackedScene" id=5]
 
 [node name="Main" type="Node2D"]
 
@@ -11,10 +11,10 @@
 position = Vector2( 860, 229 )
 
 [node name="Enemy" parent="." instance=ExtResource( 3 )]
-position = Vector2( 527, 145 )
+position = Vector2( 567, 174 )
 
 [node name="Bullet_Manager" type="Node2D" parent="."]
 script = ExtResource( 1 )
 
-[node name="The Map" parent="." instance=ExtResource( 4 )]
+[node name="Testing Map" parent="." instance=ExtResource( 5 )]
 z_index = -1

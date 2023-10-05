@@ -35,6 +35,11 @@ config/icon="res://Assets/Logo/ETW Logo.png"
 
 BgMusic="*res://bg_music.tscn"
 
+[display]
+
+mouse_cursor/custom_image="res://Assets/Crosshair/crosshair008.png"
+mouse_cursor/custom_image_hotspot=Vector2( 32, 32 )
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
