@@ -31,6 +31,10 @@ config/description="A wizard escaping the island where he is stuck"
 run/main_scene="res://Main.tscn"
 config/icon="res://Assets/Logo/ETW Logo.png"
 
+[autoload]
+
+BgMusic="*res://bg_music.tscn"
+
 [display]
 
 mouse_cursor/custom_image="res://Assets/Crosshair/crosshair008.png"
