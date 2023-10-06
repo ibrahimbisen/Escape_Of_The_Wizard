@@ -28,12 +28,8 @@ _global_script_class_icons={
 
 config/name="Escape Of The Wizard"
 config/description="A wizard escaping the island where he is stuck"
-run/main_scene="res://Main.tscn"
+run/main_scene="res://UI/Menu.tscn"
 config/icon="res://Assets/Logo/ETW Logo.png"
-
-[autoload]
-
-BgMusic="*res://bg_music.tscn"
 
 [display]
 
