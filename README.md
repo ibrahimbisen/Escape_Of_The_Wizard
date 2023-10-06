@@ -2,7 +2,7 @@
 <div align="center">
 
 
-![image]("https://github.com/ibrahimbisen/Escape_Of_The_Wizard/blob/13ac089dba1b614c9866afb29716c12fc642aa5a/Assets/Logo/ETW%20Logo%20-%20Transparent.png")
+![image](./Assets/Logo/ETW%20Logo%20-%20Transparent.png)
 
 
 
