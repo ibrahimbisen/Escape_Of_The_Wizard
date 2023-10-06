@@ -2,21 +2,19 @@ extends KinematicBody2D
 
 class_name Player
 
-signal player_fired_bullet(bullet, position, direction)
-
+signal player_fired_bullet
 
 export (PackedScene) var Fireball
 export (int) var speed = 300
 
 onready var end_of_gun = $EndofGun
-onready var gundirection = $GunDirection
+onready var gunpoint = $GunDirection
 onready var magic_shot = $Magic_Shoot
 
 var health: int = 100
 
 func _ready():
 	pass
-
 
 
 func _physics_process(delta):
@@ -44,10 +42,9 @@ func _unhandled_input(event: InputEvent):
 
 func Shoot():
 	var fireball_instance = Fireball.instance()
-	var direction = gundirection.global_position - end_of_gun.global_position.normalized()
+	var direction = (gunpoint.global_transform.origin - end_of_gun.global_transform.origin).normalized()
 	emit_signal("player_fired_bullet", fireball_instance,end_of_gun.global_position, direction)
 	print("Player shotted")
-	
 
 
 func handle_hit():
