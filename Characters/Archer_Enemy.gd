@@ -6,7 +6,7 @@ onready var gunpoint = $GunDirection
 
 export (int, LAYERS_2D_NAVIGATION) var nav_layer = 1
 onready var nav = $NavigationAgent2D
-var target_reached
+#var target_reached
 #var can_spot = true
 
 var can_fire = true
@@ -42,12 +42,15 @@ func _physics_process(delta):
 		#if enemy_vision.collider==player && can_spot:
 		if enemy_vision.collider == player:
 			target = player.global_transform.origin
-			$GunTimer.start()
-			nav.set_target_location(target)
+			direction = (target - global_position).normalized()
+			#$GunTimer.start()
+			#nav.set_target_location(target)
 
 			var for_calc = player.global_transform.origin - self.global_transform.origin
 			var dist = sqrt(for_calc.x * for_calc.x + for_calc.y * for_calc.y)
+			#print(dist, can_fire)
 			if ((dist < 1000) && (can_fire)):
+				#print(can_fire)
 				$GunTimer.start()
 				can_fire = false
 
@@ -56,20 +59,20 @@ func _physics_process(delta):
 				see_thru.append(arrow)
 				emit_signal("shoot", arrow, global_position, fire_direction)
 
-	var next_location = nav.get_next_location()
-	if !target_reached:
-		direction = (next_location - global_position).normalized()
-		target_reached = nav.is_target_reached()
-	else:
-		direction = (next_location - global_position).normalized()
+	#var next_location = nav.get_next_location()
+	#if !target_reached:
+	#	direction = (next_location - global_position).normalized()
+	#	target_reached = nav.is_target_reached()
+	#else:
+	#	direction = (next_location - global_position).normalized()
 	
 	look_at(target)
 	
-	#direction = (next_location - global_position).normalized()
 	position += direction * speed * delta
 
 
 func _on_GunTimer_timeout():
+	print("restart")
 	can_fire = true
 	$GunTimer.stop()
 

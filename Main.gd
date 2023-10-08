@@ -11,6 +11,7 @@ onready var archer = $Archer_Enemy
 func _ready():
 	enemy.player = player
 	archer.player = player
+	#var gun = get_node("Player/Gun")
 	player.connect("player_fired_bullet", self, "handle_bullet_spawned")
 	archer.connect("shoot", self, "handle_enemy_bullet_spawned")
 	#fireball.connect("gone", self, "handle_bullet_gone")
@@ -34,6 +35,3 @@ func handle_enemy_bullet_spawned(bullet: EnemyShot, a_position: Vector2, directi
 	bullet.global_position = a_position
 	bullet.set_direction(direction)
 
-
-func handle_bullet_gone():
-	pass

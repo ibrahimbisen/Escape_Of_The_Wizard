@@ -37,3 +37,14 @@ pitch_scale = 1.92
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 zoom = Vector2( 1.2, 1.2 )
+
+[node name="Shotgun_1" type="Node2D" parent="."]
+position = Vector2( -1, 31 )
+rotation = 0.656244
+
+[node name="Shotgun_2" type="Node2D" parent="."]
+position = Vector2( 18, 4 )
+
+[node name="Shotgun_3" type="Node2D" parent="."]
+position = Vector2( 9, -16 )
+rotation = -0.261799

@@ -5,10 +5,13 @@ signal gone
 export (int) var speed = 10
 
 var direction := Vector2.ZERO
+var shotty = false
 
 onready var kil_timer = $KillTimer
 
 func _ready():
+	if shotty:
+		kil_timer.wait_time = 0.4
 	kil_timer.start()
 
 
@@ -39,3 +42,5 @@ func _on_FireBall_body_entered(body):
 		body.handle_hit()
 		queue_free()
 		emit_signal("gone")
+		
+
