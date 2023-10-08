@@ -9,6 +9,21 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Enemy",
+"class": "Archer_Enemy",
+"language": "GDScript",
+"path": "res://Characters/Archer_Enemy.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Enemy",
+"language": "GDScript",
+"path": "res://Characters/Enemy.gd"
+}, {
+"base": "FireBall",
+"class": "EnemyShot",
+"language": "GDScript",
+"path": "res://Projectiles/EnemyShot.gd"
+}, {
 "base": "Area2D",
 "class": "FireBall",
 "language": "GDScript",
@@ -20,6 +35,9 @@ _global_script_classes=[ {
 "path": "res://Characters/Player.gd"
 } ]
 _global_script_class_icons={
+"Archer_Enemy": "",
+"Enemy": "",
+"EnemyShot": "",
 "FireBall": "",
 "Player": ""
 }

@@ -1,6 +1,6 @@
 extends Area2D
 class_name FireBall
-
+signal gone
 
 export (int) var speed = 10
 
@@ -15,7 +15,7 @@ func _ready():
 func _physics_process(delta: float):
 	if direction!= Vector2.ZERO:
 		var velocity  = direction *speed
-	
+
 		global_position += velocity
 	
 
@@ -27,6 +27,7 @@ func set_direction(direction: Vector2):
 
 func _on_KillTimer_timeout():
 	queue_free()
+	emit_signal("gone")
 
 
 # as well as body entered we also need to do area entered from the node
@@ -37,3 +38,4 @@ func _on_FireBall_body_entered(body):
 	if body.has_method("handle_hit"):
 		body.handle_hit()
 		queue_free()
+		emit_signal("gone")
