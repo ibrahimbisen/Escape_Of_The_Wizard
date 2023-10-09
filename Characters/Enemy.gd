@@ -1,4 +1,8 @@
 extends KinematicBody2D
+onready var animPlayer = $AnimationPlayer
+
+func _physics_process(delta):
+	animPlayer.play("test")
 
 var health: int = 100
 
