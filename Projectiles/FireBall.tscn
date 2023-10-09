@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Assets/Character/All_Fire_Bullet_Pixel_16x16.png" type="Texture" id=1]
+[ext_resource path="res://projectiles spritesheet.png" type="Texture" id=1]
 [ext_resource path="res://Projectiles/FireBall.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -14,9 +14,11 @@ script = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
+rotation = 1.5708
+scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 293, 212, 22, 8 )
+region_rect = Rect2( 159.618, 124.843, 166.907, 231.815 )
 
 [node name="KillTimer" type="Timer" parent="."]
 wait_time = 2.0
