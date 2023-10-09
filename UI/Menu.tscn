@@ -28,17 +28,12 @@ margin_right = 60.0
 margin_bottom = 44.0
 text = "Quit"
 
-[node name="Settings" type="Button" parent="Menu"]
+[node name="Tutorial" type="Button" parent="Menu"]
 margin_top = 48.0
 margin_right = 60.0
 margin_bottom = 68.0
-text = "Setting"
-
-[node name="Tutorial" type="Button" parent="Menu"]
-margin_top = 72.0
-margin_right = 60.0
-margin_bottom = 92.0
 text = "Tutorial"
 
 [connection signal="pressed" from="Menu/Start" to="Menu" method="_on_Start_pressed"]
 [connection signal="pressed" from="Menu/Quit" to="Menu" method="_on_Quit_pressed"]
+[connection signal="pressed" from="Menu/Tutorial" to="Menu" method="_on_Tutorial_pressed"]
