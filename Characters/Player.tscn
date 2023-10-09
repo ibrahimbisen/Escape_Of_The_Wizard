@@ -3,7 +3,7 @@
 [ext_resource path="res://Characters/Player.gd" type="Script" id=1]
 [ext_resource path="res://Projectiles/FireBall.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/Audio/Shooting/shooting-star-2-104073.mp3" type="AudioStream" id=4]
-[ext_resource path="res://wiz01 spritesheet v02.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Character/wiz01 spritesheet v02.png" type="Texture" id=5]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 17.0
@@ -100,7 +100,7 @@ Fireball = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
 rotation = 1.5708
-scale = Vector2( 0.2, 0.2 )
+scale = Vector2( 0.12, 0.12 )
 texture = ExtResource( 5 )
 hframes = 2
 vframes = 2
@@ -110,10 +110,10 @@ position = Vector2( -2, 0 )
 shape = SubResource( 1 )
 
 [node name="EndofGun" type="Position2D" parent="."]
-position = Vector2( 13, 19 )
+position = Vector2( 12, 20 )
 
 [node name="GunDirection" type="Position2D" parent="."]
-position = Vector2( 23, 19 )
+position = Vector2( 23, 20 )
 
 [node name="Magic_Shoot" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )

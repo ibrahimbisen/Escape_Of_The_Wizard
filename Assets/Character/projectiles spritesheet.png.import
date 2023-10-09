@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wiz01 spritesheet.png-1121d647d4e86ae6cb22e24ce859044c.stex"
+path="res://.import/projectiles spritesheet.png-803339efe5153615ca4a2a342ec179bc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://wiz01 spritesheet.png"
-dest_files=[ "res://.import/wiz01 spritesheet.png-1121d647d4e86ae6cb22e24ce859044c.stex" ]
+source_file="res://Assets/Character/projectiles spritesheet.png"
+dest_files=[ "res://.import/projectiles spritesheet.png-803339efe5153615ca4a2a342ec179bc.stex" ]
 
 [params]
 
