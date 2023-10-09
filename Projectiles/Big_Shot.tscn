@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Projectiles/FireBall.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Projectiles/Big_Shot.gd" type="Script" id=2]
+
+[node name="Big_Shot" instance=ExtResource( 1 )]
+scale = Vector2( 10, 10 )
+script = ExtResource( 2 )

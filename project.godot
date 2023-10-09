@@ -9,6 +9,34 @@
 config_version=4
 
 _global_script_classes=[ {
+<<<<<<< Updated upstream
+=======
+"base": "Enemy",
+"class": "Archer_Enemy",
+"language": "GDScript",
+"path": "res://Characters/Archer_Enemy.gd"
+}, {
+"base": "FireBall",
+"class": "Big_Shot",
+"language": "GDScript",
+"path": "res://Projectiles/Big_Shot.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Enemy",
+"language": "GDScript",
+"path": "res://Characters/Enemy.gd"
+}, {
+"base": "FireBall",
+"class": "EnemyShot",
+"language": "GDScript",
+"path": "res://Projectiles/EnemyShot.gd"
+}, {
+"base": "FireBall",
+"class": "Explosive",
+"language": "GDScript",
+"path": "res://Projectiles/Explosive.gd"
+}, {
+>>>>>>> Stashed changes
 "base": "Area2D",
 "class": "FireBall",
 "language": "GDScript",
@@ -20,6 +48,14 @@ _global_script_classes=[ {
 "path": "res://Characters/Player.gd"
 } ]
 _global_script_class_icons={
+<<<<<<< Updated upstream
+=======
+"Archer_Enemy": "",
+"Big_Shot": "",
+"Enemy": "",
+"EnemyShot": "",
+"Explosive": "",
+>>>>>>> Stashed changes
 "FireBall": "",
 "Player": ""
 }

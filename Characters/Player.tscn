@@ -9,7 +9,13 @@
 radius = 17.0
 
 [node name="Player" type="KinematicBody2D"]
+<<<<<<< Updated upstream
 position = Vector2( 56, 142 )
+=======
+position = Vector2( 0, -2 )
+collision_layer = 2
+collision_mask = 2
+>>>>>>> Stashed changes
 script = ExtResource( 1 )
 Fireball = ExtResource( 3 )
 
