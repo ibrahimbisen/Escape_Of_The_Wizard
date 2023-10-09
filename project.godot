@@ -38,11 +38,6 @@ _global_script_classes=[ {
 "class": "Player",
 "language": "GDScript",
 "path": "res://Characters/Player.gd"
-}, {
-"base": "FireBall",
-"class": "Shotgun",
-"language": "GDScript",
-"path": "res://Shotgun.gd"
 } ]
 _global_script_class_icons={
 "Archer_Enemy": "",
@@ -50,8 +45,7 @@ _global_script_class_icons={
 "EnemyShot": "",
 "Explosive": "",
 "FireBall": "",
-"Player": "",
-"Shotgun": ""
+"Player": ""
 }
 
 [application]
