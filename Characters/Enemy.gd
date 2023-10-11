@@ -1,9 +1,6 @@
 extends KinematicBody2D
 onready var animPlayer = $AnimationPlayer
 
-func _physics_process(delta):
-	animPlayer.play("test")
-
 class_name Enemy
 var health: int = 100
 var speed = 40
@@ -15,6 +12,9 @@ var see_thru = [self]
 
 
 func _physics_process(delta):
+	#the enemy movement needs to be fixed
+	#animPlayer.play("RESET")
+	
 	# update enemy sight target to player position. Note: You must
 	# import player object for this to work, so it won't run by itself
 	# without main. Also, you must have both objects be of the same type
