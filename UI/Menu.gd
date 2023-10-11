@@ -22,3 +22,12 @@ func _on_Start_pressed():
 
 func _on_Quit_pressed():
 	get_tree().quit()
+
+
+func _on_Tutorial_pressed():
+	get_tree().change_scene("res://Tutorial/Tutorial.tscn")
+
+
+func _on_Menu_pressed():
+	get_tree().change_scene("res://UI/Menu.tscn")
+

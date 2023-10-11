@@ -3,6 +3,7 @@
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Characters/Enemy.tscn" type="PackedScene" id=3]
+
 [ext_resource path="res://Characters/Archer_Enemy.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Map/Testing Map.tscn" type="PackedScene" id=5]
 
@@ -21,3 +22,6 @@ position = Vector2( 567, 174 )
 [node name="Archer_Enemy" parent="." instance=ExtResource( 4 )]
 position = Vector2( 12, 114 )
 scale = Vector2( 2, 2 )
+
+# fix thisssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+[node name="Options" parent="." instance=ExtResource( 4 )]

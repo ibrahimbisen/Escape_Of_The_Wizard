@@ -43,4 +43,3 @@ func _on_FireBall_body_entered(body):
 		queue_free()
 		emit_signal("gone")
 		
-
