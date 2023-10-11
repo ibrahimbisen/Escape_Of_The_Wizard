@@ -95,6 +95,8 @@ tracks/1/keys = {
 
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( 56, 142 )
+collision_layer = 2
+collision_mask = 2
 script = ExtResource( 1 )
 Fireball = ExtResource( 3 )
 
@@ -123,7 +125,20 @@ pitch_scale = 1.92
 current = true
 zoom = Vector2( 1.2, 1.2 )
 
+
+[node name="Shotgun_1" type="Node2D" parent="."]
+position = Vector2( -1, 31 )
+rotation = 0.656244
+
+[node name="Shotgun_2" type="Node2D" parent="."]
+position = Vector2( 18, 4 )
+
+[node name="Shotgun_3" type="Node2D" parent="."]
+position = Vector2( 9, -16 )
+rotation = -0.261799
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Idle = SubResource( 7 )
 anims/RESET = SubResource( 8 )
 anims/Run = SubResource( 9 )
+

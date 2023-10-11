@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Projectiles/FireBall.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Projectiles/EnemyShot.gd" type="Script" id=2]
+
+[node name="EnemyShot" instance=ExtResource( 1 )]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 2 )
