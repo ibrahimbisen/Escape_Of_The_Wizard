@@ -14,6 +14,7 @@ func _ready():
 	#var gun = get_node("Player/Gun")
 	player.connect("player_fired_bullet", self, "handle_bullet_spawned")
 	archer.connect("shoot", self, "handle_enemy_bullet_spawned")
+	player.connect("player_fired_laser", self, "handle_laser_spawned")
 	#fireball.connect("gone", self, "handle_bullet_gone")
 	#player.connect("player_fired_bullet", bullet_manager, "handle_bullet_spawned")
 
@@ -35,3 +36,12 @@ func handle_enemy_bullet_spawned(bullet: EnemyShot, a_position: Vector2, directi
 	bullet.global_position = a_position
 	bullet.set_direction(direction)
 
+
+func handle_laser_spawned(bullet: Laser, a_position: Vector2, direction: Vector2):
+	add_child(bullet)
+	bullet.set_is_casting(true)
+	bullet.get_node("Line2D").add_point(a_position)
+	var fire_to = a_position + (direction * 100)
+	bullet.get_node("Line2D").add_point(fire_to)
+	bullet.cast_to = fire_to
+	

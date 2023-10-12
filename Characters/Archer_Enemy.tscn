@@ -8,6 +8,7 @@
 
 [node name="Archer_Enemy" type="KinematicBody2D"]
 rotation = 1.5708
+collision_layer = 9
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
