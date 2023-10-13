@@ -1,8 +1,10 @@
 extends Node2D
 #onready var bullet_manager = $Bullet_Manager
 # think of the below as object oriented inheritence
-onready var player: Player = $Player
-#onready var player = $Player
+##onready var player: Player = $Player
+export var path_to_player := NodePath()
+onready var player = get_node(path_to_player)
+
 onready var enemy = $Enemy
 onready var archer = $Archer_Enemy
 #onready var bullet = $FireBall
@@ -11,6 +13,8 @@ onready var archer = $Archer_Enemy
 func _ready():
 	enemy.player = player
 	archer.player = player
+	#enemy.agent.set_target_location(player.global_position)
+	#archer.agent.set_target_location(player.global_position)
 	#var gun = get_node("Player/Gun")
 	player.connect("player_fired_bullet", self, "handle_bullet_spawned")
 	archer.connect("shoot", self, "handle_enemy_bullet_spawned")
