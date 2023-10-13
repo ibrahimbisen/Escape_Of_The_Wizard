@@ -29,11 +29,11 @@ position = Vector2( 9, 6 )
 script = ExtResource( 3 )
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
-target_desired_distance = 15.0
-path_max_distance = 20.0
+path_desired_distance = 0.1
+target_desired_distance = 0.1
 
 [node name="NavigationTimer" type="Timer" parent="."]
-autostart = true
+wait_time = 21.557
 
 [connection signal="timeout" from="GunTimer" to="." method="_on_GunTimer_timeout"]
 [connection signal="timeout" from="NavigationTimer" to="." method="_on_NavigationTimer_timeout"]
