@@ -3,6 +3,7 @@ extends KinematicBody2D
 class_name Player
 
 signal player_fired_bullet
+signal player_fired_laser
 
 export (PackedScene) var Fireball
 export (int) var speed = 600
@@ -49,7 +50,8 @@ func _unhandled_input(event: InputEvent):
 		#magic_shot.play()
 		#Shoot()
 		#Shotgun()
-		Explosive()
+		#Explosive()
+		Laser()
 
 
 func Shoot():
@@ -98,3 +100,12 @@ func Explosive():
 	var fireball_instance = Fireball.instance()
 	var direction = (gunpoint.global_transform.origin - end_of_gun.global_transform.origin).normalized()
 	emit_signal("player_fired_bullet", fireball_instance,end_of_gun.global_position, direction)
+
+
+func Laser():
+	var laser = load("res://Projectiles/Laser.tscn")
+	var laser_instance = laser.instance()
+	laser_instance.add_exception(self)
+	var direction = (gunpoint.global_transform.origin - end_of_gun.global_transform.origin).normalized()
+	
+	emit_signal("player_fired_laser", laser_instance, gunpoint.global_position, direction)
