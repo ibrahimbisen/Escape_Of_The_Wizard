@@ -85,3 +85,11 @@ position = Vector2( 23, 19 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 2 )
 anims/test = SubResource( 3 )
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+target_desired_distance = 15.0
+
+[node name="NavigationTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="NavigationTimer" to="." method="_on_NavigationTimer_timeout"]

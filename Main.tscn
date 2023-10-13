@@ -3,12 +3,12 @@
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Characters/Enemy.tscn" type="PackedScene" id=3]
-
 [ext_resource path="res://Characters/Archer_Enemy.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Map/Testing Map.tscn" type="PackedScene" id=5]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
+path_to_player = NodePath("Player")
 
 [node name="Testing Map" parent="." instance=ExtResource( 5 )]
 z_index = -1
@@ -20,8 +20,6 @@ position = Vector2( 860, 229 )
 position = Vector2( 567, 174 )
 
 [node name="Archer_Enemy" parent="." instance=ExtResource( 4 )]
-position = Vector2( 12, 114 )
+position = Vector2( 741, 46 )
+rotation = 0.0
 scale = Vector2( 2, 2 )
-
-# fix thisssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-[node name="Options" parent="." instance=ExtResource( 4 )]
