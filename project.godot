@@ -37,7 +37,7 @@ _global_script_classes=[ {
 "base": "RayCast2D",
 "class": "Laser",
 "language": "GDScript",
-"path": "res://Laser.gd"
+"path": "res://Projectiles/Laser.gd"
 }, {
 "base": "KinematicBody2D",
 "class": "Player",

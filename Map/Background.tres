@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=15 format=2]
+[gd_resource type="TileSet" load_steps=7 format=2]
 
 [ext_resource path="res://Assets/Backround/TX Tileset Grass.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Backround/Other/graphics-tiles-waterflow.png" type="Texture" id=2]
@@ -15,69 +15,8 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 [sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 
-[sub_resource type="NavigationPolygon" id=5]
-vertices = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
-outlines = [ PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 ) ]
-
-[sub_resource type="NavigationPolygon" id=6]
-vertices = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
-outlines = [ PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 ) ]
-
-[sub_resource type="NavigationPolygon" id=7]
-vertices = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
-outlines = [ PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 ) ]
-
-[sub_resource type="NavigationPolygon" id=8]
-vertices = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
-outlines = [ PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 ) ]
-
-[sub_resource type="NavigationPolygon" id=9]
-vertices = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
-outlines = [ PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 ) ]
-
-[sub_resource type="NavigationPolygon" id=10]
-vertices = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
-outlines = [ PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 ) ]
-
-[sub_resource type="NavigationPolygon" id=11]
-vertices = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
-outlines = [ PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 ) ]
-
-[sub_resource type="NavigationPolygon" id=12]
-vertices = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
-outlines = [ PoolVector2Array( 0, 64, 64, 64, 64, 0, 0, 0 ) ]
-
 [resource]
 resource_name = "Background"
-9/name = "TX Tileset Grass.png 9"
-9/texture = ExtResource( 1 )
-9/tex_offset = Vector2( 0, 0 )
-9/modulate = Color( 1, 1, 1, 1 )
-9/region = Rect2( 0, 0, 256, 128 )
-9/tile_mode = 2
-9/autotile/icon_coordinate = Vector2( 0, 0 )
-9/autotile/tile_size = Vector2( 64, 64 )
-9/autotile/spacing = 0
-9/autotile/occluder_map = [  ]
-9/autotile/navpoly_map = [ Vector2( 0, 0 ), SubResource( 5 ), Vector2( 0, 1 ), SubResource( 6 ), Vector2( 1, 0 ), SubResource( 7 ), Vector2( 1, 1 ), SubResource( 8 ), Vector2( 2, 0 ), SubResource( 9 ), Vector2( 2, 1 ), SubResource( 10 ), Vector2( 3, 0 ), SubResource( 11 ), Vector2( 3, 1 ), SubResource( 12 ) ]
-9/autotile/priority_map = [  ]
-9/autotile/z_index_map = [  ]
-9/occluder_offset = Vector2( 0, 0 )
-9/navigation_offset = Vector2( 0, 0 )
-9/shape_offset = Vector2( 0, 0 )
-9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-9/shape_one_way = false
-9/shape_one_way_margin = 0.0
-9/shapes = [  ]
-9/z_index = 0
 10/name = "Water"
 10/texture = ExtResource( 2 )
 10/tex_offset = Vector2( 0, 0 )
@@ -124,12 +63,19 @@ resource_name = "Background"
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 10/z_index = 0
-11/name = "TX Tileset Grass.png 11"
+11/name = "Background"
 11/texture = ExtResource( 1 )
 11/tex_offset = Vector2( 0, 0 )
 11/modulate = Color( 1, 1, 1, 1 )
-11/region = Rect2( 137, 11, 53, 50 )
-11/tile_mode = 0
+11/region = Rect2( 0, 0, 256, 128 )
+11/tile_mode = 2
+11/autotile/icon_coordinate = Vector2( 0, 0 )
+11/autotile/tile_size = Vector2( 64, 64 )
+11/autotile/spacing = 0
+11/autotile/occluder_map = [  ]
+11/autotile/navpoly_map = [  ]
+11/autotile/priority_map = [  ]
+11/autotile/z_index_map = [  ]
 11/occluder_offset = Vector2( 0, 0 )
 11/navigation_offset = Vector2( 0, 0 )
 11/shape_offset = Vector2( 0, 0 )
