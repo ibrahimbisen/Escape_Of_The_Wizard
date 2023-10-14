@@ -21,7 +21,6 @@ func _ready():
 
 func _process(delta):
 	#print($"Enemy Pathfinding/NavigationPolygonInstance".get_navigation_polygon().get_polygon_count())
-
 	pass
 
 

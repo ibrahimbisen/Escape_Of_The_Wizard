@@ -25,7 +25,7 @@ func _on_Quit_pressed():
 
 
 func _on_Tutorial_pressed():
-	get_tree().change_scene("res://Main Scenes/Main scene for the tutorial.tscn")
+	get_tree().change_scene("res://Main Scenes/Tutorial.tscn")
 
 
 func _on_Menu_pressed():
