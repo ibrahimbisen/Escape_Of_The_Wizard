@@ -8,4 +8,6 @@ var hud
 func lose_heart():
 	lives -= 1
 	hud.load_hearts()
-	#get_tree().change_scene()
+	
+	if lives <= 0:
+		get_tree().change_scene("res://UI/GameOver.tscn")
