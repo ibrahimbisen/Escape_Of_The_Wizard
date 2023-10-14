@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Main Scenes/Tutorial Main.gd" type="Script" id=1]
+[ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Map/Playable Tutorial Map.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Characters/Archer_Enemy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Characters/Enemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Tutorial/wasd.png" type="Texture" id=6]
+
+[node name="Main" type="Node2D"]
+z_index = -1
+script = ExtResource( 1 )
+
+[node name="Testing Map" parent="." instance=ExtResource( 3 )]
+z_index = -1
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 130, 90 )
+
+[node name="Enemy" parent="." instance=ExtResource( 5 )]
+position = Vector2( 7678, -208 )
+
+[node name="Archer_Enemy" parent="." instance=ExtResource( 4 )]
+position = Vector2( 7872, 595 )
+scale = Vector2( 2, 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 151.5, -177.188 )
+scale = Vector2( 0.621795, 0.555435 )
+texture = ExtResource( 6 )

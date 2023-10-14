@@ -21,7 +21,6 @@ func _ready():
 
 func _process(delta):
 	#print($"Enemy Pathfinding/NavigationPolygonInstance".get_navigation_polygon().get_polygon_count())
-
 	pass
 
 
@@ -45,4 +44,4 @@ func handle_laser_spawned(bullet: Laser, a_position: Vector2, direction: Vector2
 	var fire_to = a_position + (direction * 100)
 	bullet.get_node("Line2D").add_point(fire_to)
 	bullet.cast_to = fire_to
-
+	
