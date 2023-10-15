@@ -27,11 +27,11 @@ func handle_enemy_bullet_spawned(bullet: EnemyShot, a_position: Vector2, directi
 	bullet.set_direction(direction)
 
 
-func handle_laser_spawned(bullet: Laser, a_position: Vector2, direction: Vector2):
-	add_child(bullet)
-	bullet.set_is_casting(true)
-	bullet.get_node("Line2D").add_point(a_position)
-	var fire_to = a_position + (direction * 100)
-	bullet.get_node("Line2D").add_point(fire_to)
-	bullet.cast_to = fire_to
+#func handle_laser_spawned(bullet: Laser, a_position: Vector2, direction: Vector2):
+#	add_child(bullet)
+#	bullet.set_is_casting(true)
+#	bullet.get_node("Line2D").add_point(a_position)
+#	var fire_to = a_position + (direction * 100)
+#	bullet.get_node("Line2D").add_point(fire_to)
+#	bullet.cast_to = fire_to
 
