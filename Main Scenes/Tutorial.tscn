@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Main Scenes/Tutorial.gd" type="Script" id=1]
 [ext_resource path="res://Map/Tutorial Map.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Main Scenes/Tutorial Texts/WASD.png" type="Texture" id=9]
 [ext_resource path="res://Main Scenes/Tutorial Texts/extract.png" type="Texture" id=10]
 [ext_resource path="res://Main Scenes/Tutorial Texts/look around.png" type="Texture" id=11]
+[ext_resource path="res://Main Scenes/Tutorial Texts/run.png" type="Texture" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 130.5, 197.5 )
@@ -41,8 +42,13 @@ texture = ExtResource( 10 )
 position = Vector2( 1772, -212 )
 texture = ExtResource( 11 )
 
+[node name="Run" type="Sprite" parent="."]
+position = Vector2( 2665, -210 )
+scale = Vector2( 1.10896, 1.35417 )
+texture = ExtResource( 12 )
+
 [node name="Shoot" type="Sprite" parent="."]
-position = Vector2( 3478, -217 )
+position = Vector2( 4307, -219 )
 texture = ExtResource( 8 )
 
 [node name="Wasd" type="Sprite" parent="."]
