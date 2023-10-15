@@ -2,7 +2,7 @@ extends Area2D
 class_name FireBall
 signal gone
 
-export (int) var speed = 10
+export (int) var speed = 30
 
 var direction := Vector2.ZERO
 var shotty = false

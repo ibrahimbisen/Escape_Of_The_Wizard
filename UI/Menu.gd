@@ -17,7 +17,7 @@ func _ready():
 
 
 func _on_Start_pressed():
-	get_tree().change_scene("res://Main.tscn") # Replace with function body.
+	get_tree().change_scene("res://Main Scenes/Main.tscn") # Replace with function body.
 
 
 func _on_Quit_pressed():
@@ -25,7 +25,7 @@ func _on_Quit_pressed():
 
 
 func _on_Tutorial_pressed():
-	get_tree().change_scene("res://Tutorial/Tutorial.tscn")
+	get_tree().change_scene("res://Main Scenes/Tutorial.tscn")
 
 
 func _on_Menu_pressed():

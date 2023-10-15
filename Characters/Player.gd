@@ -1,12 +1,13 @@
 extends KinematicBody2D
 
+
 class_name Player
 
 signal player_fired_bullet
 signal player_fired_laser
 
 export (PackedScene) var Fireball
-export (int) var speed = 600
+export (int) var speed = 300
 
 onready var end_of_gun = $EndofGun
 onready var gunpoint = $GunDirection
@@ -17,8 +18,7 @@ onready var animPlayer = $AnimationPlayer
 
 var health: int = 100
 
-func _ready():
-	pass
+
 
 
 func _physics_process(delta):
@@ -35,6 +35,9 @@ func _physics_process(delta):
 	if Input.is_action_pressed("move_right"):
 		movement_direction.x += 1
 		animPlayer.play("Run")
+	#if Input.is_action_just_released("Run"):
+	#	speed = 500
+	#	animPlayer.play("Run")
 	
 	if movement_direction.x == 0 and movement_direction.y == 0:
 		animPlayer.play("Idle")
@@ -46,12 +49,10 @@ func _physics_process(delta):
 
 func _unhandled_input(event: InputEvent):
 	if event.is_action_released("Shoot"):
-		#THis needs to be fixed it is audio of the gunshot but it crashes as soon as you shoot
-		#magic_shot.play()
-		#Shoot()
+		Shoot()
 		#Shotgun()
 		#Explosive()
-		Laser()
+		#Laser()
 
 
 func Shoot():
