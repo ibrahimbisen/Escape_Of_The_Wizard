@@ -64,7 +64,6 @@ config/icon="res://Assets/Logo/ETW Logo.png"
 [autoload]
 
 BgMusic="*res://bg_music.tscn"
-Global="*res://Global.gd"
 
 [display]
 
