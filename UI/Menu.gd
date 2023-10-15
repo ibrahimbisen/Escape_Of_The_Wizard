@@ -18,7 +18,9 @@ func _ready():
 
 func _on_Start_pressed():
 	get_tree().change_scene("res://Main.tscn") # Replace with function body.
-
+	
+	# reset lives
+	Global.lives = Global.max_lives
 
 func _on_Quit_pressed():
 	get_tree().quit()

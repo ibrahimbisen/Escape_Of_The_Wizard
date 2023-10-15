@@ -63,6 +63,9 @@ func Shoot():
 func handle_hit():
 	health -= 20
 	print("player hit", health)
+	
+	# when player is hit, HUD updates with -1 heart
+	Global.lose_heart()
 
 
 func Big_Shoot():
