@@ -1,3 +1,4 @@
+
 [gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
@@ -5,6 +6,7 @@
 [ext_resource path="res://Characters/Enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Characters/Archer_Enemy.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Map/Testing Map.tscn" type="PackedScene" id=5]
+
 [ext_resource path="res://Assets/HUD/heart container v2 ZOOMED/sprite_heart_container_v20.png" type="Texture" id=6]
 [ext_resource path="res://Assets/HUD/heart container v2 ZOOMED/heart container empty v3.png.png" type="Texture" id=7]
 [ext_resource path="res://HUD.gd" type="Script" id=8]
@@ -30,6 +32,8 @@ corner_radius_bottom_left = 5
 size = 11
 font_data = ExtResource( 11 )
 
+[ext_resource path="res://UI/Inventory.tscn" type="PackedScene" id=6]
+
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -45,6 +49,7 @@ position = Vector2( 567, 174 )
 [node name="Archer_Enemy" parent="." instance=ExtResource( 4 )]
 position = Vector2( 12, 114 )
 scale = Vector2( 2, 2 )
+
 
 [node name="HUD" type="CanvasLayer" parent="."]
 script = ExtResource( 8 )
@@ -111,3 +116,10 @@ margin_bottom = 95.0
 custom_colors/font_color = Color( 1, 1, 1, 0.694118 )
 custom_fonts/font = SubResource( 2 )
 text = "x infinite"
+
+[node name="Inventory" type="CanvasLayer" parent="."]
+
+[node name="Inventory" parent="Inventory" instance=ExtResource( 6 )]
+position = Vector2( 769, 538 )
+scale = Vector2( 2, 2 )
+
