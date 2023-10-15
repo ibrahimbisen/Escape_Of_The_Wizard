@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+
 class_name Player
 
 signal player_fired_bullet
@@ -17,8 +18,7 @@ onready var animPlayer = $AnimationPlayer
 
 var health: int = 100
 
-func _ready():
-	pass
+
 
 
 func _physics_process(delta):
@@ -46,8 +46,6 @@ func _physics_process(delta):
 
 func _unhandled_input(event: InputEvent):
 	if event.is_action_released("Shoot"):
-		#THis needs to be fixed it is audio of the gunshot but it crashes as soon as you shoot
-		magic_shot.play()
 		Shoot()
 		#Shotgun()
 		#Explosive()

@@ -6,7 +6,11 @@ onready var archer = $Archer_Enemy
 
 
 
+
 func _ready():
+	
+
+	
 	
 	enemy.player = player
 	archer.player = player
@@ -34,4 +38,6 @@ func handle_laser_spawned(bullet: Laser, a_position: Vector2, direction: Vector2
 	var fire_to = a_position + (direction * 100)
 	bullet.get_node("Line2D").add_point(fire_to)
 	bullet.cast_to = fire_to
+
+
 
