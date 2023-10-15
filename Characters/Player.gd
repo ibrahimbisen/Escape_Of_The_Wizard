@@ -7,7 +7,7 @@ signal player_fired_bullet
 signal player_fired_laser
 
 export (PackedScene) var Fireball
-export (int) var speed = 600
+export (int) var speed = 300
 
 onready var end_of_gun = $EndofGun
 onready var gunpoint = $GunDirection
@@ -35,6 +35,9 @@ func _physics_process(delta):
 	if Input.is_action_pressed("move_right"):
 		movement_direction.x += 1
 		animPlayer.play("Run")
+	#if Input.is_action_just_released("Run"):
+	#	speed = 500
+	#	animPlayer.play("Run")
 	
 	if movement_direction.x == 0 and movement_direction.y == 0:
 		animPlayer.play("Idle")

@@ -14,7 +14,6 @@ func _ready():
 func _process(delta):
 	if entered == true:
 		if Input.is_action_just_pressed("Shoot"):
-			print("bs")
 			timer.start()
 
 func _on_Extraction_body_entered(body: PhysicsBody2D):
