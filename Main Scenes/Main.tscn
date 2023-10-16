@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Main Scenes/Main.gd" type="Script" id=1]
 [ext_resource path="res://Map/Game Map.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Characters/Archer_Enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Characters/Enemy.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://UI/Inventory.tscn" type="PackedScene" id=6]
+[ext_resource path="res://UI/UI.gd" type="Script" id=7]
+[ext_resource path="res://UI/HotBar.tscn" type="PackedScene" id=8]
+[ext_resource path="res://UI/Options.tscn" type="PackedScene" id=9]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
@@ -20,3 +24,19 @@ position = Vector2( 2346, 1448 )
 [node name="Archer_Enemy" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1791, 1388 )
 scale = Vector2( 2, 2 )
+
+[node name="UI" type="CanvasLayer" parent="."]
+script = ExtResource( 7 )
+
+[node name="Inventory" parent="UI" instance=ExtResource( 6 )]
+visible = false
+position = Vector2( -509, -267 )
+scale = Vector2( 2, 2 )
+
+[node name="HotBar" parent="UI" instance=ExtResource( 8 )]
+position = Vector2( -572, -639 )
+scale = Vector2( 2, 2 )
+
+[node name="Options" parent="UI" instance=ExtResource( 9 )]
+pause_mode = 2
+visible = false
