@@ -9,12 +9,10 @@ func _input(event):
 	if event.is_action_pressed("Inventory"):
 		$Inventory.visible = !$Inventory.visible
 	if event.is_action_pressed("pause"):
-		var new_pause_state = not get_tree().paused
-		get_tree().paused = new_pause_state
-		visible = new_pause_state
-		$Options.visible = !$Options.visible
-		
-	
+		$GamePause.visible = !$GamePause.visible
+#func _process(delta):
+#	if Input.is_action_pressed("pause"):
+#		$Options.visible = !$Options.visible
 		
 # Called when the node enters the scene tree for the first time.
 func _ready():

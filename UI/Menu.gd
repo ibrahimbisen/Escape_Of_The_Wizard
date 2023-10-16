@@ -4,7 +4,7 @@ extends VBoxContainer
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-var is_paused = false setget set_is_paused
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -18,7 +18,7 @@ func _ready():
 
 func _on_Start_pressed():
 	get_tree().change_scene("res://Main Scenes/Main.tscn") # Replace with function body.
-
+	
 
 func _on_Quit_pressed():
 	get_tree().quit()
@@ -30,14 +30,8 @@ func _on_Tutorial_pressed():
 
 func _on_Menu_pressed():
 	get_tree().change_scene("res://UI/Menu.tscn")
+	
+	
 
 
-
-func set_is_paused(value):
-	is_paused = value
-	get_tree().paused = is_paused
-	visible = is_paused
-
-
-func _on_Resume_pressed():
-	self.is_paused = false
+	
