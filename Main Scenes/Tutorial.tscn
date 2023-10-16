@@ -34,19 +34,21 @@ scale = Vector2( 0.978666, 2.00279 )
 z_index = 1
 
 [node name="Extract" type="Sprite" parent="."]
-position = Vector2( 6083, -522 )
+position = Vector2( 6070, -333 )
 texture = ExtResource( 10 )
 
 [node name="LookAround" type="Sprite" parent="."]
-position = Vector2( 1772, -212 )
+position = Vector2( 1743, 217 )
+scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 11 )
 
 [node name="Shoot" type="Sprite" parent="."]
-position = Vector2( 3478, -217 )
+position = Vector2( 3022, 189 )
 texture = ExtResource( 8 )
 
 [node name="Wasd" type="Sprite" parent="."]
-position = Vector2( 623, -208 )
+position = Vector2( 470, -32 )
+scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 9 )
 
 [node name="Extraction" type="Area2D" parent="."]
