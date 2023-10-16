@@ -40,10 +40,10 @@ z_index = -1
 position = Vector2( 860, 229 )
 
 [node name="Enemy" parent="." instance=ExtResource( 3 )]
-position = Vector2( 567, 174 )
+position = Vector2( 622, 201 )
 
 [node name="Archer_Enemy" parent="." instance=ExtResource( 4 )]
-position = Vector2( 12, 114 )
+position = Vector2( -64, 144 )
 scale = Vector2( 2, 2 )
 
 [node name="HUD" type="CanvasLayer" parent="."]

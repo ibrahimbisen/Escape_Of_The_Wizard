@@ -122,7 +122,6 @@ stream = ExtResource( 4 )
 pitch_scale = 1.92
 
 [node name="Camera2D" type="Camera2D" parent="."]
-current = true
 zoom = Vector2( 1.2, 1.2 )
 
 [node name="Shotgun_1" type="Node2D" parent="."]
@@ -140,3 +139,7 @@ rotation = -0.261799
 anims/Idle = SubResource( 7 )
 anims/RESET = SubResource( 8 )
 anims/Run = SubResource( 9 )
+
+[node name="Camera2D2" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.75, 0.75 )
