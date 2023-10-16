@@ -6,7 +6,6 @@ onready var archer = $Archer_Enemy
 
 
 
-
 func _ready():
 	
 	enemy.player = player
