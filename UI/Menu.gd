@@ -17,6 +17,7 @@ func _ready():
 
 
 func _on_Start_pressed():
+	Global.lives = Global.max_lives
 	get_tree().change_scene("res://Main Scenes/Main.tscn") # Replace with function body.
 
 
