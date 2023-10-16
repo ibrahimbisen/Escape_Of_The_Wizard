@@ -37,13 +37,13 @@ script = ExtResource( 1 )
 z_index = -1
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 860, 229 )
+position = Vector2( 546, 498 )
 
 [node name="Enemy" parent="." instance=ExtResource( 3 )]
-position = Vector2( 622, 201 )
+position = Vector2( 227, 161 )
 
 [node name="Archer_Enemy" parent="." instance=ExtResource( 4 )]
-position = Vector2( -64, 144 )
+position = Vector2( 59, -323 )
 scale = Vector2( 2, 2 )
 
 [node name="HUD" type="CanvasLayer" parent="."]
