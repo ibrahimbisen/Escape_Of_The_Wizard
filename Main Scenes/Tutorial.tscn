@@ -30,16 +30,10 @@ position = Vector2( 5263, 164 )
 scale = Vector2( 2, 2 )
 z_index = 1
 
-
-
 [node name="Extraction" parent="." instance=ExtResource( 6 )]
 position = Vector2( 6242, 31 )
 
 [node name="ALl Pictures" type="Sprite" parent="."]
-
-[node name="Extract" type="Sprite" parent="."]
-position = Vector2( 6070, -333 )
-texture = ExtResource( 10 )
 
 [node name="PressEnterToExtract" type="Sprite" parent="ALl Pictures"]
 position = Vector2( 6244, -118 )
@@ -61,5 +55,4 @@ texture = ExtResource( 8 )
 
 [node name="Wasd" type="Sprite" parent="ALl Pictures"]
 position = Vector2( 623, -208 )
-
 texture = ExtResource( 9 )
