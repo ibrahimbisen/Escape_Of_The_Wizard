@@ -1,19 +1,16 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Main Scenes/Tutorial.gd" type="Script" id=1]
 [ext_resource path="res://Map/Tutorial Map.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Characters/Archer_Enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Characters/Enemy.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Main Scenes/Extraction.gd" type="Script" id=6]
-[ext_resource path="res://Assets/Backround/Extract.png" type="Texture" id=7]
+[ext_resource path="res://Main Scenes/Extraction/Extraction.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Main Scenes/Tutorial Texts/shoot.png" type="Texture" id=8]
 [ext_resource path="res://Main Scenes/Tutorial Texts/WASD.png" type="Texture" id=9]
-[ext_resource path="res://Main Scenes/Tutorial Texts/extract.png" type="Texture" id=10]
 [ext_resource path="res://Main Scenes/Tutorial Texts/look around.png" type="Texture" id=11]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 130.5, 197.5 )
+[ext_resource path="res://Main Scenes/Tutorial Texts/run.png" type="Texture" id=12]
+[ext_resource path="res://Main Scenes/Tutorial Texts/press enter to extract.png" type="Texture" id=13]
 
 [node name="Tutorial" type="Node2D"]
 script = ExtResource( 1 )
@@ -21,7 +18,7 @@ script = ExtResource( 1 )
 [node name="Scene" parent="." instance=ExtResource( 2 )]
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
-position = Vector2( 472, 79 )
+position = Vector2( 237, 93 )
 z_index = 1
 
 [node name="Enemy" parent="." instance=ExtResource( 4 )]
@@ -30,40 +27,32 @@ z_index = 1
 
 [node name="Archer_Enemy" parent="." instance=ExtResource( 3 )]
 position = Vector2( 5263, 164 )
-scale = Vector2( 0.978666, 2.00279 )
+scale = Vector2( 2, 2 )
 z_index = 1
 
-[node name="Extract" type="Sprite" parent="."]
-position = Vector2( 6083, -522 )
-texture = ExtResource( 10 )
+[node name="Extraction" parent="." instance=ExtResource( 6 )]
+position = Vector2( 6242, 31 )
 
-[node name="LookAround" type="Sprite" parent="."]
+[node name="ALl Pictures" type="Sprite" parent="."]
+
+[node name="PressEnterToExtract" type="Sprite" parent="ALl Pictures"]
+position = Vector2( 6244, -118 )
+scale = Vector2( 0.597562, 0.648734 )
+texture = ExtResource( 13 )
+
+[node name="LookAround" type="Sprite" parent="ALl Pictures"]
 position = Vector2( 1772, -212 )
 texture = ExtResource( 11 )
 
-[node name="Shoot" type="Sprite" parent="."]
-position = Vector2( 3478, -217 )
+[node name="Run" type="Sprite" parent="ALl Pictures"]
+position = Vector2( 2665, -210 )
+scale = Vector2( 1.10896, 1.35417 )
+texture = ExtResource( 12 )
+
+[node name="Shoot" type="Sprite" parent="ALl Pictures"]
+position = Vector2( 4307, -219 )
 texture = ExtResource( 8 )
 
-[node name="Wasd" type="Sprite" parent="."]
+[node name="Wasd" type="Sprite" parent="ALl Pictures"]
 position = Vector2( 623, -208 )
 texture = ExtResource( 9 )
-
-[node name="Extraction" type="Area2D" parent="."]
-position = Vector2( 6244, 35 )
-script = ExtResource( 6 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Extraction"]
-position = Vector2( -1, -4 )
-shape = SubResource( 1 )
-
-[node name="ExtractionTimer" type="Timer" parent="Extraction"]
-wait_time = 5.0
-
-[node name="Sprite" type="Sprite" parent="Extraction"]
-position = Vector2( 0, -2 )
-texture = ExtResource( 7 )
-
-[connection signal="body_entered" from="Extraction" to="Extraction" method="_on_Extraction_body_entered"]
-[connection signal="body_exited" from="Extraction" to="Extraction" method="_on_Extraction_body_exited"]
-[connection signal="timeout" from="Extraction/ExtractionTimer" to="Extraction" method="_on_Timer_timeout"]
