@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Main Scenes/Extraction/Pop-up-timer.gd" type="Script" id=1]
+
+[node name="countdown" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="sec" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -235.0
+margin_top = 37.0
+margin_right = -190.0
+margin_bottom = 77.0
+text = "00"
+
+[node name="ms" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -20.0
+margin_right = 132.0
+margin_bottom = 40.0
+text = "00"
+
+[node name="dsec" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -121.0
+margin_top = 44.0
+margin_right = -81.0
+margin_bottom = 84.0
+text = "00"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

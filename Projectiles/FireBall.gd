@@ -2,7 +2,7 @@ extends Area2D
 class_name FireBall
 signal gone
 
-export (int) var speed = 30
+export (int) var speed = 23
 
 var direction := Vector2.ZERO
 var shotty = false
@@ -40,6 +40,6 @@ func _on_KillTimer_timeout():
 func _on_FireBall_body_entered(body):
 	if body.has_method("handle_hit"):
 		body.handle_hit()
-		queue_free()
-		emit_signal("gone")
+	queue_free()
+	emit_signal("gone")
 		
