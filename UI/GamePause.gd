@@ -24,7 +24,7 @@ func _unhandled_input(event):
 
 
 func _on_Menu_pressed():
-	get_tree().change_scene("res://Main Scenes/Main.tscn")
+	get_tree().change_scene("res://UI/Menu.tscn")
 
 
 func _on_Quit_pressed():
