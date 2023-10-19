@@ -21,6 +21,7 @@ size = 64
 font_data = ExtResource( 3 )
 
 [node name="Control" type="Control"]
+pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
 
@@ -30,6 +31,7 @@ margin_bottom = 600.0
 color = Color( 0.682353, 0.737255, 0.47451, 1 )
 
 [node name="Menu" type="VBoxContainer" parent="."]
+pause_mode = 2
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5

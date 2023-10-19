@@ -1,0 +1,19 @@
+{
+   "Bronze Shield": {
+   "ItemCategory": "Defense",
+   "StackSize": 1,
+   "Description": "The weakest shield"
+   },
+{
+   "WandR": {
+   "ItemCategory": "Weapon",
+   "StackSize": 1,
+   "Description": "The strongest weapon"
+   },
+{
+   "WandP": {
+   "ItemCategory": "Weapon",
+   "StackSize": 1,
+   "Description": "The weakest weapon"
+   }
+}
