@@ -9,7 +9,7 @@ func _input(event):
 	if event.is_action_pressed("Inventory"):
 		$Inventory.visible = !$Inventory.visible
 	if event.is_action_pressed("pause"):
-		$GamePause.visible = !$GamePause.visible
+		$GamePause.visible = true
 #func _process(delta):
 #	if Input.is_action_pressed("pause"):
 #		$Options.visible = !$Options.visible

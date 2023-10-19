@@ -15,16 +15,23 @@ margin_right = 32.0
 margin_bottom = 34.0
 script = ExtResource( 1 )
 
-[node name="Menu" type="Button" parent="Options"]
+[node name="Resume" type="Button" parent="Options"]
 margin_right = 64.0
 margin_bottom = 20.0
-text = "Menu"
+text = "Resume"
 
-[node name="Quit" type="Button" parent="Options"]
+[node name="Menu" type="Button" parent="Options"]
 margin_top = 24.0
 margin_right = 64.0
 margin_bottom = 44.0
+text = "Menu"
+
+[node name="Quit" type="Button" parent="Options"]
+margin_top = 48.0
+margin_right = 64.0
+margin_bottom = 68.0
 text = "Quit"
 
+[connection signal="pressed" from="Options/Resume" to="Options" method="_on_Resume_pressed"]
 [connection signal="pressed" from="Options/Menu" to="Options" method="_on_Menu_pressed"]
 [connection signal="pressed" from="Options/Quit" to="Options" method="_on_Quit_pressed"]

@@ -25,7 +25,14 @@ func _unhandled_input(event):
 
 func _on_Menu_pressed():
 	get_tree().change_scene("res://UI/Menu.tscn")
+	self.is_paused = !is_paused
 
 
 func _on_Quit_pressed():
 	get_tree().quit()
+
+
+func _on_Resume_pressed():
+	self.is_paused = !is_paused
+	get_tree().paused = false
+	
