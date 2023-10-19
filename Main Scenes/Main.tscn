@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Main Scenes/Main.gd" type="Script" id=1]
 [ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=2]
@@ -6,7 +6,11 @@
 [ext_resource path="res://Characters/Archer_Enemy.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Map/Testing Map.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Main Scenes/HUD.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/Maps/Main Map/Map Skeleton/Transparent/Map Skeleton 8k - WHITE.png" type="Texture" id=7]
 [ext_resource path="res://Main Scenes/Extraction/Extraction.tscn" type="PackedScene" id=12]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+light_mode = 1
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
@@ -28,3 +32,14 @@ scale = Vector2( 2, 2 )
 position = Vector2( 1020, -397 )
 
 [node name="HUD" parent="." instance=ExtResource( 6 )]
+
+[node name="Map Reference" type="CanvasLayer" parent="."]
+
+[node name="Map Skeleton" type="TextureRect" parent="Map Reference"]
+material = SubResource( 1 )
+margin_left = -6719.0
+margin_top = -6580.0
+margin_right = 9756.0
+margin_bottom = 7485.0
+texture = ExtResource( 7 )
+expand = true
