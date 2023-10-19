@@ -4,7 +4,7 @@
 [ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Characters/Enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Characters/Archer_Enemy.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Map/Testing Map.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Map/Game Map.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Main Scenes/HUD.tscn" type="PackedScene" id=6]
 [ext_resource path="res://UI/UI.gd" type="Script" id=7]
 [ext_resource path="res://UI/HotBar.tscn" type="PackedScene" id=8]
@@ -31,8 +31,7 @@ scale = Vector2( 2, 2 )
 pause_mode = 2
 visible = false
 
-[node name="Testing Map" parent="." instance=ExtResource( 5 )]
-z_index = -1
+[node name="Game Map" parent="." instance=ExtResource( 5 )]
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 546, 498 )
@@ -45,7 +44,7 @@ position = Vector2( 59, -323 )
 scale = Vector2( 2, 2 )
 
 [node name="Extraction" parent="." instance=ExtResource( 12 )]
-position = Vector2( 1020, -397 )
+position = Vector2( 840, 536 )
 collision_layer = 2
 collision_mask = 2
 
