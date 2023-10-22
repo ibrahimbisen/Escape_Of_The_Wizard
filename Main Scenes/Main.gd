@@ -1,5 +1,8 @@
 extends Node2D
 
+#Each time you make a new enemy instance, instantiate them by defining it as
+#a variable and then connecting it to the current player instance and
+#connect its signals to the main scene
 onready var player: Player = $Player
 onready var enemy = $Enemy
 onready var archer = $Archer_Enemy
