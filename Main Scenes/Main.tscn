@@ -33,15 +33,11 @@ visible = false
 
 [node name="Game Map" parent="." instance=ExtResource( 5 )]
 
-[node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 546, 498 )
-
 [node name="Enemy" parent="." instance=ExtResource( 3 )]
-position = Vector2( 227, 161 )
+position = Vector2( 307, 509 )
 
 [node name="Archer_Enemy" parent="." instance=ExtResource( 4 )]
 position = Vector2( 59, -323 )
-scale = Vector2( 2, 2 )
 
 [node name="Extraction" parent="." instance=ExtResource( 12 )]
 position = Vector2( 840, 536 )
@@ -49,3 +45,45 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="HUD" parent="." instance=ExtResource( 6 )]
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1395, 3122 )
+
+[node name="Archer_Enemy2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1744, 1314 )
+
+[node name="Archer_Enemy3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 955, 1448 )
+
+[node name="Archer_Enemy4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 869, 1574 )
+
+[node name="Archer_Enemy5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1353, 1386 )
+
+[node name="Archer_Enemy6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1123, 2114 )
+
+[node name="a_e_7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 649, 1689 )
+
+[node name="a_e_8" parent="." instance=ExtResource( 4 )]
+position = Vector2( 966, 2375 )
+
+[node name="a_e_9" parent="." instance=ExtResource( 4 )]
+position = Vector2( 754, 1914 )
+
+[node name="a_e_10" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1775, 3089 )
+
+[node name="a_e_11" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1111, 2812 )
+
+[node name="a_e_12" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2003, 2188 )
+
+[node name="a_e_13" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1479, 1978 )
+
+[node name="a_e_14" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2023, 2655 )

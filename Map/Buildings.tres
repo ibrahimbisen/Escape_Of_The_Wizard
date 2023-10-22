@@ -62,7 +62,7 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 outlines = [ PoolVector2Array( 2, 26, 63, 27, 61, 64, 0, 64 ) ]
 
 [sub_resource type="ConvexPolygonShape2D" id=13]
-points = PoolVector2Array( 2.0784, 1.97725, 62.0809, 1.97725, 61.6158, 21.2804, 2.31094, 21.513 )
+points = PoolVector2Array( 2.0784, 1.97725, 62.0809, 1.97725, 63, 24.25, 2, 23.25 )
 
 [sub_resource type="ConvexPolygonShape2D" id=14]
 points = PoolVector2Array( 2.31094, 1.23574, 33.0099, 1.23574, 32.7773, 22.1669, 2.31094, 21.4692 )

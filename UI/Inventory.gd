@@ -9,8 +9,6 @@ func _ready():
 		inv_slot.connect("gui_input", self, "slot_gui_input", [inv_slot])
 
 
-
-
 func slot_gui_input(event: InputEvent, slot: SlotClass):
 	if event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT && event.pressed:

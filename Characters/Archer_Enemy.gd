@@ -34,6 +34,8 @@ func _physics_process(delta):
 	# import player object for this to work, so it won't run by itself
 	# without main. Also, you must have both objects be of the same type
 	# KinematicBody2D for some reason
+	var for_calc = player.global_transform.origin - self.global_transform.origin
+	var dist = sqrt(for_calc.x * for_calc.x + for_calc.y * for_calc.y)
 	var space = get_world_2d().direct_space_state
 	var enemy_vision = space.intersect_ray(global_transform.origin,
 							player.global_transform.origin, see_thru)
@@ -46,10 +48,8 @@ func _physics_process(delta):
 			#$GunTimer.start()
 			#nav.set_target_location(target)
 
-			var for_calc = player.global_transform.origin - self.global_transform.origin
-			var dist = sqrt(for_calc.x * for_calc.x + for_calc.y * for_calc.y)
 			#print(dist, can_fire)
-			if ((dist < 1000) && (can_fire)):
+			if ((dist < 500) && (can_fire)):
 				#print(can_fire)
 				$GunTimer.start()
 				can_fire = false
@@ -72,7 +72,7 @@ func _physics_process(delta):
 
 
 func _on_GunTimer_timeout():
-	print("restart")
+	#print("restart")
 	can_fire = true
 	$GunTimer.stop()
 
