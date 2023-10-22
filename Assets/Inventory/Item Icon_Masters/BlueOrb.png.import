@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bronze Shield.png-8bd298248310ebb23cefaed7e4cc0f5b.stex"
+path="res://.import/BlueOrb.png-6e7d8672f49460e0f0f6600a52ba7429.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Inventory/item_icons/1x/Bronze Shield.png"
-dest_files=[ "res://.import/Bronze Shield.png-8bd298248310ebb23cefaed7e4cc0f5b.stex" ]
+source_file="res://Assets/Inventory/Item Icon_Masters/BlueOrb.png"
+dest_files=[ "res://.import/BlueOrb.png-6e7d8672f49460e0f0f6600a52ba7429.stex" ]
 
 [params]
 

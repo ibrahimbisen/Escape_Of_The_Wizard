@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Main Scenes/Main.gd" type="Script" id=1]
 [ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://UI/UI.gd" type="Script" id=7]
 [ext_resource path="res://UI/HotBar.tscn" type="PackedScene" id=8]
 [ext_resource path="res://UI/GamePause.tscn" type="PackedScene" id=9]
+[ext_resource path="res://UI/Inventory.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Main Scenes/Extraction/Extraction.tscn" type="PackedScene" id=12]
 
 [node name="Main" type="Node2D"]
@@ -18,14 +19,12 @@ script = ExtResource( 1 )
 pause_mode = 2
 script = ExtResource( 7 )
 
-[node name="Inventory" parent="UI" instance=ExtResource( 6 )]
-visible = false
-scale = Vector2( 2, 2 )
-transform = Transform2D( 2, 0, 0, 2, 0, 0 )
-
 [node name="HotBar" parent="UI" instance=ExtResource( 8 )]
 position = Vector2( -572, -639 )
 scale = Vector2( 2, 2 )
+
+[node name="Inventory" parent="UI" instance=ExtResource( 10 )]
+visible = false
 
 [node name="GamePause" parent="UI" instance=ExtResource( 9 )]
 pause_mode = 2
