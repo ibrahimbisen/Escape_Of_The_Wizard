@@ -35,3 +35,5 @@ func handle_enemy_bullet_spawned(bullet: EnemyShot, a_position: Vector2, directi
 #	bullet.get_node("Line2D").add_point(fire_to)
 #	bullet.cast_to = fire_to
 
+
+
