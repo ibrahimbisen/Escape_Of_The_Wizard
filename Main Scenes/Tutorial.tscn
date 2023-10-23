@@ -20,7 +20,7 @@ script = ExtResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
 light_mask = 3
-position = Vector2( 5998, 41 )
+position = Vector2( 184, 105 )
 z_index = 1
 
 [node name="Enemy" parent="." instance=ExtResource( 4 )]

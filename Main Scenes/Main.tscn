@@ -45,6 +45,7 @@ pause_mode = 2
 visible = false
 
 [node name="Game Map" parent="." instance=ExtResource( 5 )]
+<<<<<<< Updated upstream
 
 [node name="Enemy" parent="." instance=ExtResource( 3 )]
 position = Vector2( 307, 509 )
@@ -54,8 +55,31 @@ position = Vector2( 3704, 2265 )
 
 [node name="Extraction" parent="." instance=ExtResource( 12 )]
 position = Vector2( 840, 536 )
+=======
+visible = false
+
+[node name="Scene" parent="." instance=ExtResource( 14 )]
+scale = Vector2( 1.2, 1.2 )
+
+[node name="Extraction" parent="." instance=ExtResource( 12 )]
+position = Vector2( 1221, -480 )
+>>>>>>> Stashed changes
 collision_layer = 2
 collision_mask = 2
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 655, 600 )
+
+[node name="Camera2D3" type="Camera2D" parent="Player"]
+current = true
+zoom = Vector2( 0.8, 0.8 )
+
+[node name="Enemy" parent="." instance=ExtResource( 3 )]
+position = Vector2( 274, 197 )
+
+[node name="Archer_Enemy" parent="." instance=ExtResource( 4 )]
+position = Vector2( 251, -602 )
+scale = Vector2( 2, 2 )
 
 [node name="HUD" parent="." instance=ExtResource( 6 )]
 
@@ -218,7 +242,11 @@ margin_top = 16.0
 margin_right = 136.5
 margin_bottom = 126.0
 script = ExtResource( 11 )
+<<<<<<< Updated upstream
 minutes = 1
+=======
+seconds = 45
+>>>>>>> Stashed changes
 
 [node name="min" type="RichTextLabel" parent="HUD/Control"]
 anchor_left = 0.5

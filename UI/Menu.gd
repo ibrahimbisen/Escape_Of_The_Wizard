@@ -26,6 +26,7 @@ func _on_Quit_pressed():
 
 
 func _on_Tutorial_pressed():
+	Global.lives = Global.max_lives
 	get_tree().change_scene("res://Main Scenes/Tutorial.tscn")
 
 
