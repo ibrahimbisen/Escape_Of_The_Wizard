@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/WandB.png-050670b0ee865e1d63d06df16c52f02b.stex"
+path="res://.import/GreenOrb.png-d327146f827dbfdefbca5497949eec7d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Inventory/item_icons/1x/WandB.png"
-dest_files=[ "res://.import/WandB.png-050670b0ee865e1d63d06df16c52f02b.stex" ]
+source_file="res://Assets/Inventory/Item Icon_Masters/GreenOrb.png"
+dest_files=[ "res://.import/GreenOrb.png-d327146f827dbfdefbca5497949eec7d.stex" ]
 
 [params]
 
