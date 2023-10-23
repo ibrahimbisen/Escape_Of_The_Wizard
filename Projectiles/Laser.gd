@@ -11,8 +11,8 @@ func _ready():
 
 
 func _physics_process(delta):
-	print(cast_to)
-	print("%%%",$Line2D.points)
+	#print(cast_to)
+	#print("%%%",$Line2D.points)
 	force_raycast_update()
 	
 	if is_colliding():
@@ -20,7 +20,7 @@ func _physics_process(delta):
 		var collider = self.get_collider()
 		#$Line2D.points[1] = collider.global_position
 		if collider.has_method("handle_hit"):
-			print(collider)
+			#print(collider)
 			collider.handle_hit()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
