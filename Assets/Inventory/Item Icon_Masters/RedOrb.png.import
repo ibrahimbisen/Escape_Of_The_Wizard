@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/WandP.png-e7b889cf13b868dd4f8c4a5cda01ddc8.stex"
+path="res://.import/RedOrb.png-19843debea0a835685591749a0f21309.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Inventory/item_icons/1x/WandP.png"
-dest_files=[ "res://.import/WandP.png-e7b889cf13b868dd4f8c4a5cda01ddc8.stex" ]
+source_file="res://Assets/Inventory/Item Icon_Masters/RedOrb.png"
+dest_files=[ "res://.import/RedOrb.png-19843debea0a835685591749a0f21309.stex" ]
 
 [params]
 
