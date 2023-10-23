@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=7 format=2]
+[gd_resource type="TileSet" load_steps=8 format=2]
 
 [ext_resource path="res://Assets/Backround/TX Tileset Grass.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Backround/Other/graphics-tiles-waterflow.png" type="Texture" id=2]
@@ -14,6 +14,8 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 
 [sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
+
+[sub_resource type="AtlasTexture" id=5]
 
 [resource]
 resource_name = "Background"
@@ -84,3 +86,24 @@ resource_name = "Background"
 11/shape_one_way_margin = 0.0
 11/shapes = [  ]
 11/z_index = 0
+12/name = "TX Tileset Grass.png 12"
+12/texture = SubResource( 5 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 2, 131, 253, 56 )
+12/tile_mode = 2
+12/autotile/icon_coordinate = Vector2( 0, 0 )
+12/autotile/tile_size = Vector2( 32, 32 )
+12/autotile/spacing = 0
+12/autotile/occluder_map = [  ]
+12/autotile/navpoly_map = [  ]
+12/autotile/priority_map = [  ]
+12/autotile/z_index_map = [  ]
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape_one_way = false
+12/shape_one_way_margin = 0.0
+12/shapes = [  ]
+12/z_index = 0

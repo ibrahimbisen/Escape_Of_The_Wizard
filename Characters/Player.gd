@@ -5,6 +5,7 @@ class_name Player
 
 signal player_fired_bullet
 signal player_fired_laser
+signal player_switched_weapon
 
 export (PackedScene) var Fireball
 export (int) var speed = 300
@@ -15,10 +16,9 @@ onready var gunpoint = $GunDirection
 onready var magic_shot = $Magic_Shoot
 onready var animPlayer = $AnimationPlayer
 
+onready var inv_pos = 0
 
 var health: int = 100
-
-
 
 
 func _physics_process(delta):
@@ -52,11 +52,27 @@ func _physics_process(delta):
 	look_at(get_global_mouse_position())
 
 func _unhandled_input(event: InputEvent):
+	if event.is_action_released("swap_left"):
+		inv_pos -= 1
+		if inv_pos < 0:
+			inv_pos = 6
+		emit_signal("player_switched_weapon", inv_pos)
+		print(inv_pos)
+	if event.is_action_released("swap_right"):
+		inv_pos += 1
+		if inv_pos > 6:
+			inv_pos = 0
+		print(inv_pos)
+		emit_signal("player_switched_weapon", inv_pos)
 	if event.is_action_released("Shoot"):
-		Shoot()
-		#Shotgun()
-		#Explosive()
-		#Laser()
+		if inv_pos == 0:
+			Shoot()
+		elif inv_pos == 1:
+			Shotgun()
+		elif inv_pos == 2:
+			Explosive()
+		elif inv_pos == 3:
+			Laser()
 
 
 func Shoot():
@@ -67,7 +83,7 @@ func Shoot():
 
 func handle_hit():
 	health -= 20
-	print("player hit", health)
+	#print("player hit", health)
 	
 	# when player is hit, HUD updates with -1 heart
 	Global.lose_heart()
@@ -114,5 +130,6 @@ func Laser():
 	var laser_instance = laser.instance()
 	laser_instance.add_exception(self)
 	var direction = (gunpoint.global_transform.origin - end_of_gun.global_transform.origin).normalized()
+	#laser_instance.global_position = gunpoint.global_position
 	
 	emit_signal("player_fired_laser", laser_instance, gunpoint.global_position, direction)

@@ -2,7 +2,6 @@
 
 [ext_resource path="res://Projectiles/Laser.gd" type="Script" id=1]
 
-
 [node name="Laser" type="RayCast2D"]
 collision_mask = 8
 script = ExtResource( 1 )
