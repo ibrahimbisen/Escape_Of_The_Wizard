@@ -8,6 +8,7 @@ extends CanvasLayer
 func _input(event):
 	if event.is_action_pressed("Inventory"):
 		$Inventory.visible = !$Inventory.visible
+		$Inventory.initialize_inventory()
 	if event.is_action_pressed("pause"):
 		$GamePause.visible = true
 #func _process(delta):

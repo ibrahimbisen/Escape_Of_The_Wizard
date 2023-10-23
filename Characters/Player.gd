@@ -116,3 +116,12 @@ func Laser():
 	var direction = (gunpoint.global_transform.origin - end_of_gun.global_transform.origin).normalized()
 	
 	emit_signal("player_fired_laser", laser_instance, gunpoint.global_position, direction)
+
+
+
+func _input(event):
+	if event.is_action_pressed("pickup"):
+		if $PickupZone.items_in_range.size() > 0:
+			var pickup_item = $PickupZone.items_in_range.values()[0]
+			pickup_item.pick_up_item(self)
+			$PickupZone.items_in_range.erase(pickup_item)

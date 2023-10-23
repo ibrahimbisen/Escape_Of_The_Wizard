@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Main Scenes/Main.gd" type="Script" id=1]
 [ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://UI/HotBar.tscn" type="PackedScene" id=8]
 [ext_resource path="res://UI/GamePause.tscn" type="PackedScene" id=9]
 [ext_resource path="res://UI/Inventory.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Main Scenes/ItemDrop.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Main Scenes/Extraction/Extraction.tscn" type="PackedScene" id=12]
 
 [node name="Main" type="Node2D"]
@@ -48,3 +49,8 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="HUD" parent="." instance=ExtResource( 6 )]
+
+[node name="ItemDrop" parent="." instance=ExtResource( 11 )]
+position = Vector2( 619, 489 )
+collision_layer = 4
+collision_mask = 2

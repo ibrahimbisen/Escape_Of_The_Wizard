@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Characters/Player.gd" type="Script" id=1]
+[ext_resource path="res://Characters/PickupZone.gd" type="Script" id=2]
 [ext_resource path="res://Projectiles/FireBall.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/Audio/Shooting/shooting-star-2-104073.mp3" type="AudioStream" id=4]
 [ext_resource path="res://Assets/Character/wiz01 spritesheet v02.png" type="Texture" id=5]
@@ -93,9 +94,11 @@ tracks/1/keys = {
 "values": [ 0, 1, 2, 3 ]
 }
 
+[sub_resource type="CircleShape2D" id=10]
+radius = 31.5753
+
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( 56, 142 )
-collision_layer = 2
 collision_mask = 2
 script = ExtResource( 1 )
 Fireball = ExtResource( 3 )
@@ -143,3 +146,14 @@ anims/Run = SubResource( 9 )
 [node name="Camera2D2" type="Camera2D" parent="."]
 current = true
 zoom = Vector2( 1.2, 1.2 )
+
+[node name="PickupZone" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="PickupZone"]
+shape = SubResource( 10 )
+
+[connection signal="body_entered" from="PickupZone" to="PickupZone" method="_on_PickupZone_body_entered"]
+[connection signal="body_exited" from="PickupZone" to="PickupZone" method="_on_PickupZone_body_exited"]
