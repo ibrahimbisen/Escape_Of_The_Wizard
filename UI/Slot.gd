@@ -7,22 +7,38 @@ extends Panel
 
 var default_tex = preload("res://Assets/Inventory/item_slot_default_background.png")
 var empty_tex = preload("res://Assets/Inventory/item_slot_empty_background.png")
+var selected_tex = preload("res://Assets/Inventory/item_slot_selected_background.png")
+
 var default_style: StyleBoxTexture = null
 var empty_style: StyleBoxTexture = null
+var selected_style: StyleBoxTexture = null
 
 var ItemClass = preload("res://UI/Item.tscn")
 var item = null
-var slot_index# Called when the node enters the scene tree for the first time.
+var slot_index
+var slotType = null 
+
+enum SlotType {
+	HOTBAR = 0,
+	INVENTORY,
+}
+
+
+
 func _ready():
 	default_style = StyleBoxTexture.new()
 	empty_style = StyleBoxTexture.new()
+	selected_style = StyleBoxTexture.new()
 	default_style.texture = default_tex
 	empty_style.texture = empty_tex
+	selected_style.texture = selected_tex
 	
 	#if randi() % 2 == 0:
 	#	item = ItemClass.instance()
 	#	add_child(item)
 func refresh_style():
+	if SlotType.HOTBAR == slotType and PlayerInventory.active_item_slot == slot_index:
+		set('custome_styles/panel', empty_style)
 	if item == null:
 		set('custome_styles/panel', empty_style)
 	else:

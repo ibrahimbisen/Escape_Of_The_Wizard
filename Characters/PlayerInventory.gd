@@ -1,15 +1,36 @@
 extends Node
 
+signal active_item_updated
+
 const SlotClass = preload("res://UI/Slot.gd")
 const ItemClass = preload("res://UI/Item.gd")
 const NUM_INVENTORY_SLOTS = 20
+const NUM_HOTBAR_SLOTS = 9
+
+var active_item_slot = 0
+
 var inventory = {
 	0: ["BlueOrb", 10],  #--> slot_index: [item_name, item_quantity]
 	1: ["RedOrb", 10], #--> slot_index: [item_name, item_quantity]
 	2: ["GreenOrb", 10],
 	3: ["RedOrb", 10], 
-	4: ["GreenOrb", 10],
+	4: ["BlueOrb", 10],
+	5: ["RedOrb", 10], #--> slot_index: [item_name, item_quantity]
+	6: ["GreenOrb", 10],
+	7: ["BlueOrb", 10], 
+	8: ["GreenOrb", 10],
 	
+}
+var hotbar = {
+	0: ["BlueOrb", 10],  #--> slot_index: [item_name, item_quantity]
+	1: ["RedOrb", 10], #--> slot_index: [item_name, item_quantity]
+	2: ["GreenOrb", 10],
+	3: ["RedOrb", 10], 
+	4: ["BlueOrb", 10],
+	5: ["RedOrb", 10], #--> slot_index: [item_name, item_quantity]
+	6: ["GreenOrb", 10],
+	7: ["BlueOrb", 10], 
+	8: ["GreenOrb", 10],
 }
 func add_item(item_name, item_quantity):
 	for item in inventory:
@@ -18,6 +39,7 @@ func add_item(item_name, item_quantity):
 			var able_to_add = stack_size - inventory[item][1]
 			if able_to_add >= item_quantity:
 				inventory[item][1] += item_quantity
+				
 				return
 			else:
 				inventory[item][1] += able_to_add
@@ -37,6 +59,14 @@ func _ready():
 
 func remove_item(slot: SlotClass):		
 	inventory.erase(slot.slot_index)	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+### Hotbar Related Functions
+func active_item_scroll_up() -> void:
+	active_item_slot = (active_item_slot + 1) % NUM_HOTBAR_SLOTS
+	emit_signal("active_item_updated")
+
+func active_item_scroll_down() -> void:
+	if active_item_slot == 0:
+		active_item_slot = NUM_HOTBAR_SLOTS - 1
+	else:
+		active_item_slot -= 1
+	emit_signal("active_item_updated")
