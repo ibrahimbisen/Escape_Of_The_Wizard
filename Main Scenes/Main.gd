@@ -198,3 +198,5 @@ func handle_laser_spawned(bullet: Laser, a_position: Vector2, direction: Vector2
 	bullet.get_node("Line2D").add_point(Vector2(0,0))
 	bullet.get_node("Line2D").add_point(fire_to-a_position)
 
+
+
