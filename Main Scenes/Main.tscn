@@ -1,4 +1,7 @@
+
 [gd_scene load_steps=15 format=2]
+
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Main Scenes/Main.gd" type="Script" id=1]
 [ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=2]
@@ -10,10 +13,27 @@
 [ext_resource path="res://UI/HotBar.tscn" type="PackedScene" id=8]
 [ext_resource path="res://UI/GamePause.tscn" type="PackedScene" id=9]
 [ext_resource path="res://UI/Inventory.tscn" type="PackedScene" id=10]
+
 [ext_resource path="res://Main Scenes/Blue_Ammo.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Main Scenes/Extraction/Extraction.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Main Scenes/Green_Ammo.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Main Scenes/Red_Ammo.tscn" type="PackedScene" id=14]
+
+[ext_resource path="res://Main Scenes/Countdown.gd" type="Script" id=11]
+[ext_resource path="res://Main Scenes/Extraction/Extraction.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Assets/Fonts/alagard_font/alagard.ttf" type="DynamicFontData" id=13]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+font_data = ExtResource( 13 )
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
@@ -206,3 +226,50 @@ position = Vector2( 3999, 2088 )
 
 [node name="a_e_50" parent="." instance=ExtResource( 4 )]
 position = Vector2( 3508, 1751 )
+
+
+[node name="Control" type="Control" parent="HUD"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -136.5
+margin_top = 16.0
+margin_right = 136.5
+margin_bottom = 126.0
+script = ExtResource( 11 )
+minutes = 1
+
+[node name="min" type="RichTextLabel" parent="HUD/Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -76.5
+margin_right = -26.5
+margin_bottom = 100.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "00"
+fit_content_height = true
+
+[node name="sec" type="RichTextLabel" parent="HUD/Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -20.0
+margin_right = 30.0
+margin_bottom = 100.0
+custom_fonts/normal_font = SubResource( 2 )
+text = "00"
+
+[node name="dsec" type="RichTextLabel" parent="HUD/Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 36.5
+margin_right = 86.5
+margin_bottom = 100.0
+custom_fonts/normal_font = SubResource( 3 )
+text = "00"
+
+[node name="Timer" type="Timer" parent="HUD/Control"]
+process_mode = 0
+wait_time = 0.1
+autostart = true
+
+[connection signal="timeout" from="HUD/Control/Timer" to="HUD/Control" method="_on_Timer_timeout"]
+
