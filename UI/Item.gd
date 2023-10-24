@@ -30,4 +30,4 @@ func decrease_item_quantity(amount_to_remove):
 func set_item(nm, qt):
 	item_name = nm
 	item_quantity = qt
-	$TextureRect.texture = load("res://item_icons/" + item_name + ".png")
+	$TextureRect.texture = load("res://Assets/Inventory/item_icons/" + item_name + ".png")
