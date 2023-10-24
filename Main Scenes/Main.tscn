@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Main Scenes/Main.gd" type="Script" id=1]
 [ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=2]
@@ -10,7 +10,10 @@
 [ext_resource path="res://UI/HotBar.tscn" type="PackedScene" id=8]
 [ext_resource path="res://UI/GamePause.tscn" type="PackedScene" id=9]
 [ext_resource path="res://UI/Inventory.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Main Scenes/Blue_Ammo.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Main Scenes/Extraction/Extraction.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Main Scenes/Green_Ammo.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Main Scenes/Red_Ammo.tscn" type="PackedScene" id=14]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
@@ -46,7 +49,16 @@ collision_mask = 2
 [node name="HUD" parent="." instance=ExtResource( 6 )]
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 3258, 3061 )
+position = Vector2( 3542, 3054 )
+
+[node name="Red_Ammo" parent="." instance=ExtResource( 14 )]
+position = Vector2( 3157, 3043 )
+
+[node name="Green_Ammo" parent="." instance=ExtResource( 13 )]
+position = Vector2( 3297, 3033 )
+
+[node name="Blue_Ammo" parent="." instance=ExtResource( 11 )]
+position = Vector2( 3278, 3083 )
 
 [node name="Archer_Enemy2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1744, 1314 )

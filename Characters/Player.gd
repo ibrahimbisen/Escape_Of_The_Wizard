@@ -18,6 +18,9 @@ onready var animPlayer = $AnimationPlayer
 
 onready var inv_pos = 0
 
+var ammo_blue = 0
+var ammo_green = 0
+var ammo_red = 11
 var health: int = 100
 
 
@@ -65,13 +68,17 @@ func _unhandled_input(event: InputEvent):
 		print(inv_pos)
 		emit_signal("player_switched_weapon", inv_pos)
 	if event.is_action_released("Shoot"):
-		if inv_pos == 0:
+		if inv_pos == 0 && ammo_red > 0:
+			ammo_red -= 1
 			Shoot()
-		elif inv_pos == 1:
+		elif inv_pos == 1 && ammo_red > 3:
+			ammo_red -= 4
 			Shotgun()
-		elif inv_pos == 2:
+		elif inv_pos == 2 && ammo_green > 0:
+			ammo_green -= 1
 			Explosive()
-		elif inv_pos == 3:
+		elif inv_pos == 3 && ammo_blue > 0:
+			ammo_blue -= 1
 			Laser()
 
 
