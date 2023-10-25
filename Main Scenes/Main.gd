@@ -8,6 +8,8 @@ onready var green1 = $Green_Ammo
 onready var red1 = $Red_Ammo
 
 onready var player: Player = $Player
+onready var blue = $BlueAmmo
+
 onready var enemy = $Enemy
 onready var archer = $Archer_Enemy
 onready var enemy1 = $Archer_Enemy2
@@ -119,7 +121,8 @@ func _ready():
 	
 	player.connect("player_fired_bullet", self, "handle_bullet_spawned")
 	player.connect("player_fired_laser", self, "handle_laser_spawned")
-	player.connect("player_switched_weapon", self, "handle_switched_weapon")
+	
+	blue.connect("picked_up", self, "handle_pick_up")
 	
 	blue1.connect("pick_up", self, "handle_bullet_pickup")
 	green1.connect("pick_up", self, "handle_bullet_pickup")
@@ -189,6 +192,7 @@ func handle_enemy_bullet_spawned(bullet: EnemyShot, a_position: Vector2, directi
 	bullet.set_direction(direction)
 
 
+<<<<<<< Updated upstream:Main Scenes/Main.gd
 func handle_bullet_pickup(type: int):
 	if type == 3:
 		player.ammo_blue += 5
@@ -200,6 +204,12 @@ func handle_bullet_pickup(type: int):
 
 func handle_switched_weapon(weapon: int):
 	pass
+=======
+func handle_pick_up(ammo: int):
+	if ammo == 3:
+		player.ammoBlue += 5
+
+>>>>>>> Stashed changes:Main Scenes/Level 1.gd
 
 func handle_laser_spawned(bullet: Laser, a_position: Vector2, direction: Vector2):
 	add_child(bullet)

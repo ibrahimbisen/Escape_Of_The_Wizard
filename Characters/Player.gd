@@ -5,7 +5,6 @@ class_name Player
 
 signal player_fired_bullet
 signal player_fired_laser
-signal player_switched_weapon
 
 export (PackedScene) var Fireball
 export (int) var speed = 300
@@ -16,6 +15,7 @@ onready var gunpoint = $GunDirection
 onready var magic_shot = $Magic_Shoot
 onready var animPlayer = $AnimationPlayer
 
+var ammoBlue = 0
 onready var inv_pos = 0
 
 var ammo_blue = 0
@@ -57,22 +57,31 @@ func _physics_process(delta):
 func _unhandled_input(event: InputEvent):
 	if event.is_action_released("swap_left"):
 		inv_pos -= 1
+<<<<<<< Updated upstream
 		if inv_pos < 0:
 			inv_pos = 6
 		emit_signal("player_switched_weapon", inv_pos)
+=======
+		if inv_pos <= 0:
+			inv_pos = 3
+>>>>>>> Stashed changes
 		print(inv_pos)
 	if event.is_action_released("swap_right"):
 		inv_pos += 1
 		if inv_pos > 6:
 			inv_pos = 0
 		print(inv_pos)
-		emit_signal("player_switched_weapon", inv_pos)
 	if event.is_action_released("Shoot"):
 		if inv_pos == 0 && ammo_red > 0:
 			ammo_red -= 1
 			Shoot()
+<<<<<<< Updated upstream
 		elif inv_pos == 1 && ammo_red > 3:
 			ammo_red -= 4
+=======
+		elif inv_pos == 1 && ammoBlue > 0:
+			ammoBlue -= 1
+>>>>>>> Stashed changes
 			Shotgun()
 		elif inv_pos == 2 && ammo_green > 0:
 			ammo_green -= 1
