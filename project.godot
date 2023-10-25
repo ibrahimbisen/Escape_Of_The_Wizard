@@ -14,11 +14,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Characters/Archer_Enemy.gd"
 }, {
-"base": "Area2D",
-"class": "Blue_Ammo",
-"language": "GDScript",
-"path": "res://Area2D.gd"
-}, {
 "base": "KinematicBody2D",
 "class": "Enemy",
 "language": "GDScript",
@@ -51,7 +46,6 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Archer_Enemy": "",
-"Blue_Ammo": "",
 "Enemy": "",
 "EnemyShot": "",
 "Explosive": "",

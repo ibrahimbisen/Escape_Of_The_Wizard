@@ -4,6 +4,6 @@
 [ext_resource path="res://Projectiles/EnemyShot.gd" type="Script" id=2]
 
 [node name="EnemyShot" instance=ExtResource( 1 )]
-collision_layer = 0
+collision_layer = 2
 collision_mask = 2
 script = ExtResource( 2 )

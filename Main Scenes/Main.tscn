@@ -1,6 +1,5 @@
 [gd_scene load_steps=16 format=2]
 
-
 [ext_resource path="res://Main Scenes/Main.gd" type="Script" id=1]
 [ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Characters/Enemy.tscn" type="PackedScene" id=3]
@@ -10,14 +9,6 @@
 [ext_resource path="res://UI/UI.gd" type="Script" id=7]
 [ext_resource path="res://UI/Hotbar.tscn" type="PackedScene" id=8]
 [ext_resource path="res://UI/GamePause.tscn" type="PackedScene" id=9]
-
-[ext_resource path="res://UI/Inventory.tscn" type="PackedScene" id=10]
-
-[ext_resource path="res://Main Scenes/Blue_Ammo.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Main Scenes/Extraction/Extraction.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Main Scenes/Green_Ammo.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Main Scenes/Red_Ammo.tscn" type="PackedScene" id=14]
-
 [ext_resource path="res://Main Scenes/Countdown.gd" type="Script" id=11]
 [ext_resource path="res://Main Scenes/Extraction/Extraction.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Assets/Fonts/alagard_font/alagard.ttf" type="DynamicFontData" id=13]
@@ -107,16 +98,7 @@ wait_time = 0.1
 autostart = true
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 3542, 3054 )
-
-[node name="Red_Ammo" parent="." instance=ExtResource( 14 )]
-position = Vector2( 3157, 3043 )
-
-[node name="Green_Ammo" parent="." instance=ExtResource( 13 )]
-position = Vector2( 3297, 3033 )
-
-[node name="Blue_Ammo" parent="." instance=ExtResource( 11 )]
-position = Vector2( 3278, 3083 )
+position = Vector2( 3258, 3061 )
 
 [node name="Archer_Enemy2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1744, 1314 )

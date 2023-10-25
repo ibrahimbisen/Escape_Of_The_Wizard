@@ -3,10 +3,6 @@ extends Node2D
 #Each time you make a new enemy instance, instantiate them by defining it as
 #a variable and then connecting it to the current player instance and
 #connect its signals to the main scene
-onready var blue1 = $Blue_Ammo
-onready var green1 = $Green_Ammo
-onready var red1 = $Red_Ammo
-
 onready var player: Player = $Player
 onready var enemy = $Enemy
 onready var archer = $Archer_Enemy
@@ -64,7 +60,7 @@ var EnemyArray = Array()
 
 
 func _ready():
-	#get_tree().call_group("archers", "init_player")
+	get_tree().call_group("archers", "init_player")
 	enemy.player = player
 	archer.player = player
 	enemy1.player = player
@@ -120,10 +116,6 @@ func _ready():
 	player.connect("player_fired_bullet", self, "handle_bullet_spawned")
 	player.connect("player_fired_laser", self, "handle_laser_spawned")
 	player.connect("player_switched_weapon", self, "handle_switched_weapon")
-	
-	blue1.connect("pick_up", self, "handle_bullet_pickup")
-	green1.connect("pick_up", self, "handle_bullet_pickup")
-	red1.connect("pick_up", self, "handle_bullet_pickup")
 	
 	archer.connect("shoot", self, "handle_enemy_bullet_spawned")
 	enemy1.connect("shoot", self, "handle_enemy_bullet_spawned")
@@ -187,15 +179,6 @@ func handle_enemy_bullet_spawned(bullet: EnemyShot, a_position: Vector2, directi
 	add_child(bullet)
 	bullet.global_position = a_position
 	bullet.set_direction(direction)
-
-
-func handle_bullet_pickup(type: int):
-	if type == 3:
-		player.ammo_blue += 5
-	elif type == 2:
-		player.ammo_green += 5
-	elif type == 1:
-		player.ammo_red += 15
 
 
 func handle_switched_weapon(weapon: int):
