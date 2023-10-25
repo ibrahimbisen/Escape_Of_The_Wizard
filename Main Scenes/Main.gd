@@ -192,24 +192,13 @@ func handle_enemy_bullet_spawned(bullet: EnemyShot, a_position: Vector2, directi
 	bullet.set_direction(direction)
 
 
-<<<<<<< Updated upstream:Main Scenes/Main.gd
-func handle_bullet_pickup(type: int):
-	if type == 3:
-		player.ammo_blue += 5
-	elif type == 2:
-		player.ammo_green += 5
-	elif type == 1:
-		player.ammo_red += 15
-
-
 func handle_switched_weapon(weapon: int):
 	pass
-=======
+
 func handle_pick_up(ammo: int):
 	if ammo == 3:
 		player.ammoBlue += 5
 
->>>>>>> Stashed changes:Main Scenes/Level 1.gd
 
 func handle_laser_spawned(bullet: Laser, a_position: Vector2, direction: Vector2):
 	add_child(bullet)
