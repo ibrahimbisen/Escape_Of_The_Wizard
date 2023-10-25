@@ -8,14 +8,13 @@ const ItemClass = preload("res://UI/Item.gd")
 const NUM_HOTBAR_SLOTS = 3
 
 var active_item_slot = 0
-var inactive_item_slot = active_item_slot -1
+
 
 var hotbar = {
 	0: ["RedOrb", 10],
 	1: ["BlueOrb", 10],
 	2: ["GreenOrb", 10],
 }
-
 
 
 # TODO: First try to add to hotbar
@@ -39,12 +38,11 @@ func add_item(item_name, item_quantity):
 
 # TODO: Make compatible with hotbar as well
 func update_slot_visual(slot_index, item_name, new_quantity):
-	var slot = get_tree().root.get_node("/root/World/UI/HotBar/HotbarSlots/Slot" + str(slot_index + 1))
+	var slot = get_tree().root.get_node("/root/Main/UI/Hotbar/HotbarSlots/Slot" + str(slot_index + 1))
 	if slot.item != null:
 		slot.item.set_item(item_name, new_quantity)
 	else:
 		slot.initialize_item(item_name, new_quantity)
-
 
 ###
 ### Hotbar Related Functions

@@ -12,8 +12,11 @@ var item = null
 var slot_index
 
 enum SlotType {
-	HOTBAR
+	HOTBAR = 0,
+	INVENTORY,
 }
+var slotType = null
+
 func _ready():
 	default_style = StyleBoxTexture.new()
 	empty_style = StyleBoxTexture.new()
@@ -24,10 +27,13 @@ func _ready():
 	refresh_style()
 	
 func refresh_style():
-	if PlayerInventory.active_item_slot == slot_index:
+	
+	if slotType == SlotType.HOTBAR and PlayerInventory.active_item_slot == slot_index:
 		set('custom_styles/panel', selected_style)
+	elif item == null:
+		set('custom_styles/panel', empty_style)
 	else:
-		set('custome_styles/panel', default_style)
+		set('custom_styles/panel', default_style)
 	
 func initialize_item(item_name, item_quantity):
 	if item == null:
