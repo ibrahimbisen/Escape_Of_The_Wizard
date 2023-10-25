@@ -1,4 +1,8 @@
+
 [gd_scene load_steps=16 format=2]
+
+#[gd_scene load_steps=17 format=2]
+
 
 [ext_resource path="res://Assets/Fonts/alagard_font/alagard.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/GamePause.tscn" type="PackedScene" id=2]
@@ -12,6 +16,8 @@
 [ext_resource path="res://Main Scenes/Level 1.gd" type="Script" id=10]
 [ext_resource path="res://Main Scenes/Countdown.gd" type="Script" id=11]
 [ext_resource path="res://UI/UI.gd" type="Script" id=12]
+
+[ext_resource path="res://Projectiles/BlueAmmo.tscn" type="PackedScene" id=13]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -45,10 +51,12 @@ position = Vector2( 389, -201 )
 position = Vector2( 1614, -1587 )
 
 [node name="Archer_Enemy" parent="." instance=ExtResource( 3 )]
+
 position = Vector2( 6622, 349 )
 
 [node name="Extraction" parent="." instance=ExtResource( 7 )]
 position = Vector2( 5159, 371 )
+
 collision_layer = 2
 collision_mask = 2
 
@@ -98,6 +106,7 @@ wait_time = 0.1
 autostart = true
 
 [node name="Player" parent="." instance=ExtResource( 9 )]
+
 position = Vector2( 1552, 734 )
 
 [node name="Archer_Enemy3" parent="." instance=ExtResource( 3 )]
@@ -175,16 +184,20 @@ position = Vector2( 5985, -1245 )
 [node name="a_e_26" parent="." instance=ExtResource( 3 )]
 position = Vector2( 7180, 98 )
 
+
 [node name="a_e_27" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1837, 344 )
 
 [node name="a_e_28" parent="." instance=ExtResource( 3 )]
+
 position = Vector2( 6899, -316 )
+
 
 [node name="a_e_29" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1866, 612 )
 
 [node name="a_e_30" parent="." instance=ExtResource( 3 )]
+
 position = Vector2( 6698, -88 )
 
 [node name="a_e_31" parent="." instance=ExtResource( 3 )]
@@ -246,5 +259,6 @@ position = Vector2( 8009, -685 )
 
 [node name="a_e_50" parent="." instance=ExtResource( 3 )]
 position = Vector2( 7518, -1022 )
+
 
 [connection signal="timeout" from="HUD/Control/Timer" to="HUD/Control" method="_on_Timer_timeout"]

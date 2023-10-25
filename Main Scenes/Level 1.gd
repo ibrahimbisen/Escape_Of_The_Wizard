@@ -4,6 +4,8 @@ extends Node2D
 #a variable and then connecting it to the current player instance and
 #connect its signals to the main scene
 onready var player: Player = $Player
+onready var blue = $BlueAmmo
+
 onready var enemy = $Enemy
 onready var archer = $Archer_Enemy
 onready var enemy1 = $Archer_Enemy2
@@ -115,7 +117,8 @@ func _ready():
 	
 	player.connect("player_fired_bullet", self, "handle_bullet_spawned")
 	player.connect("player_fired_laser", self, "handle_laser_spawned")
-	player.connect("player_switched_weapon", self, "handle_switched_weapon")
+	
+	blue.connect("picked_up", self, "handle_pick_up")
 	
 	archer.connect("shoot", self, "handle_enemy_bullet_spawned")
 	enemy1.connect("shoot", self, "handle_enemy_bullet_spawned")
@@ -183,6 +186,11 @@ func handle_enemy_bullet_spawned(bullet: EnemyShot, a_position: Vector2, directi
 
 func handle_switched_weapon(weapon: int):
 	pass
+
+func handle_pick_up(ammo: int):
+	if ammo == 3:
+		player.ammoBlue += 5
+
 
 func handle_laser_spawned(bullet: Laser, a_position: Vector2, direction: Vector2):
 	add_child(bullet)

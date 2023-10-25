@@ -5,7 +5,6 @@ class_name Player
 
 signal player_fired_bullet
 signal player_fired_laser
-signal player_switched_weapon
 
 export (PackedScene) var Fireball
 export (int) var speed = 300
@@ -16,6 +15,7 @@ onready var gunpoint = $GunDirection
 onready var magic_shot = $Magic_Shoot
 onready var animPlayer = $AnimationPlayer
 
+var ammoBlue = 0
 onready var inv_pos = 0
 
 var health: int = 100
@@ -56,18 +56,20 @@ func _unhandled_input(event: InputEvent):
 		inv_pos -= 1
 		if inv_pos <= 0:
 			inv_pos = 3
-		emit_signal("player_switched_weapon", inv_pos)
 		print(inv_pos)
+
 	if event.is_action_released("scroll_down"):
 		inv_pos += 1
 		if inv_pos >= 3:
 			inv_pos = 0
 		print(inv_pos)
-		emit_signal("player_switched_weapon", inv_pos)
 	if event.is_action_released("Shoot"):
 		if inv_pos == 0:
 			Shoot()
-		elif inv_pos == 1:
+
+		elif inv_pos == 1 && ammo_red > 3:
+			ammo_red -= 4
+
 			Shotgun()
 		elif inv_pos == 2:
 			Explosive()
