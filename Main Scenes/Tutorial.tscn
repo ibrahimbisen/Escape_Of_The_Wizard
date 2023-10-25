@@ -29,6 +29,7 @@ z_index = 1
 
 [node name="Archer_Enemy" parent="." instance=ExtResource( 3 )]
 position = Vector2( 5263, 164 )
+scale = Vector2( 2, 2 )
 z_index = 1
 
 [node name="Extraction" parent="." instance=ExtResource( 6 )]
