@@ -2,8 +2,8 @@ extends KinematicBody2D
 onready var animPlayer = $AnimationPlayer
 
 class_name Enemy
-var health: int = 100
-var speed = 40
+var health: int = 30
+var speed = 50
 var direction = Vector2.ZERO
 var target
 onready var player

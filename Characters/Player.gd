@@ -52,15 +52,15 @@ func _physics_process(delta):
 	look_at(get_global_mouse_position())
 
 func _unhandled_input(event: InputEvent):
-	if event.is_action_released("swap_left"):
+	if event.is_action_released("scroll_up"):
 		inv_pos -= 1
-		if inv_pos < 0:
-			inv_pos = 6
+		if inv_pos <= 0:
+			inv_pos = 3
 		emit_signal("player_switched_weapon", inv_pos)
 		print(inv_pos)
-	if event.is_action_released("swap_right"):
+	if event.is_action_released("scroll_down"):
 		inv_pos += 1
-		if inv_pos > 6:
+		if inv_pos >= 3:
 			inv_pos = 0
 		print(inv_pos)
 		emit_signal("player_switched_weapon", inv_pos)
