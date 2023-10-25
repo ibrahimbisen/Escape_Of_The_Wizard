@@ -10,4 +10,4 @@ func lose_heart():
 	hud.load_hearts()
 	
 	if lives <= 0:
-		return get_tree().change_scene("res://Main Scenes/GameOver.tscn")
+		get_tree().change_scene("res://Main Scenes/GameOver.tscn")
