@@ -99,7 +99,6 @@ margin_bottom = 40.0
 rect_min_size = Vector2( 18, 18 )
 rect_pivot_offset = Vector2( 9, 9 )
 custom_styles/panel = SubResource( 1 )
-script = ExtResource( 3 )
 
 [node name="Slot9" type="Panel" parent="GridContainer"]
 margin_left = 66.0
