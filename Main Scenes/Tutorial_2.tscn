@@ -1,0 +1,109 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Assets/Fonts/alagard_font/alagard.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://UI/GamePause.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Characters/Archer_Enemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://UI/Hotbar.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Map/Tutorial Map.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Characters/Enemy.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Main Scenes/Extraction/Extraction.tscn" type="PackedScene" id=7]
+[ext_resource path="res://UI/HUD.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Main Scenes/Tutorial_2.gd" type="Script" id=10]
+[ext_resource path="res://Main Scenes/Countdown.gd" type="Script" id=11]
+[ext_resource path="res://UI/UI.gd" type="Script" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+font_data = ExtResource( 1 )
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 10 )
+
+[node name="Scene" parent="." instance=ExtResource( 5 )]
+
+[node name="UI" type="CanvasLayer" parent="."]
+pause_mode = 2
+script = ExtResource( 12 )
+
+[node name="GamePause" parent="UI" instance=ExtResource( 2 )]
+pause_mode = 2
+visible = false
+
+[node name="Hotbar" parent="UI" instance=ExtResource( 4 )]
+position = Vector2( 389, -201 )
+
+[node name="Extraction" parent="." instance=ExtResource( 7 )]
+position = Vector2( 6246, 101 )
+collision_layer = 2
+collision_mask = 2
+
+[node name="Player" parent="." instance=ExtResource( 9 )]
+position = Vector2( 296, 91 )
+
+[node name="HUD" parent="." instance=ExtResource( 8 )]
+
+[node name="Control" type="Control" parent="HUD"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -136.5
+margin_top = 16.0
+margin_right = 136.5
+margin_bottom = 126.0
+script = ExtResource( 11 )
+minutes = 1
+
+[node name="min" type="RichTextLabel" parent="HUD/Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -76.5
+margin_right = -26.5
+margin_bottom = 100.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "00"
+fit_content_height = true
+
+[node name="sec" type="RichTextLabel" parent="HUD/Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -20.0
+margin_right = 30.0
+margin_bottom = 100.0
+custom_fonts/normal_font = SubResource( 2 )
+text = "00"
+
+[node name="dsec" type="RichTextLabel" parent="HUD/Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 36.5
+margin_right = 86.5
+margin_bottom = 100.0
+custom_fonts/normal_font = SubResource( 3 )
+text = "00"
+
+[node name="Timer" type="Timer" parent="HUD/Control"]
+process_mode = 0
+wait_time = 0.1
+autostart = true
+
+[node name="Enemy" parent="." instance=ExtResource( 6 )]
+position = Vector2( 3791, 55 )
+
+[node name="Archer_Enemy" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5116, 27 )
+
+[node name="Archer_Enemy3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5417, 182 )
+
+[node name="Archer_Enemy2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5827, 30 )
+
+[connection signal="timeout" from="HUD/Control/Timer" to="HUD/Control" method="_on_Timer_timeout"]

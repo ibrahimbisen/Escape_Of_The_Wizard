@@ -64,12 +64,13 @@ func _unhandled_input(event: InputEvent):
 			inv_pos = 0
 		print(inv_pos)
 	if event.is_action_released("Shoot"):
-		if inv_pos == 0:
+		if inv_pos == 0 && ammoBlue > 1:
+			ammoBlue -= 1
+			
 			Shoot()
 
-		elif inv_pos == 1 && ammo_red > 3:
-			ammo_red -= 4
-
+		elif inv_pos == 1 && ammoBlue > 3:
+			ammoBlue -= 4
 			Shotgun()
 		elif inv_pos == 2:
 			Explosive()
