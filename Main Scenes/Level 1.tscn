@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Assets/Fonts/alagard_font/alagard.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/GamePause.tscn" type="PackedScene" id=2]
@@ -12,6 +12,9 @@
 [ext_resource path="res://Main Scenes/Level 1.gd" type="Script" id=10]
 [ext_resource path="res://Main Scenes/Countdown.gd" type="Script" id=11]
 [ext_resource path="res://UI/UI.gd" type="Script" id=12]
+[ext_resource path="res://Projectiles/BlueAmmo.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Projectiles/RedAmmo.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Projectiles/GreenAmmo.tscn" type="PackedScene" id=15]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -29,6 +32,15 @@ font_data = ExtResource( 1 )
 script = ExtResource( 10 )
 
 [node name="Scene" parent="." instance=ExtResource( 5 )]
+
+[node name="BlueAmmo" parent="." instance=ExtResource( 13 )]
+position = Vector2( 424, 646 )
+
+[node name="GreenAmmo" parent="." instance=ExtResource( 15 )]
+position = Vector2( 260, 570 )
+
+[node name="RedAmmo" parent="." instance=ExtResource( 14 )]
+position = Vector2( 202, 704 )
 
 [node name="UI" type="CanvasLayer" parent="."]
 pause_mode = 2
