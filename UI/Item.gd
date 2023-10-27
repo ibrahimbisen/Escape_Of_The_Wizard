@@ -10,7 +10,7 @@ func _ready():
 		item_name = "RedOrb"
 	elif rand_val == 1:
 		item_name = "BlueOrb"
-	else:
+	elif rand_val == 2:
 		item_name = "GreenOrb"
 		
 	$TextureRect.texture = load("res://Assets/Inventory/item_icons/" + item_name + ".png")

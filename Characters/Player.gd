@@ -16,6 +16,9 @@ onready var gunpoint = $GunDirection
 onready var magic_shot = $Magic_Shoot
 onready var animPlayer = $AnimationPlayer
 
+onready var blue_ammo = 0
+onready var red_ammo = 21
+onready var green_ammo = 0
 onready var inv_pos = 0
 
 var health: int = 100
@@ -54,25 +57,28 @@ func _physics_process(delta):
 func _unhandled_input(event: InputEvent):
 	if event.is_action_released("scroll_up"):
 		inv_pos -= 1
-		if inv_pos <= 0:
-			inv_pos = 3
-		emit_signal("player_switched_weapon", inv_pos)
-		print(inv_pos)
+		if inv_pos < 0:
+			inv_pos = 2
+		#emit_signal("player_switched_weapon", inv_pos)
+		#print(inv_pos)
 	if event.is_action_released("scroll_down"):
 		inv_pos += 1
-		if inv_pos >= 3:
+		if inv_pos > 2:
 			inv_pos = 0
-		print(inv_pos)
-		emit_signal("player_switched_weapon", inv_pos)
+		#print(inv_pos)
+		#emit_signal("player_switched_weapon", inv_pos)
 	if event.is_action_released("Shoot"):
-		if inv_pos == 0:
+		if inv_pos == 0 && red_ammo > 0:
+			red_ammo -= 1
 			Shoot()
-		elif inv_pos == 1:
+		elif inv_pos == 1 && blue_ammo > 0:
+			blue_ammo -= 1
 			Shotgun()
-		elif inv_pos == 2:
+		elif inv_pos == 2 && green_ammo > 0:
+			green_ammo -= 1
 			Explosive()
-		elif inv_pos == 3:
-			Laser()
+		#elif inv_pos == 3:
+		#	Laser()
 
 
 func Shoot():

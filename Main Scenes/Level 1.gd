@@ -4,6 +4,11 @@ extends Node2D
 #a variable and then connecting it to the current player instance and
 #connect its signals to the main scene
 onready var player: Player = $Player
+
+onready var B1 = $BlueAmmo
+onready var R1 = $RedAmmo
+onready var G1 = $GreenAmmo
+
 onready var enemy = $Enemy
 onready var archer = $Archer_Enemy
 onready var enemy1 = $Archer_Enemy2
@@ -56,7 +61,7 @@ onready var enemy47 = $a_e_48
 onready var enemy48 = $a_e_49
 onready var enemy49 = $a_e_50
 
-var EnemyArray = Array()
+#var EnemyArray = Array()
 
 
 func _ready():
@@ -116,6 +121,10 @@ func _ready():
 	player.connect("player_fired_bullet", self, "handle_bullet_spawned")
 	player.connect("player_fired_laser", self, "handle_laser_spawned")
 	player.connect("player_switched_weapon", self, "handle_switched_weapon")
+	
+	B1.connect("picked_up", self, "ammo_pick_up")
+	R1.connect("picked_up", self, "ammo_pick_up")
+	G1.connect("picked_up", self, "ammo_pick_up")
 	
 	archer.connect("shoot", self, "handle_enemy_bullet_spawned")
 	enemy1.connect("shoot", self, "handle_enemy_bullet_spawned")
@@ -179,6 +188,14 @@ func handle_enemy_bullet_spawned(bullet: EnemyShot, a_position: Vector2, directi
 	add_child(bullet)
 	bullet.global_position = a_position
 	bullet.set_direction(direction)
+
+func ammo_pick_up(type: int):
+	if type == 0:
+		player.red_ammo += 20
+	elif type == 1:
+		player.blue_ammo += 7
+	elif type == 2:
+		player.green_ammo += 6
 
 
 func handle_switched_weapon(weapon: int):
