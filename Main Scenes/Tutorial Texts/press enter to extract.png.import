@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/look around.png-c717f12fe77a9bb9f845604ac53c4f4c.stex"
+path="res://.import/press enter to extract.png-f593bb9e2dbb4d8e083cc44db851d64f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Map/Tutorial Texts/look around.png"
-dest_files=[ "res://.import/look around.png-c717f12fe77a9bb9f845604ac53c4f4c.stex" ]
+source_file="res://Main Scenes/Tutorial Texts/press enter to extract.png"
+dest_files=[ "res://.import/press enter to extract.png-f593bb9e2dbb4d8e083cc44db851d64f.stex" ]
 
 [params]
 
