@@ -60,7 +60,7 @@ onready var enemy46 = $a_e_47
 onready var enemy47 = $a_e_48
 onready var enemy48 = $a_e_49
 onready var enemy49 = $a_e_50
-
+onready var turret1 = $Turret
 #var EnemyArray = Array()
 
 
@@ -118,6 +118,8 @@ func _ready():
 	enemy48.player = player
 	enemy49.player = player
 	
+	turret1.player = player
+	
 	player.connect("player_fired_bullet", self, "handle_bullet_spawned")
 	player.connect("player_fired_laser", self, "handle_laser_spawned")
 	player.connect("player_switched_weapon", self, "handle_switched_weapon")
@@ -125,6 +127,8 @@ func _ready():
 	B1.connect("picked_up", self, "ammo_pick_up")
 	R1.connect("picked_up", self, "ammo_pick_up")
 	G1.connect("picked_up", self, "ammo_pick_up")
+	
+	turret1.connect("shoot", self, "handle_enemy_bullet_spawned")
 	
 	archer.connect("shoot", self, "handle_enemy_bullet_spawned")
 	enemy1.connect("shoot", self, "handle_enemy_bullet_spawned")
