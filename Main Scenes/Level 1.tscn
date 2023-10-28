@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Assets/Fonts/alagard_font/alagard.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/GamePause.tscn" type="PackedScene" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://Projectiles/RedAmmo.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Projectiles/GreenAmmo.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Characters/Turret.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Characters/RocketTurret.tscn" type="PackedScene" id=17]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -61,7 +62,10 @@ position = Vector2( 1614, -1587 )
 position = Vector2( 6152, 437 )
 
 [node name="Turret" parent="." instance=ExtResource( 16 )]
-position = Vector2( 1039, 376 )
+position = Vector2( 904, 201 )
+
+[node name="RocketTurret" parent="." instance=ExtResource( 17 )]
+position = Vector2( 1143, 705 )
 
 [node name="Extraction" parent="." instance=ExtResource( 7 )]
 position = Vector2( 8760, 697 )
