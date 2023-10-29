@@ -20,6 +20,13 @@ onready var R7 = $R7
 onready var R8 = $R8
 onready var R9 = $R9
 onready var R10 = $R10
+onready var R11 = $R11
+onready var R12 = $R12
+onready var R13 = $R13
+onready var R14 = $R14
+onready var R15 = $R15
+onready var R16 = $R16
+onready var R17 = $R17
 onready var G1 = $GreenAmmo
 
 onready var enemy = $Enemy
@@ -73,6 +80,9 @@ onready var enemy46 = $a_e_47
 onready var enemy47 = $a_e_48
 onready var enemy48 = $a_e_49
 onready var enemy49 = $a_e_50
+onready var enemy50 = $a_e_51
+onready var enemy51 = $a_e_52
+onready var enemy52 = $a_e_53
 
 #var EnemyArray = Array()
 
@@ -130,6 +140,9 @@ func _ready():
 	enemy47.player = player
 	enemy48.player = player
 	enemy49.player = player
+	enemy50.player = player
+	enemy51.player = player
+	enemy52.player = player
 	
 	player.connect("player_fired_bullet", self, "handle_bullet_spawned")
 	player.connect("player_fired_laser", self, "handle_laser_spawned")
@@ -150,6 +163,9 @@ func _ready():
 	R8.connect("picked_up", self, "ammo_pick_up")
 	R9.connect("picked_up", self, "ammo_pick_up")
 	R10.connect("picked_up", self, "ammo_pick_up")
+	R11.connect("picked_up", self, "ammo_pick_up")
+	R12.connect("picked_up", self, "ammo_pick_up")
+	R13.connect("picked_up", self, "ammo_pick_up")
 	G1.connect("picked_up", self, "ammo_pick_up")
 	
 	archer.connect("shoot", self, "handle_enemy_bullet_spawned")
@@ -202,6 +218,9 @@ func _ready():
 	enemy47.connect("shoot", self, "handle_enemy_bullet_spawned")
 	enemy48.connect("shoot", self, "handle_enemy_bullet_spawned")
 	enemy49.connect("shoot", self, "handle_enemy_bullet_spawned")
+	enemy50.connect("shoot", self, "handle_enemy_bullet_spawned")
+	enemy51.connect("shoot", self, "handle_enemy_bullet_spawned")
+	enemy52.connect("shoot", self, "handle_enemy_bullet_spawned")
 
 
 func handle_bullet_spawned(bullet: FireBall, a_position: Vector2, direction: Vector2):

@@ -58,6 +58,21 @@ position = Vector2( 1295, 1230 )
 [node name="HeartCollect8" parent="." instance=ExtResource( 16 )]
 position = Vector2( 2068, 729 )
 
+[node name="HeartCollect9" parent="." instance=ExtResource( 16 )]
+position = Vector2( 8442, 1265 )
+
+[node name="HeartCollect10" parent="." instance=ExtResource( 16 )]
+position = Vector2( 8039, 215 )
+
+[node name="HeartCollect11" parent="." instance=ExtResource( 16 )]
+position = Vector2( 5590, 1366 )
+
+[node name="HeartCollect12" parent="." instance=ExtResource( 16 )]
+position = Vector2( 7797, 1433 )
+
+[node name="HeartCollect13" parent="." instance=ExtResource( 16 )]
+position = Vector2( 6821, 134 )
+
 [node name="BlueAmmo" parent="." instance=ExtResource( 13 )]
 position = Vector2( 121, 697 )
 
@@ -105,6 +120,27 @@ position = Vector2( 1500, 200 )
 
 [node name="R10" parent="." instance=ExtResource( 14 )]
 position = Vector2( 798, 186 )
+
+[node name="R11" parent="." instance=ExtResource( 14 )]
+position = Vector2( 6270, 881 )
+
+[node name="R12" parent="." instance=ExtResource( 14 )]
+position = Vector2( 6458, 1239 )
+
+[node name="R13" parent="." instance=ExtResource( 14 )]
+position = Vector2( 7486, 384 )
+
+[node name="R14" parent="." instance=ExtResource( 14 )]
+position = Vector2( 7240, 1217 )
+
+[node name="R15" parent="." instance=ExtResource( 14 )]
+position = Vector2( 6401, 210 )
+
+[node name="R16" parent="." instance=ExtResource( 14 )]
+position = Vector2( 6635, 737 )
+
+[node name="R17" parent="." instance=ExtResource( 14 )]
+position = Vector2( 5039, 1191 )
 
 [node name="UI" type="CanvasLayer" parent="."]
 pause_mode = 2
@@ -322,5 +358,14 @@ position = Vector2( 4867, 1062 )
 
 [node name="a_e_50" parent="." instance=ExtResource( 3 )]
 position = Vector2( 4959, 588 )
+
+[node name="a_e_51" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5837, 1109 )
+
+[node name="a_e_52" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5424, 719 )
+
+[node name="a_e_53" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5622, 306 )
 
 [connection signal="timeout" from="HUD/Control/Timer" to="HUD/Control" method="_on_Timer_timeout"]
