@@ -5,8 +5,21 @@ extends Node2D
 #connect its signals to the main scene
 onready var player: Player = $Player
 
-onready var B1 = $BlueAmmo
-onready var R1 = $RedAmmo
+onready var B0 = $BlueAmmo
+onready var B1 = $B1
+onready var B2 = $B2
+onready var B3 = $B3
+onready var R0 = $RedAmmo
+onready var R1 = $R1
+onready var R2 = $R2
+onready var R3 = $R3
+onready var R4 = $R4
+onready var R5 = $R5
+onready var R6 = $R6
+onready var R7 = $R7
+onready var R8 = $R8
+onready var R9 = $R9
+onready var R10 = $R10
 onready var G1 = $GreenAmmo
 
 onready var enemy = $Enemy
@@ -122,8 +135,21 @@ func _ready():
 	player.connect("player_fired_laser", self, "handle_laser_spawned")
 	player.connect("player_switched_weapon", self, "handle_switched_weapon")
 	
+	B0.connect("picked_up", self, "ammo_pick_up")
 	B1.connect("picked_up", self, "ammo_pick_up")
+	B2.connect("picked_up", self, "ammo_pick_up")
+	B3.connect("picked_up", self, "ammo_pick_up")
+	R0.connect("picked_up", self, "ammo_pick_up")
 	R1.connect("picked_up", self, "ammo_pick_up")
+	R2.connect("picked_up", self, "ammo_pick_up")
+	R3.connect("picked_up", self, "ammo_pick_up")
+	R4.connect("picked_up", self, "ammo_pick_up")
+	R5.connect("picked_up", self, "ammo_pick_up")
+	R6.connect("picked_up", self, "ammo_pick_up")
+	R7.connect("picked_up", self, "ammo_pick_up")
+	R8.connect("picked_up", self, "ammo_pick_up")
+	R9.connect("picked_up", self, "ammo_pick_up")
+	R10.connect("picked_up", self, "ammo_pick_up")
 	G1.connect("picked_up", self, "ammo_pick_up")
 	
 	archer.connect("shoot", self, "handle_enemy_bullet_spawned")
