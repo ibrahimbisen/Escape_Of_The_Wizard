@@ -83,12 +83,20 @@ onready var enemy49 = $a_e_50
 onready var enemy50 = $a_e_51
 onready var enemy51 = $a_e_52
 onready var enemy52 = $a_e_53
+onready var enemy53 = $a_e_54
+onready var enemy54 = $a_e_55
+onready var enemy55 = $a_e_56
+onready var enemy56 = $a_e_57
+onready var enemy57 = $a_e_58
+onready var enemy58 = $a_e_59
+onready var enemy59 = $a_e_60
+onready var enemy60 = $a_e_61
 
 #var EnemyArray = Array()
 
 
 func _ready():
-	get_tree().call_group("archers", "init_player")
+#	get_tree().call_group("archers", "init_player")
 	enemy.player = player
 	archer.player = player
 	enemy1.player = player
@@ -143,6 +151,14 @@ func _ready():
 	enemy50.player = player
 	enemy51.player = player
 	enemy52.player = player
+	enemy53.player = player
+	enemy54.player = player
+	enemy55.player = player
+	enemy56.player = player
+	enemy57.player = player
+	enemy58.player = player
+	enemy59.player = player
+	enemy60.player = player
 	
 	player.connect("player_fired_bullet", self, "handle_bullet_spawned")
 	player.connect("player_fired_laser", self, "handle_laser_spawned")
@@ -221,6 +237,14 @@ func _ready():
 	enemy50.connect("shoot", self, "handle_enemy_bullet_spawned")
 	enemy51.connect("shoot", self, "handle_enemy_bullet_spawned")
 	enemy52.connect("shoot", self, "handle_enemy_bullet_spawned")
+	enemy53.connect("shoot", self, "handle_enemy_bullet_spawned")
+	enemy54.connect("shoot", self, "handle_enemy_bullet_spawned")
+	enemy55.connect("shoot", self, "handle_enemy_bullet_spawned")
+	enemy56.connect("shoot", self, "handle_enemy_bullet_spawned")
+	enemy57.connect("shoot", self, "handle_enemy_bullet_spawned")
+	enemy58.connect("shoot", self, "handle_enemy_bullet_spawned")
+	enemy59.connect("shoot", self, "handle_enemy_bullet_spawned")
+	enemy60.connect("shoot", self, "handle_enemy_bullet_spawned")
 
 
 func handle_bullet_spawned(bullet: FireBall, a_position: Vector2, direction: Vector2):

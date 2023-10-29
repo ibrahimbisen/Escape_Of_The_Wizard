@@ -368,4 +368,28 @@ position = Vector2( 5424, 719 )
 [node name="a_e_53" parent="." instance=ExtResource( 3 )]
 position = Vector2( 5622, 306 )
 
+[node name="a_e_54" parent="." instance=ExtResource( 3 )]
+position = Vector2( 8523, 648 )
+
+[node name="a_e_55" parent="." instance=ExtResource( 3 )]
+position = Vector2( 7442, 686 )
+
+[node name="a_e_56" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5447, 1061 )
+
+[node name="a_e_57" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5042, 257 )
+
+[node name="a_e_58" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4053, 1144 )
+
+[node name="a_e_59" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2661, -20 )
+
+[node name="a_e_60" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3707, 1450 )
+
+[node name="a_e_61" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2967, 1161 )
+
 [connection signal="timeout" from="HUD/Control/Timer" to="HUD/Control" method="_on_Timer_timeout"]
