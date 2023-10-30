@@ -11,7 +11,7 @@ func _ready():
 		slots[i].slotType = SlotClass.SlotType.HOTBAR
 		slots[i].slot_index = i
 	initialize_hotbar()
-
+	
 func initialize_hotbar():
 	for i in range(slots.size()):
 		if PlayerInventory.hotbar.has(i):

@@ -525,4 +525,6 @@ position = Vector2( 7886, 77 )
 [node name="Turret10" parent="." instance=ExtResource( 16 )]
 position = Vector2( 4803, 102 )
 
+[connection signal="body_entered" from="GreenAmmo" to="GreenAmmo" method="_on_GreenAmmo_body_entered"]
+[connection signal="body_entered" from="RedAmmo" to="RedAmmo" method="_on_RedAmmo_body_entered"]
 [connection signal="timeout" from="HUD/Control/Timer" to="HUD/Control" method="_on_Timer_timeout"]

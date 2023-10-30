@@ -99,7 +99,7 @@ func Big_Shoot():
 	var fireball_instance = Bigshot.instance()
 	var direction = (gunpoint.global_transform.origin - end_of_gun.global_transform.origin).normalized()
 	emit_signal("player_fired_bullet", fireball_instance,end_of_gun.global_position, direction)
-	
+	PlayerInventory.subtract_item("GreenOrb", 1)
 
 func Shotgun():
 	var Fireball = load("res://Projectiles/FireBall.tscn")
@@ -107,7 +107,7 @@ func Shotgun():
 	var fireball_instance2 = Fireball.instance()
 	var fireball_instance3 = Fireball.instance()
 	var fireball_instance4 = Fireball.instance()
-	
+	PlayerInventory.subtract_item("BlueOrb", 1)
 	fireball_instance1.shotty = true
 	fireball_instance2.shotty = true
 	fireball_instance3.shotty = true
@@ -129,7 +129,7 @@ func Explosive():
 	var fireball_instance = Fireball.instance()
 	var direction = (gunpoint.global_transform.origin - end_of_gun.global_transform.origin).normalized()
 	emit_signal("player_fired_bullet", fireball_instance,end_of_gun.global_position, direction)
-
+	PlayerInventory.subtract_item("RedOrb", 1)
 
 func Laser():
 	var laser = load("res://Projectiles/Laser.tscn")

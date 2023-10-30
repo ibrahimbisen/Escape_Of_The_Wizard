@@ -4,7 +4,7 @@ extends Node2D
 #a variable and then connecting it to the current player instance and
 #connect its signals to the main scene
 onready var player: Player = $Player
-
+const SlotClass = preload("res://UI/Slot.gd")
 onready var B1 = $BlueAmmo
 onready var B2 = $B1
 onready var B3 = $B2
@@ -334,13 +334,16 @@ func handle_enemy_bullet_spawned(bullet: EnemyShot, a_position: Vector2, directi
 	bullet.global_position = a_position
 	bullet.set_direction(direction)
 
-func ammo_pick_up(type: int):
+func ammo_pick_up(type: int, slot: SlotClass):
 	if type == 0:
 		player.red_ammo += 20
+		PlayerInventory.add_item("RedOrb", 20)
 	elif type == 1:
 		player.blue_ammo += 7
+		PlayerInventory.add_item("BlueOrb", 7)
 	elif type == 2:
 		player.green_ammo += 6
+		PlayerInventory.add_item("BlueOrb", 6)
 
 func handle_switched_weapon(weapon: int):
 	pass

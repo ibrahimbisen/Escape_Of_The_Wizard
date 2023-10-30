@@ -15,7 +15,7 @@ func _ready():
 		
 	$TextureRect.texture = load("res://Assets/Inventory/item_icons/" + item_name + ".png")
 	var stack_size = int(JsonData.item_data[item_name]["StackSize"])
-	item_quantity = randi() % stack_size + 1
+	item_quantity = 0
 	
 	if stack_size == 1:
 		$Label.visible = false
@@ -31,3 +31,9 @@ func set_item(nm, qt):
 	item_name = nm
 	item_quantity = qt
 	$TextureRect.texture = load("res://Assets/Inventory/item_icons/" + item_name + ".png")
+	var stack_size = int(JsonData.item_data[item_name]["StackSize"])
+	item_quantity = qt
+	if stack_size == 1:
+		$Label.visible = false
+	else:
+		$Label.text = String(item_quantity)
