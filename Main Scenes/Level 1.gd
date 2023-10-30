@@ -6,8 +6,43 @@ extends Node2D
 onready var player: Player = $Player
 
 onready var B1 = $BlueAmmo
+onready var B2 = $B1
+onready var B3 = $B2
+onready var B4 = $B3
+onready var B5 = $B4
+onready var B6 = $B5
+onready var B7 = $B6
+onready var B8 = $B7
+onready var B9 = $B8
+onready var B10 = $B9
+onready var B11 = $B10
 onready var R1 = $RedAmmo
+onready var R2 = $R1
+onready var R3 = $R2
+onready var R4 = $R3
+onready var R5 = $R4
+onready var R6 = $R5
+onready var R7 = $R6
+onready var R8 = $R7
+onready var R9 = $R8
+onready var R10 = $R9
+onready var R11 = $R10
+onready var R12 = $R11
+onready var R13 = $R12
+onready var R14 = $R13
+onready var R15 = $R14
+onready var R16 = $R15
+onready var R17 = $R16
+onready var R18 = $R17
+onready var R19 = $R18
+onready var R20 = $R19
 onready var G1 = $GreenAmmo
+onready var G2 = $G1
+onready var G3 = $G2
+onready var G4 = $G3
+onready var G5 = $G4
+onready var G6 = $G5
+onready var G7 = $G6
 
 onready var enemy = $Enemy
 onready var archer = $Archer_Enemy
@@ -60,9 +95,30 @@ onready var enemy46 = $a_e_47
 onready var enemy47 = $a_e_48
 onready var enemy48 = $a_e_49
 onready var enemy49 = $a_e_50
+onready var enemy50 = $a_e_51
+onready var enemy51 = $a_e_52
+onready var enemy52 = $a_e_53
+onready var enemy53 = $a_e_54
+onready var enemy54 = $a_e_55
+onready var enemy55 = $a_e_56
+onready var enemy56 = $a_e_57
+onready var enemy57 = $a_e_58
+onready var enemy58 = $a_e_59
+onready var enemy59 = $a_e_60
 
 onready var rocket1 = $RocketTurret
+onready var rocket2 = $RocketTurret2
+onready var rocket3 = $RocketTurret3
 onready var turret1 = $Turret
+onready var turret2 = $Turret2
+onready var turret3 = $Turret3
+onready var turret4 = $Turret4
+onready var turret5 = $Turret5
+onready var turret6 = $Turret6
+onready var turret7 = $Turret7
+onready var turret8 = $Turret8
+onready var turret9 = $Turret9
+onready var turret10 = $Turret10
 #var EnemyArray = Array()
 
 
@@ -119,20 +175,85 @@ func _ready():
 	enemy47.player = player
 	enemy48.player = player
 	enemy49.player = player
+	enemy50.player = player
+	enemy51.player = player
+	enemy52.player = player
+	enemy53.player = player
+	enemy54.player = player
+	enemy55.player = player
+	enemy56.player = player
+	enemy57.player = player
+	enemy58.player = player
+	enemy59.player = player
 	
 	rocket1.player = player
+	rocket2.player = player
+	rocket3.player = player
 	turret1.player = player
+	turret2.player = player
+	turret3.player = player
+	turret4.player = player
+	turret5.player = player
+	turret6.player = player
+	turret7.player = player
+	turret8.player = player
+	turret9.player = player
+	turret10.player = player
 	
 	player.connect("player_fired_bullet", self, "handle_bullet_spawned")
 	player.connect("player_fired_laser", self, "handle_laser_spawned")
 	player.connect("player_switched_weapon", self, "handle_switched_weapon")
 	
 	B1.connect("picked_up", self, "ammo_pick_up")
+	B2.connect("picked_up", self, "ammo_pick_up")
+	B3.connect("picked_up", self, "ammo_pick_up")
+	B4.connect("picked_up", self, "ammo_pick_up")
+	B5.connect("picked_up", self, "ammo_pick_up")
+	B6.connect("picked_up", self, "ammo_pick_up")
+	B7.connect("picked_up", self, "ammo_pick_up")
+	B8.connect("picked_up", self, "ammo_pick_up")
+	B9.connect("picked_up", self, "ammo_pick_up")
+	B10.connect("picked_up", self, "ammo_pick_up")
 	R1.connect("picked_up", self, "ammo_pick_up")
+	R2.connect("picked_up", self, "ammo_pick_up")
+	R3.connect("picked_up", self, "ammo_pick_up")
+	R4.connect("picked_up", self, "ammo_pick_up")
+	R5.connect("picked_up", self, "ammo_pick_up")
+	R6.connect("picked_up", self, "ammo_pick_up")
+	R7.connect("picked_up", self, "ammo_pick_up")
+	R8.connect("picked_up", self, "ammo_pick_up")
+	R9.connect("picked_up", self, "ammo_pick_up")
+	R10.connect("picked_up", self, "ammo_pick_up")
+	R11.connect("picked_up", self, "ammo_pick_up")
+	R12.connect("picked_up", self, "ammo_pick_up")
+	R13.connect("picked_up", self, "ammo_pick_up")
+	R14.connect("picked_up", self, "ammo_pick_up")
+	R15.connect("picked_up", self, "ammo_pick_up")
+	R16.connect("picked_up", self, "ammo_pick_up")
+	R17.connect("picked_up", self, "ammo_pick_up")
+	R18.connect("picked_up", self, "ammo_pick_up")
+	R19.connect("picked_up", self, "ammo_pick_up")
 	G1.connect("picked_up", self, "ammo_pick_up")
+	G2.connect("picked_up", self, "ammo_pick_up")
+	G3.connect("picked_up", self, "ammo_pick_up")
+	G4.connect("picked_up", self, "ammo_pick_up")
+	G5.connect("picked_up", self, "ammo_pick_up")
+	G6.connect("picked_up", self, "ammo_pick_up")
+	G7.connect("picked_up", self, "ammo_pick_up")
 	
 	rocket1.connect("rocket", self, "handle_enemy_rocket_spawned")
+	rocket2.connect("rocket", self, "handle_enemy_rocket_spawned")
+	rocket3.connect("rocket", self, "handle_enemy_rocket_spawned")
 	turret1.connect("shoot", self, "handle_enemy_bullet_spawned")
+	turret2.connect("shoot", self, "handle_enemy_bullet_spawned")
+	turret3.connect("shoot", self, "handle_enemy_bullet_spawned")
+	turret4.connect("shoot", self, "handle_enemy_bullet_spawned")
+	turret5.connect("shoot", self, "handle_enemy_bullet_spawned")
+	turret6.connect("shoot", self, "handle_enemy_bullet_spawned")
+	turret7.connect("shoot", self, "handle_enemy_bullet_spawned")
+	turret8.connect("shoot", self, "handle_enemy_bullet_spawned")
+	turret9.connect("shoot", self, "handle_enemy_bullet_spawned")
+	turret10.connect("shoot", self, "handle_enemy_bullet_spawned")
 	
 	archer.connect("shoot", self, "handle_enemy_bullet_spawned")
 	enemy1.connect("shoot", self, "handle_enemy_bullet_spawned")
@@ -184,6 +305,16 @@ func _ready():
 	enemy47.connect("shoot", self, "handle_enemy_bullet_spawned")
 	enemy48.connect("shoot", self, "handle_enemy_bullet_spawned")
 	enemy49.connect("shoot", self, "handle_enemy_bullet_spawned")
+	enemy50.connect("shoot", self, "handle_enemy_bullet_spawned")
+	enemy51.connect("shoot", self, "handle_enemy_bullet_spawned")
+	enemy52.connect("shoot", self, "handle_enemy_bullet_spawned")
+	enemy53.connect("shoot", self, "handle_enemy_bullet_spawned")
+	enemy54.connect("shoot", self, "handle_enemy_bullet_spawned")
+	enemy55.connect("shoot", self, "handle_enemy_bullet_spawned")
+	enemy56.connect("shoot", self, "handle_enemy_bullet_spawned")
+	enemy57.connect("shoot", self, "handle_enemy_bullet_spawned")
+	enemy58.connect("shoot", self, "handle_enemy_bullet_spawned")
+	enemy59.connect("shoot", self, "handle_enemy_bullet_spawned")
 
 
 func handle_enemy_rocket_spawned(bullet: Explosive, a_position: Vector2, direction: Vector2):
@@ -210,7 +341,6 @@ func ammo_pick_up(type: int):
 		player.blue_ammo += 7
 	elif type == 2:
 		player.green_ammo += 6
-
 
 func handle_switched_weapon(weapon: int):
 	pass
