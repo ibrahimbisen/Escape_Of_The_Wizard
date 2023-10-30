@@ -48,6 +48,11 @@ _global_script_classes=[ {
 "class": "ammo",
 "language": "GDScript",
 "path": "res://Projectiles/BlueAmmo.gd"
+}, {
+"base": "Archer_Enemy",
+"class": "turret",
+"language": "GDScript",
+"path": "res://Characters/Turret.gd"
 } ]
 _global_script_class_icons={
 "Archer_Enemy": "",
@@ -57,7 +62,8 @@ _global_script_class_icons={
 "FireBall": "",
 "Laser": "",
 "Player": "",
-"ammo": ""
+"ammo": "",
+"turret": ""
 }
 
 [application]
