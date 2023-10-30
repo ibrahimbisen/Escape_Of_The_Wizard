@@ -1,5 +1,6 @@
 [gd_scene load_steps=22 format=2]
 
+
 [ext_resource path="res://Assets/Fonts/alagard_font/alagard.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/GamePause.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Characters/Archer_Enemy.tscn" type="PackedScene" id=3]
@@ -15,9 +16,12 @@
 [ext_resource path="res://Projectiles/BlueAmmo.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Projectiles/RedAmmo.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Projectiles/GreenAmmo.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Assets/SFX/Weapons/Shotgun.wav" type="AudioStream" id=16]
-[ext_resource path="res://Assets/SFX/Weapons/Laser.wav" type="AudioStream" id=17]
-[ext_resource path="res://Assets/SFX/Weapons/Fire.wav" type="AudioStream" id=18]
+[ext_resource path="res://Characters/Turret.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Characters/RocketTurret.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Assets/SFX/Weapons/Shotgun.wav" type="AudioStream" id=18]
+[ext_resource path="res://Assets/SFX/Weapons/Laser.wav" type="AudioStream" id=19]
+[ext_resource path="res://Assets/SFX/Weapons/Fire.wav" type="AudioStream" id=20]
+
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -64,10 +68,28 @@ position = Vector2( 1614, -1587 )
 [node name="Archer_Enemy" parent="." instance=ExtResource( 3 )]
 position = Vector2( 6152, 437 )
 
+[node name="Turret" parent="." instance=ExtResource( 16 )]
+position = Vector2( 904, 201 )
+
+[node name="RocketTurret" parent="." instance=ExtResource( 17 )]
+position = Vector2( 1143, 705 )
+
 [node name="Extraction" parent="." instance=ExtResource( 7 )]
 position = Vector2( 8760, 697 )
 collision_layer = 2
 collision_mask = 2
+
+[node name="HeartCollect1" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1393, 902 )
+scale = Vector2( 2, 2 )
+
+[node name="HeartCollect2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 2027, 722 )
+scale = Vector2( 2, 2 )
+
+[node name="HeartCollect3" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1996, 457 )
+scale = Vector2( 2, 2 )
 
 [node name="HUD" parent="." instance=ExtResource( 8 )]
 
@@ -272,17 +294,5 @@ position = Vector2( 4867, 1062 )
 
 [node name="a_e_50" parent="." instance=ExtResource( 3 )]
 position = Vector2( 4959, 588 )
-
-[node name="HeartCollect1" parent="." instance=ExtResource( 13 )]
-position = Vector2( 1393, 902 )
-scale = Vector2( 2, 2 )
-
-[node name="HeartCollect2" parent="." instance=ExtResource( 13 )]
-position = Vector2( 2027, 722 )
-scale = Vector2( 2, 2 )
-
-[node name="HeartCollect3" parent="." instance=ExtResource( 13 )]
-position = Vector2( 1996, 457 )
-scale = Vector2( 2, 2 )
 
 [connection signal="timeout" from="HUD/Control/Timer" to="HUD/Control" method="_on_Timer_timeout"]
