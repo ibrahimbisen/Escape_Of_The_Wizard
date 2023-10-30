@@ -1,10 +1,8 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://UI/Menu.gd" type="Script" id=1]
 [ext_resource path="res://Assets/title logo pixelized.png.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Fonts/alagard_font/alagard.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://Assets/SFX/UI/Start.wav" type="AudioStream" id=4]
-[ext_resource path="res://Assets/Audio/Menu/Story Music/inspiring-cinematic-ambient-116199.mp3" type="AudioStream" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 36
@@ -39,17 +37,10 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 margin_left = -120.0
-margin_top = -201.0
+margin_top = -160.0
 margin_right = 120.0
-margin_bottom = -22.0
+margin_bottom = 10.0
 script = ExtResource( 1 )
-
-[node name="Menu Music" type="AudioStreamPlayer" parent="Menu"]
-stream = ExtResource( 5 )
-autoplay = true
-
-[node name="StartSFX" type="AudioStreamPlayer" parent="Menu"]
-stream = ExtResource( 4 )
 
 [node name="Start" type="Button" parent="Menu"]
 margin_right = 240.0
@@ -57,6 +48,8 @@ margin_bottom = 40.0
 custom_colors/font_color = Color( 1, 0.941176, 0.611765, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "START"
+
+[node name="StartSFX" type="AudioStreamPlayer" parent="Menu/Start"]
 
 [node name="Tutorial" type="Button" parent="Menu"]
 margin_top = 44.0
@@ -66,42 +59,35 @@ custom_colors/font_color = Color( 1, 0.941176, 0.611765, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "TUTORIAL"
 
-[node name="Options" type="Button" parent="Menu"]
+[node name="TutorialSFX" type="AudioStreamPlayer" parent="Menu/Tutorial"]
+
+[node name="Quit" type="Button" parent="Menu"]
 margin_top = 88.0
 margin_right = 240.0
 margin_bottom = 128.0
-custom_colors/font_color = Color( 1, 0.941176, 0.611765, 1 )
-custom_fonts/font = SubResource( 2 )
-text = "OPTIONS"
-
-[node name="Quit" type="Button" parent="Menu"]
-margin_top = 132.0
-margin_right = 240.0
-margin_bottom = 172.0
 custom_colors/font_color = Color( 1, 0.941176, 0.611765, 1 )
 custom_fonts/font = SubResource( 3 )
 text = "QUIT"
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_left = 320.0
-margin_top = 45.0
-margin_right = 368.0
-margin_bottom = 93.0
+margin_left = 312.0
+margin_top = 88.0
+margin_right = 360.0
+margin_bottom = 136.0
 rect_scale = Vector2( 7.5, 7.5 )
 texture = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -353.0
-margin_top = 37.0
-margin_right = 347.0
-margin_bottom = 112.0
+margin_left = -350.0
+margin_top = 60.0
+margin_right = 350.0
+margin_bottom = 135.0
 custom_colors/font_color = Color( 1, 0.941176, 0.611765, 1 )
 custom_fonts/font = SubResource( 4 )
 text = "ESCAPE OF THE WIZARD"
 
 [connection signal="pressed" from="Menu/Start" to="Menu" method="_on_Start_pressed"]
 [connection signal="pressed" from="Menu/Tutorial" to="Menu" method="_on_Tutorial_pressed"]
-[connection signal="pressed" from="Menu/Options" to="Menu" method="_on_Tutorial_pressed"]
 [connection signal="pressed" from="Menu/Quit" to="Menu" method="_on_Quit_pressed"]
