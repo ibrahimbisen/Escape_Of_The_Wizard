@@ -92,6 +92,8 @@ onready var enemy58 = $a_e_59
 onready var enemy59 = $a_e_60
 onready var enemy60 = $a_e_61
 
+onready var rocket1 = $RocketTurret
+onready var turret1 = $Turret
 #var EnemyArray = Array()
 
 
@@ -160,6 +162,9 @@ func _ready():
 	enemy59.player = player
 	enemy60.player = player
 	
+	rocket1.player = player
+	turret1.player = player
+	
 	player.connect("player_fired_bullet", self, "handle_bullet_spawned")
 	player.connect("player_fired_laser", self, "handle_laser_spawned")
 	player.connect("player_switched_weapon", self, "handle_switched_weapon")
@@ -183,6 +188,9 @@ func _ready():
 	R12.connect("picked_up", self, "ammo_pick_up")
 	R13.connect("picked_up", self, "ammo_pick_up")
 	G1.connect("picked_up", self, "ammo_pick_up")
+	
+	rocket1.connect("rocket", self, "handle_enemy_rocket_spawned")
+	turret1.connect("shoot", self, "handle_enemy_bullet_spawned")
 	
 	archer.connect("shoot", self, "handle_enemy_bullet_spawned")
 	enemy1.connect("shoot", self, "handle_enemy_bullet_spawned")
@@ -245,6 +253,12 @@ func _ready():
 	enemy58.connect("shoot", self, "handle_enemy_bullet_spawned")
 	enemy59.connect("shoot", self, "handle_enemy_bullet_spawned")
 	enemy60.connect("shoot", self, "handle_enemy_bullet_spawned")
+
+
+func handle_enemy_rocket_spawned(bullet: Explosive, a_position: Vector2, direction: Vector2):
+	add_child(bullet)
+	bullet.global_position = a_position
+	bullet.set_direction(direction)
 
 
 func handle_bullet_spawned(bullet: FireBall, a_position: Vector2, direction: Vector2):

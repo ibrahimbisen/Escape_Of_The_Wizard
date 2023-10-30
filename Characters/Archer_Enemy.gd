@@ -68,7 +68,7 @@ func _physics_process(delta):
 	
 	look_at(target)
 	
-	position += direction * speed * delta
+	#position += direction * speed * delta
 
 
 func _on_GunTimer_timeout():
