@@ -6,6 +6,9 @@ extends VBoxContainer
 # var b = "text"
 
 
+
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -18,25 +21,25 @@ func _ready():
 
 func _on_Start_pressed():
 	Global.lives = Global.max_lives
-	return get_tree().change_scene("res://Main Scenes/Level 1.tscn") # Replace with function body.
+	get_tree().change_scene("res://Main Scenes/Level 1.tscn") 
+	
 	
 
 func _on_Quit_pressed():
-	return get_tree().quit()
+	get_tree().quit()
 
 
 func _on_Tutorial_pressed():
-	return get_tree().change_scene("res://Main Scenes/Tutorial.tscn")
-
+	get_tree().change_scene("res://Main Scenes/Tutorial.tscn")
+	
 
 func _on_Menu_pressed():
-	return get_tree().change_scene("res://UI/Menu.tscn")
+	get_tree().change_scene("res://UI/Menu.tscn")
 	
 	
-
 
 	
 
 
 func _on_Main_Menu_pressed():
-	 return get_tree().change_scene("res://UI/Menu.tscn")
+	 get_tree().change_scene("res://UI/Menu.tscn")

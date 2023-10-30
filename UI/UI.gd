@@ -8,6 +8,7 @@ extends CanvasLayer
 func _input(event):
 	if event.is_action_pressed("pause"):
 		$GamePause.visible = true
+		
 	if event.is_action_pressed("scroll_up"):
 		PlayerInventory.active_item_scroll_up()
 	elif event.is_action_pressed("scroll_down"):

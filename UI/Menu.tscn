@@ -49,6 +49,8 @@ custom_colors/font_color = Color( 1, 0.941176, 0.611765, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "START"
 
+[node name="StartSFX" type="AudioStreamPlayer" parent="Menu/Start"]
+
 [node name="Tutorial" type="Button" parent="Menu"]
 margin_top = 44.0
 margin_right = 240.0
@@ -56,6 +58,8 @@ margin_bottom = 84.0
 custom_colors/font_color = Color( 1, 0.941176, 0.611765, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "TUTORIAL"
+
+[node name="TutorialSFX" type="AudioStreamPlayer" parent="Menu/Tutorial"]
 
 [node name="Quit" type="Button" parent="Menu"]
 margin_top = 88.0
