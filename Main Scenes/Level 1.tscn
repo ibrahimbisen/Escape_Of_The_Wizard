@@ -414,7 +414,7 @@ position = Vector2( 3958, 557 )
 position = Vector2( 3258, 189 )
 
 [node name="a_e_34" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3713, 816 )
+position = Vector2( 1190, 607 )
 
 [node name="a_e_35" parent="." instance=ExtResource( 3 )]
 position = Vector2( 4641, 1161 )
@@ -438,7 +438,7 @@ position = Vector2( 5431, 233 )
 position = Vector2( 5339, 505 )
 
 [node name="a_e_42" parent="." instance=ExtResource( 3 )]
-position = Vector2( 6530, 1104 )
+position = Vector2( 1716, 740 )
 
 [node name="a_e_43" parent="." instance=ExtResource( 3 )]
 position = Vector2( 6203, 909 )
