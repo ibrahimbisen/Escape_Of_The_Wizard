@@ -38,7 +38,7 @@ func add_item(item_name, item_quantity):
 
 # TODO: Make compatible with hotbar as well
 func update_slot_visual(slot_index, item_name, new_quantity):
-	var slot = get_tree().root.get_node("/root/Main/UI/Hotbar/HotbarSlots/Slot" + str(slot_index + 1))
+	var slot = get_tree().root.get_node("/root/Main/UI/Hotbar/HotbarSlots/HotbarSlot" + str(slot_index + 1))
 	if slot.item != null:
 		slot.item.set_item(item_name, new_quantity)
 	else:
