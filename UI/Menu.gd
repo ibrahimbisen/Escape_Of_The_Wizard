@@ -21,8 +21,7 @@ func _ready():
 
 func _on_Start_pressed():
 	Global.lives = Global.max_lives
-	return get_tree().change_scene("res://Main Scenes/Level 1.tscn") 
-	
+	return get_tree().change_scene("res://Main Scenes/Level 1.tscn") 	
 	
 
 func _on_Quit_pressed():
@@ -31,7 +30,6 @@ func _on_Quit_pressed():
 
 func _on_Tutorial_pressed():
 	return get_tree().change_scene("res://Main Scenes/Tutorial.tscn")
-	
 
 func _on_Menu_pressed():
 	return get_tree().change_scene("res://UI/Menu.tscn")
