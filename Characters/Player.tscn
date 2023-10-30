@@ -6,7 +6,7 @@
 [ext_resource path="res://Assets/Character/wiz01 spritesheet v02.png" type="Texture" id=5]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 17.0
+radius = 146.342
 
 [sub_resource type="Animation" id=7]
 resource_name = "Idle"
@@ -95,6 +95,7 @@ tracks/1/keys = {
 
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( 56, 142 )
+scale = Vector2( 0.5, 0.5 )
 collision_layer = 2
 collision_mask = 2
 script = ExtResource( 1 )
@@ -102,7 +103,6 @@ Fireball = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
 rotation = 1.5708
-scale = Vector2( 0.12, 0.12 )
 texture = ExtResource( 5 )
 hframes = 2
 vframes = 2
@@ -142,4 +142,4 @@ anims/Run = SubResource( 9 )
 
 [node name="Camera2D2" type="Camera2D" parent="."]
 current = true
-zoom = Vector2( 1.2, 1.2 )
+zoom = Vector2( 2.2, 2.2 )
