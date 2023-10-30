@@ -5,28 +5,8 @@ extends Node2D
 #connect its signals to the main scene
 onready var player: Player = $Player
 
-onready var B0 = $BlueAmmo
-onready var B1 = $B1
-onready var B2 = $B2
-onready var B3 = $B3
-onready var R0 = $RedAmmo
-onready var R1 = $R1
-onready var R2 = $R2
-onready var R3 = $R3
-onready var R4 = $R4
-onready var R5 = $R5
-onready var R6 = $R6
-onready var R7 = $R7
-onready var R8 = $R8
-onready var R9 = $R9
-onready var R10 = $R10
-onready var R11 = $R11
-onready var R12 = $R12
-onready var R13 = $R13
-onready var R14 = $R14
-onready var R15 = $R15
-onready var R16 = $R16
-onready var R17 = $R17
+onready var B1 = $BlueAmmo
+onready var R1 = $RedAmmo
 onready var G1 = $GreenAmmo
 
 onready var enemy = $Enemy
@@ -80,17 +60,6 @@ onready var enemy46 = $a_e_47
 onready var enemy47 = $a_e_48
 onready var enemy48 = $a_e_49
 onready var enemy49 = $a_e_50
-onready var enemy50 = $a_e_51
-onready var enemy51 = $a_e_52
-onready var enemy52 = $a_e_53
-onready var enemy53 = $a_e_54
-onready var enemy54 = $a_e_55
-onready var enemy55 = $a_e_56
-onready var enemy56 = $a_e_57
-onready var enemy57 = $a_e_58
-onready var enemy58 = $a_e_59
-onready var enemy59 = $a_e_60
-onready var enemy60 = $a_e_61
 
 onready var rocket1 = $RocketTurret
 onready var turret1 = $Turret
@@ -98,7 +67,7 @@ onready var turret1 = $Turret
 
 
 func _ready():
-#	get_tree().call_group("archers", "init_player")
+	get_tree().call_group("archers", "init_player")
 	enemy.player = player
 	archer.player = player
 	enemy1.player = player
@@ -150,17 +119,6 @@ func _ready():
 	enemy47.player = player
 	enemy48.player = player
 	enemy49.player = player
-	enemy50.player = player
-	enemy51.player = player
-	enemy52.player = player
-	enemy53.player = player
-	enemy54.player = player
-	enemy55.player = player
-	enemy56.player = player
-	enemy57.player = player
-	enemy58.player = player
-	enemy59.player = player
-	enemy60.player = player
 	
 	rocket1.player = player
 	turret1.player = player
@@ -169,24 +127,8 @@ func _ready():
 	player.connect("player_fired_laser", self, "handle_laser_spawned")
 	player.connect("player_switched_weapon", self, "handle_switched_weapon")
 	
-	B0.connect("picked_up", self, "ammo_pick_up")
 	B1.connect("picked_up", self, "ammo_pick_up")
-	B2.connect("picked_up", self, "ammo_pick_up")
-	B3.connect("picked_up", self, "ammo_pick_up")
-	R0.connect("picked_up", self, "ammo_pick_up")
 	R1.connect("picked_up", self, "ammo_pick_up")
-	R2.connect("picked_up", self, "ammo_pick_up")
-	R3.connect("picked_up", self, "ammo_pick_up")
-	R4.connect("picked_up", self, "ammo_pick_up")
-	R5.connect("picked_up", self, "ammo_pick_up")
-	R6.connect("picked_up", self, "ammo_pick_up")
-	R7.connect("picked_up", self, "ammo_pick_up")
-	R8.connect("picked_up", self, "ammo_pick_up")
-	R9.connect("picked_up", self, "ammo_pick_up")
-	R10.connect("picked_up", self, "ammo_pick_up")
-	R11.connect("picked_up", self, "ammo_pick_up")
-	R12.connect("picked_up", self, "ammo_pick_up")
-	R13.connect("picked_up", self, "ammo_pick_up")
 	G1.connect("picked_up", self, "ammo_pick_up")
 	
 	rocket1.connect("rocket", self, "handle_enemy_rocket_spawned")
@@ -242,17 +184,6 @@ func _ready():
 	enemy47.connect("shoot", self, "handle_enemy_bullet_spawned")
 	enemy48.connect("shoot", self, "handle_enemy_bullet_spawned")
 	enemy49.connect("shoot", self, "handle_enemy_bullet_spawned")
-	enemy50.connect("shoot", self, "handle_enemy_bullet_spawned")
-	enemy51.connect("shoot", self, "handle_enemy_bullet_spawned")
-	enemy52.connect("shoot", self, "handle_enemy_bullet_spawned")
-	enemy53.connect("shoot", self, "handle_enemy_bullet_spawned")
-	enemy54.connect("shoot", self, "handle_enemy_bullet_spawned")
-	enemy55.connect("shoot", self, "handle_enemy_bullet_spawned")
-	enemy56.connect("shoot", self, "handle_enemy_bullet_spawned")
-	enemy57.connect("shoot", self, "handle_enemy_bullet_spawned")
-	enemy58.connect("shoot", self, "handle_enemy_bullet_spawned")
-	enemy59.connect("shoot", self, "handle_enemy_bullet_spawned")
-	enemy60.connect("shoot", self, "handle_enemy_bullet_spawned")
 
 
 func handle_enemy_rocket_spawned(bullet: Explosive, a_position: Vector2, direction: Vector2):
