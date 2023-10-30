@@ -1,5 +1,5 @@
 extends KinematicBody2D
-onready var animPlayer = $AnimationPlayer
+#onready var animPlayer = $AnimationPlayer
 
 class_name Enemy
 var health: int = 30

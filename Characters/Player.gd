@@ -42,9 +42,9 @@ func _physics_process(delta):
 	#	speed = 500
 	#	animPlayer.play("Run")
 	if Input.is_key_pressed(KEY_SHIFT):
-		speed = 500
+		speed = 1500
 	else:
-		speed = 300
+		speed = 1000
 	
 	if movement_direction.x == 0 and movement_direction.y == 0:
 		animPlayer.play("Idle")

@@ -5,6 +5,7 @@
 [ext_resource path="res://Characters/GunTimer.gd" type="Script" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
+radius = 48.8365
 
 [node name="Archer_Enemy" type="KinematicBody2D" groups=["archers"]]
 rotation = 1.5708
@@ -15,7 +16,7 @@ script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 rotation = 1.5708
-scale = Vector2( 1.3, 1.3 )
+scale = Vector2( 5, 5 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -23,10 +24,10 @@ position = Vector2( -1, 4.37114e-08 )
 shape = SubResource( 1 )
 
 [node name="EndofGun" type="Node2D" parent="."]
-position = Vector2( 2, 6 )
+position = Vector2( 40.5001, 31.4999 )
 
 [node name="GunDirection" type="Node2D" parent="."]
-position = Vector2( 9, 6 )
+position = Vector2( 20, -2.00007 )
 
 [node name="GunTimer" type="Timer" parent="."]
 script = ExtResource( 3 )
