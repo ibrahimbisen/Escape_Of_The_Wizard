@@ -284,7 +284,7 @@ anchor_right = 0.5
 margin_left = -76.5
 margin_right = -26.5
 margin_bottom = 100.0
-custom_colors/default_color = Color( 1, 0, 0, 1 )
+custom_colors/default_color = Color( 1, 0.282353, 0.388235, 1 )
 custom_fonts/normal_font = SubResource( 1 )
 text = "00"
 fit_content_height = true
@@ -295,7 +295,7 @@ anchor_right = 0.5
 margin_left = -20.0
 margin_right = 30.0
 margin_bottom = 100.0
-custom_colors/default_color = Color( 1, 0, 0, 1 )
+custom_colors/default_color = Color( 1, 0.282353, 0.388235, 1 )
 custom_fonts/normal_font = SubResource( 2 )
 text = "00"
 
@@ -305,7 +305,7 @@ anchor_right = 0.5
 margin_left = 36.5
 margin_right = 86.5
 margin_bottom = 100.0
-custom_colors/default_color = Color( 1, 0, 0, 1 )
+custom_colors/default_color = Color( 1, 0.282353, 0.388235, 1 )
 custom_fonts/normal_font = SubResource( 3 )
 text = "00"
 
@@ -496,9 +496,11 @@ position = Vector2( 1459, 1017 )
 
 [node name="RocketTurret2" parent="." instance=ExtResource( 17 )]
 position = Vector2( 6755, 289 )
+nav_layer = 1
 
 [node name="RocketTurret3" parent="." instance=ExtResource( 17 )]
 position = Vector2( 6750, 1199 )
+nav_layer = 1
 
 [node name="Turret2" parent="." instance=ExtResource( 16 )]
 position = Vector2( 5128, 42 )
