@@ -1,8 +1,12 @@
 extends Archer_Enemy
 class_name turret
+signal rocket
+
+var proj_type
 
 func _ready():
 	speed = 0
+	proj_type = 0
 
 
 func _physics_process(delta):
@@ -28,9 +32,15 @@ func _physics_process(delta):
 				can_fire = false
 
 				var fire_direction = (gunpoint.global_transform.origin - end_of_gun.global_transform.origin).normalized()
-				var arrow = Projectile.instance()
-				see_thru.append(arrow)
-				emit_signal("shoot", arrow, global_position, fire_direction)
+
+				if (proj_type == 0):
+					var arrow = Projectile.instance()
+					see_thru.append(arrow)
+					emit_signal("shoot", arrow, global_position, fire_direction)
+				elif (proj_type == 1):
+					var Fireball = load("res://Projectiles/EnemyExplosive.tscn")
+					var fireball_instance = Fireball.instance()
+					emit_signal("rocket", fireball_instance, global_position, fire_direction)
 	
 	look_at(target)
 
