@@ -103,5 +103,5 @@ text = "ESCAPE OF THE WIZARD"
 
 [connection signal="pressed" from="Menu/Start" to="Menu" method="_on_Start_pressed"]
 [connection signal="pressed" from="Menu/Tutorial" to="Menu" method="_on_Tutorial_pressed"]
-[connection signal="pressed" from="Menu/Options" to="Menu" method="_on_Tutorial_pressed"]
+[connection signal="pressed" from="Menu/Options" to="Menu" method="_on_Options_pressed"]
 [connection signal="pressed" from="Menu/Quit" to="Menu" method="_on_Quit_pressed"]

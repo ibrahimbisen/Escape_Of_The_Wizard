@@ -3,10 +3,21 @@
 [ext_resource path="res://Characters/Turret.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Characters/RocketTurret.gd" type="Script" id=2]
 
-
 [node name="RocketTurret" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 nav_layer = null
+
+[node name="Sprite" parent="." index="0"]
+modulate = Color( 1, 0.180392, 0.180392, 1 )
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2( 0.500004, 0.999998 )
+
+[node name="EndofGun" parent="." index="2"]
+position = Vector2( -4.33922e-05, -12 )
+
+[node name="GunDirection" parent="." index="3"]
+position = Vector2( -2.90871e-05, -8 )
 
 [node name="GunTimer" parent="." index="4"]
 wait_time = 1.0

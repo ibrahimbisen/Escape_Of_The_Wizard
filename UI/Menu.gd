@@ -22,3 +22,7 @@ func _on_Menu_pressed():
 
 func _on_Main_Menu_pressed():
 	 return get_tree().change_scene("res://UI/Menu.tscn")
+
+
+func _on_Options_pressed():
+	pass # Replace with function body.
