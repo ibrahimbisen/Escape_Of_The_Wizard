@@ -1,4 +1,5 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=20 format=2]
+
 
 [ext_resource path="res://Assets/Fonts/alagard_font/alagard.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/GamePause.tscn" type="PackedScene" id=2]
@@ -35,14 +36,113 @@ script = ExtResource( 10 )
 
 [node name="Scene" parent="." instance=ExtResource( 5 )]
 
+[node name="HeartCollect1" parent="." instance=ExtResource( 16 )]
+position = Vector2( 4821, 566 )
+
+[node name="HeartCollect2" parent="." instance=ExtResource( 16 )]
+position = Vector2( 4523, 823 )
+
+[node name="HeartCollect3" parent="." instance=ExtResource( 16 )]
+position = Vector2( 4338, 1174 )
+
+[node name="HeartCollect4" parent="." instance=ExtResource( 16 )]
+position = Vector2( 3642, 733 )
+
+[node name="HeartCollect5" parent="." instance=ExtResource( 16 )]
+position = Vector2( 3162, 1021 )
+
+[node name="HeartCollect6" parent="." instance=ExtResource( 16 )]
+position = Vector2( 2958, 597 )
+
+[node name="HeartCollect7" parent="." instance=ExtResource( 16 )]
+position = Vector2( 1295, 1230 )
+
+[node name="HeartCollect8" parent="." instance=ExtResource( 16 )]
+position = Vector2( 2068, 729 )
+
+[node name="HeartCollect9" parent="." instance=ExtResource( 16 )]
+position = Vector2( 8442, 1265 )
+
+[node name="HeartCollect10" parent="." instance=ExtResource( 16 )]
+position = Vector2( 8039, 215 )
+
+[node name="HeartCollect11" parent="." instance=ExtResource( 16 )]
+position = Vector2( 5590, 1366 )
+
+[node name="HeartCollect12" parent="." instance=ExtResource( 16 )]
+position = Vector2( 7797, 1433 )
+
+[node name="HeartCollect13" parent="." instance=ExtResource( 16 )]
+position = Vector2( 6821, 134 )
+
 [node name="BlueAmmo" parent="." instance=ExtResource( 13 )]
-position = Vector2( 424, 646 )
+position = Vector2( 121, 697 )
 
 [node name="GreenAmmo" parent="." instance=ExtResource( 15 )]
-position = Vector2( 260, 570 )
+position = Vector2( 122, 606 )
 
 [node name="RedAmmo" parent="." instance=ExtResource( 14 )]
-position = Vector2( 202, 704 )
+position = Vector2( 121, 650 )
+
+[node name="B1" parent="." instance=ExtResource( 13 )]
+position = Vector2( 257, 1390 )
+
+[node name="B2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 4330, 253 )
+
+[node name="B3" parent="." instance=ExtResource( 13 )]
+position = Vector2( 3058, 412 )
+
+[node name="R1" parent="." instance=ExtResource( 14 )]
+position = Vector2( 3768, 351 )
+
+[node name="R2" parent="." instance=ExtResource( 14 )]
+position = Vector2( 3474, 721 )
+
+[node name="R3" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2412, 1064 )
+
+[node name="R4" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2939, 569 )
+
+[node name="R5" parent="." instance=ExtResource( 14 )]
+position = Vector2( 1994, 1442 )
+
+[node name="R6" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2393, 668 )
+
+[node name="R7" parent="." instance=ExtResource( 14 )]
+position = Vector2( 209, 1406 )
+
+[node name="R8" parent="." instance=ExtResource( 14 )]
+position = Vector2( 1290, 1165 )
+
+[node name="R9" parent="." instance=ExtResource( 14 )]
+position = Vector2( 1500, 200 )
+
+[node name="R10" parent="." instance=ExtResource( 14 )]
+position = Vector2( 798, 186 )
+
+[node name="R11" parent="." instance=ExtResource( 14 )]
+position = Vector2( 6270, 881 )
+
+[node name="R12" parent="." instance=ExtResource( 14 )]
+position = Vector2( 6458, 1239 )
+
+[node name="R13" parent="." instance=ExtResource( 14 )]
+position = Vector2( 7486, 384 )
+
+[node name="R14" parent="." instance=ExtResource( 14 )]
+position = Vector2( 7240, 1217 )
+
+[node name="R15" parent="." instance=ExtResource( 14 )]
+position = Vector2( 6401, 210 )
+
+[node name="R16" parent="." instance=ExtResource( 14 )]
+position = Vector2( 6635, 737 )
+
+[node name="R17" parent="." instance=ExtResource( 14 )]
+position = Vector2( 5039, 1191 )
 
 [node name="UI" type="CanvasLayer" parent="."]
 pause_mode = 2
@@ -278,5 +378,38 @@ position = Vector2( 4867, 1062 )
 
 [node name="a_e_50" parent="." instance=ExtResource( 3 )]
 position = Vector2( 4959, 588 )
+
+[node name="a_e_51" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5837, 1109 )
+
+[node name="a_e_52" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5424, 719 )
+
+[node name="a_e_53" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5622, 306 )
+
+[node name="a_e_54" parent="." instance=ExtResource( 3 )]
+position = Vector2( 8523, 648 )
+
+[node name="a_e_55" parent="." instance=ExtResource( 3 )]
+position = Vector2( 7442, 686 )
+
+[node name="a_e_56" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5447, 1061 )
+
+[node name="a_e_57" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5042, 257 )
+
+[node name="a_e_58" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4053, 1144 )
+
+[node name="a_e_59" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2661, -20 )
+
+[node name="a_e_60" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3707, 1450 )
+
+[node name="a_e_61" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2967, 1161 )
 
 [connection signal="timeout" from="HUD/Control/Timer" to="HUD/Control" method="_on_Timer_timeout"]
