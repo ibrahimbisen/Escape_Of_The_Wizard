@@ -1,4 +1,5 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
+
 
 [ext_resource path="res://Assets/Fonts/alagard_font/alagard.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/GamePause.tscn" type="PackedScene" id=2]
@@ -17,6 +18,10 @@
 [ext_resource path="res://Projectiles/GreenAmmo.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Characters/Turret.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Characters/RocketTurret.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Assets/SFX/Weapons/Shotgun.wav" type="AudioStream" id=18]
+[ext_resource path="res://Assets/SFX/Weapons/Laser.wav" type="AudioStream" id=19]
+[ext_resource path="res://Assets/SFX/Weapons/Fire.wav" type="AudioStream" id=20]
+
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -54,6 +59,8 @@ visible = false
 
 [node name="Hotbar" parent="UI" instance=ExtResource( 4 )]
 position = Vector2( 389, -201 )
+
+[node name="GamePauseSFX" type="AudioStreamPlayer" parent="UI"]
 
 [node name="Enemy" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1614, -1587 )
@@ -131,6 +138,15 @@ autostart = true
 
 [node name="Player" parent="." instance=ExtResource( 9 )]
 position = Vector2( 207, 653 )
+
+[node name="FireSFX" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource( 18 )
+
+[node name="ShotGunSFX" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource( 16 )
+
+[node name="LaserSFX" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource( 17 )
 
 [node name="Archer_Enemy3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 2406, 285 )
