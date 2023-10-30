@@ -358,7 +358,7 @@ wait_time = 0.1
 autostart = true
 
 [node name="Player" parent="." instance=ExtResource( 9 )]
-position = Vector2( 159, 95 )
+position = Vector2( 200, 105 )
 
 [node name="Archer_Enemy2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 6096, 377 )
@@ -367,7 +367,7 @@ position = Vector2( 6096, 377 )
 position = Vector2( 3977, 188 )
 
 [node name="Archer_Enemy4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 5361, -301 )
+position = Vector2( 5315, -233 )
 
 [node name="Archer_Enemy5" parent="." instance=ExtResource( 3 )]
 position = Vector2( 5478, 335 )
@@ -542,7 +542,7 @@ position = Vector2( 5853, 609 )
 nav_layer = 1
 
 [node name="RocketTurret3" parent="." instance=ExtResource( 17 )]
-position = Vector2( 5471, 2 )
+position = Vector2( 5472, -4 )
 nav_layer = 1
 
 [node name="Turret2" parent="." instance=ExtResource( 16 )]

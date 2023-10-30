@@ -11,13 +11,10 @@ nav_layer = null
 modulate = Color( 1, 0.180392, 0.180392, 1 )
 
 [node name="CollisionShape2D" parent="." index="1"]
-position = Vector2( 0.500004, 0.999998 )
+position = Vector2( -0.999998, 0.500004 )
 
 [node name="EndofGun" parent="." index="2"]
-position = Vector2( -4.33922e-05, -12 )
-
-[node name="GunDirection" parent="." index="3"]
-position = Vector2( -2.90871e-05, -8 )
+position = Vector2( 10, -3.62396e-05 )
 
 [node name="GunTimer" parent="." index="4"]
 wait_time = 1.0
