@@ -67,20 +67,14 @@ func _unhandled_input(event: InputEvent):
 			inv_pos = 0
 		#print(inv_pos)
 		#emit_signal("player_switched_weapon", inv_pos)
-
-
 	if event.is_action_released("Shoot"):
-		
 		if inv_pos == 0 && red_ammo > 0:
-			#magic_shot.play()
 			red_ammo -= 1
 			Shoot()
 		elif inv_pos == 1 && blue_ammo > 0:
-			#magic_shot.play()
 			blue_ammo -= 1
 			Shotgun()
 		elif inv_pos == 2 && green_ammo > 0:
-			#magic_shot.play()
 			green_ammo -= 1
 			Explosive()
 		#elif inv_pos == 3:
