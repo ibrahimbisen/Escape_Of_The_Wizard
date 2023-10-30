@@ -4,7 +4,7 @@
 [ext_resource path="res://UI/GamePause.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Characters/Archer_Enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://UI/Hotbar.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Map/Game Map.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Map/Level 1.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Characters/Enemy.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Main Scenes/Extraction/Extraction.tscn" type="PackedScene" id=7]
 [ext_resource path="res://UI/HUD.tscn" type="PackedScene" id=8]
@@ -17,7 +17,7 @@
 [ext_resource path="res://Projectiles/GreenAmmo.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Characters/Turret.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Characters/RocketTurret.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Assets/SFX/Weapons/Shotgun.wav" type="AudioStream" id=18]
+[ext_resource path="res://Assets/Audio/In game/Caves/caves-of-dawn-10376.mp3" type="AudioStream" id=18]
 [ext_resource path="res://Characters/HeartCollect.tscn" type="PackedScene" id=19]
 
 [sub_resource type="DynamicFont" id=1]
@@ -33,201 +33,207 @@ size = 40
 font_data = ExtResource( 1 )
 
 [node name="Main" type="Node2D"]
+position = Vector2( 21, -1623 )
 script = ExtResource( 10 )
 
-[node name="Scene" parent="." instance=ExtResource( 5 )]
+[node name="Main Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 18 )
+volume_db = -5.0
+autoplay = true
+
+[node name="Level 1 Map" parent="." instance=ExtResource( 5 )]
 
 [node name="BlueAmmo" parent="." instance=ExtResource( 13 )]
-position = Vector2( 424, 646 )
+position = Vector2( 150, 570 )
 
 [node name="GreenAmmo" parent="." instance=ExtResource( 15 )]
-position = Vector2( 260, 570 )
+position = Vector2( -142, 577 )
 
 [node name="RedAmmo" parent="." instance=ExtResource( 14 )]
-position = Vector2( 202, 704 )
+position = Vector2( 15, 575 )
 
 [node name="H1" parent="." instance=ExtResource( 19 )]
-position = Vector2( 757, 620 )
+position = Vector2( 1030, 601 )
 
 [node name="H2" parent="." instance=ExtResource( 19 )]
-position = Vector2( 7294, 815 )
+position = Vector2( 1771, 193 )
 
 [node name="H3" parent="." instance=ExtResource( 19 )]
-position = Vector2( 7010, 867 )
+position = Vector2( 2526, 990 )
 
 [node name="H4" parent="." instance=ExtResource( 19 )]
-position = Vector2( 6308, 209 )
+position = Vector2( 3929, -24 )
 
 [node name="H5" parent="." instance=ExtResource( 19 )]
-position = Vector2( 5142, 1341 )
+position = Vector2( 5493, 733 )
 
 [node name="H6" parent="." instance=ExtResource( 19 )]
-position = Vector2( 5535, 538 )
+position = Vector2( 4703, 607 )
 
 [node name="H7" parent="." instance=ExtResource( 19 )]
-position = Vector2( 4814, 1123 )
+position = Vector2( 4955, 925 )
 
 [node name="H8" parent="." instance=ExtResource( 19 )]
-position = Vector2( 3022, 831 )
+position = Vector2( 2654, 547 )
 
 [node name="H9" parent="." instance=ExtResource( 19 )]
-position = Vector2( 2030, 699 )
+position = Vector2( 1699, 879 )
 
 [node name="H10" parent="." instance=ExtResource( 19 )]
-position = Vector2( 203, 1246 )
+position = Vector2( 543, 609 )
 
 [node name="H11" parent="." instance=ExtResource( 19 )]
-position = Vector2( 6411, 465 )
+position = Vector2( 4333, -19 )
 
 [node name="H12" parent="." instance=ExtResource( 19 )]
-position = Vector2( 7918, 1083 )
+position = Vector2( 3192, 389 )
 
 [node name="H13" parent="." instance=ExtResource( 19 )]
-position = Vector2( 8054, 86 )
+position = Vector2( 1458, 671 )
 
 [node name="H14" parent="." instance=ExtResource( 19 )]
-position = Vector2( 6414, 178 )
+position = Vector2( 5924, 287 )
 
 [node name="H15" parent="." instance=ExtResource( 19 )]
-position = Vector2( 6529, 1226 )
+position = Vector2( 2528, 484 )
 
 [node name="H16" parent="." instance=ExtResource( 19 )]
-position = Vector2( 5923, 1054 )
+position = Vector2( 5787, 985 )
 
 [node name="H17" parent="." instance=ExtResource( 19 )]
-position = Vector2( 3407, 613 )
+position = Vector2( 2655, 483 )
 
 [node name="H18" parent="." instance=ExtResource( 19 )]
-position = Vector2( 7790, 540 )
+position = Vector2( 5043, 1064 )
 
 [node name="H19" parent="." instance=ExtResource( 19 )]
-position = Vector2( 4625, 827 )
+position = Vector2( 4731, 773 )
 
 [node name="H20" parent="." instance=ExtResource( 19 )]
-position = Vector2( 3867, 948 )
+position = Vector2( 3878, 923 )
 
 [node name="H21" parent="." instance=ExtResource( 19 )]
-position = Vector2( 4257, 569 )
+position = Vector2( 4295, 533 )
 
 [node name="H22" parent="." instance=ExtResource( 19 )]
-position = Vector2( 2592, 318 )
+position = Vector2( 2593, 481 )
 
 [node name="H23" parent="." instance=ExtResource( 19 )]
 position = Vector2( 1345, 372 )
 
 [node name="H24" parent="." instance=ExtResource( 19 )]
-position = Vector2( 8325, 1176 )
+position = Vector2( 3001, 150 )
 
 [node name="H25" parent="." instance=ExtResource( 19 )]
-position = Vector2( 7669, 748 )
+position = Vector2( 5715, 828 )
 
 [node name="H26" parent="." instance=ExtResource( 19 )]
-position = Vector2( 7169, 368 )
+position = Vector2( 3964, 198 )
 
 [node name="G1" parent="." instance=ExtResource( 15 )]
-position = Vector2( 7990, 1390 )
+position = Vector2( 4677, 220 )
 
 [node name="G2" parent="." instance=ExtResource( 15 )]
-position = Vector2( 7284, 919 )
+position = Vector2( 1375, 552 )
 
 [node name="G3" parent="." instance=ExtResource( 15 )]
-position = Vector2( 4755, 1457 )
+position = Vector2( 5543, 381 )
 
 [node name="G4" parent="." instance=ExtResource( 15 )]
 position = Vector2( 5900, 702 )
 
 [node name="G5" parent="." instance=ExtResource( 15 )]
-position = Vector2( 6188, 1404 )
+position = Vector2( 5686, 1143 )
 
 [node name="G6" parent="." instance=ExtResource( 15 )]
-position = Vector2( 5330, 643 )
+position = Vector2( 4985, 274 )
 
 [node name="B1" parent="." instance=ExtResource( 13 )]
-position = Vector2( 5315, 1301 )
+position = Vector2( 5087, 810 )
 
 [node name="B2" parent="." instance=ExtResource( 13 )]
-position = Vector2( 4043, 1225 )
+position = Vector2( 3933, 1061 )
 
 [node name="B3" parent="." instance=ExtResource( 13 )]
-position = Vector2( 1797, 1000 )
+position = Vector2( 1547, 1108 )
 
 [node name="B4" parent="." instance=ExtResource( 13 )]
-position = Vector2( 203, 1335 )
+position = Vector2( 349, 1102 )
 
 [node name="B5" parent="." instance=ExtResource( 13 )]
-position = Vector2( 4361, 250 )
+position = Vector2( 2124, 20 )
 
 [node name="B6" parent="." instance=ExtResource( 13 )]
-position = Vector2( 6085, 433 )
+position = Vector2( 5918, 419 )
 
 [node name="B7" parent="." instance=ExtResource( 13 )]
-position = Vector2( 3129, 1219 )
+position = Vector2( 2529, 544 )
 
 [node name="B8" parent="." instance=ExtResource( 13 )]
-position = Vector2( 1490, 1190 )
+position = Vector2( 924, 1025 )
 
 [node name="B9" parent="." instance=ExtResource( 13 )]
-position = Vector2( 8496, 1433 )
+position = Vector2( 5784, 164 )
 
 [node name="B10" parent="." instance=ExtResource( 13 )]
-position = Vector2( 7933, 235 )
+position = Vector2( 3520, 840 )
 
 [node name="R1" parent="." instance=ExtResource( 14 )]
 position = Vector2( 4306, 250 )
 
 [node name="R2" parent="." instance=ExtResource( 14 )]
-position = Vector2( 4585, 424 )
+position = Vector2( 3806, 193 )
 
 [node name="R3" parent="." instance=ExtResource( 14 )]
-position = Vector2( 4111, 1157 )
+position = Vector2( 4124, 1058 )
 
 [node name="R4" parent="." instance=ExtResource( 14 )]
-position = Vector2( 2869, 1030 )
+position = Vector2( 2530, 609 )
 
 [node name="R5" parent="." instance=ExtResource( 14 )]
-position = Vector2( 3632, 509 )
+position = Vector2( 2845, 1151 )
 
 [node name="R6" parent="." instance=ExtResource( 14 )]
-position = Vector2( 2810, 386 )
+position = Vector2( 2591, 611 )
 
 [node name="R7" parent="." instance=ExtResource( 14 )]
-position = Vector2( 2301, 725 )
+position = Vector2( 2653, 611 )
 
 [node name="R8" parent="." instance=ExtResource( 14 )]
-position = Vector2( 4574, 1316 )
+position = Vector2( 4132, 739 )
 
 [node name="R9" parent="." instance=ExtResource( 14 )]
-position = Vector2( 97, 1237 )
+position = Vector2( 203, 903 )
 
 [node name="R10" parent="." instance=ExtResource( 14 )]
-position = Vector2( 949, 161 )
+position = Vector2( 662, 197 )
 
 [node name="R11" parent="." instance=ExtResource( 14 )]
-position = Vector2( 7861, 1140 )
+position = Vector2( 2275, 682 )
 
 [node name="R12" parent="." instance=ExtResource( 14 )]
-position = Vector2( 7911, 1490 )
+position = Vector2( 4515, 326 )
 
 [node name="R13" parent="." instance=ExtResource( 14 )]
-position = Vector2( 7084, 1454 )
+position = Vector2( 3193, 727 )
 
 [node name="R14" parent="." instance=ExtResource( 14 )]
-position = Vector2( 7284, 1240 )
+position = Vector2( 3468, 631 )
 
 [node name="R15" parent="." instance=ExtResource( 14 )]
-position = Vector2( 7611, 587 )
+position = Vector2( 1254, 740 )
 
 [node name="R16" parent="." instance=ExtResource( 14 )]
-position = Vector2( 7111, 232 )
+position = Vector2( 5037, 655 )
 
 [node name="R17" parent="." instance=ExtResource( 14 )]
-position = Vector2( 6494, 933 )
+position = Vector2( 5212, 584 )
 
 [node name="R18" parent="." instance=ExtResource( 14 )]
-position = Vector2( 3324, 328 )
+position = Vector2( 3007, 636 )
 
 [node name="R19" parent="." instance=ExtResource( 14 )]
-position = Vector2( 5391, 968 )
+position = Vector2( 4960, 798 )
 
 [node name="UI" type="CanvasLayer" parent="."]
 pause_mode = 2
@@ -238,25 +244,25 @@ pause_mode = 2
 visible = false
 
 [node name="Hotbar" parent="UI" instance=ExtResource( 4 )]
-position = Vector2( 389, -201 )
+position = Vector2( 429, -206 )
 
 [node name="GamePauseSFX" type="AudioStreamPlayer" parent="UI"]
 
 [node name="Enemy" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1614, -1587 )
+position = Vector2( 9176, 652 )
 
 [node name="Archer_Enemy" parent="." instance=ExtResource( 3 )]
-position = Vector2( 6152, 437 )
+position = Vector2( 6742, 1009 )
 
 [node name="Turret" parent="." instance=ExtResource( 16 )]
-position = Vector2( 1535, 167 )
+position = Vector2( 525, 310 )
 
 [node name="RocketTurret" parent="." instance=ExtResource( 17 )]
-position = Vector2( 1143, 705 )
+position = Vector2( 1062, 816 )
 nav_layer = 1
 
 [node name="Extraction" parent="." instance=ExtResource( 7 )]
-position = Vector2( 8760, 697 )
+position = Vector2( 6562, 607 )
 collision_layer = 2
 collision_mask = 2
 
@@ -265,10 +271,10 @@ collision_mask = 2
 [node name="Control" type="Control" parent="HUD"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -136.5
-margin_top = 16.0
-margin_right = 136.5
-margin_bottom = 126.0
+margin_left = -134.0
+margin_top = 21.0
+margin_right = 139.0
+margin_bottom = 131.0
 script = ExtResource( 11 )
 minutes = 1
 
@@ -278,6 +284,7 @@ anchor_right = 0.5
 margin_left = -76.5
 margin_right = -26.5
 margin_bottom = 100.0
+custom_colors/default_color = Color( 1, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 1 )
 text = "00"
 fit_content_height = true
@@ -288,6 +295,7 @@ anchor_right = 0.5
 margin_left = -20.0
 margin_right = 30.0
 margin_bottom = 100.0
+custom_colors/default_color = Color( 1, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 2 )
 text = "00"
 
@@ -297,6 +305,7 @@ anchor_right = 0.5
 margin_left = 36.5
 margin_right = 86.5
 margin_bottom = 100.0
+custom_colors/default_color = Color( 1, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 3 )
 text = "00"
 
@@ -306,68 +315,61 @@ wait_time = 0.1
 autostart = true
 
 [node name="Player" parent="." instance=ExtResource( 9 )]
-position = Vector2( 207, 653 )
-
-[node name="FireSFX" type="AudioStreamPlayer" parent="Player"]
-stream = ExtResource( 18 )
-
-[node name="ShotGunSFX" type="AudioStreamPlayer" parent="Player"]
-
-[node name="LaserSFX" type="AudioStreamPlayer" parent="Player"]
+position = Vector2( -468, 565 )
 
 [node name="Archer_Enemy3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2406, 285 )
+position = Vector2( 839, 50 )
 
 [node name="Archer_Enemy4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1093, 1223 )
+position = Vector2( 798, 1147 )
 
 [node name="Archer_Enemy5" parent="." instance=ExtResource( 3 )]
 position = Vector2( 2804, 223 )
 
 [node name="Archer_Enemy2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3195, 151 )
+position = Vector2( 2024, 113 )
 
 [node name="a_e_7" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2100, 526 )
+position = Vector2( 1140, 90 )
 
 [node name="a_e_11" parent="." instance=ExtResource( 3 )]
-position = Vector2( 4651, 48 )
+position = Vector2( 4651, 79 )
 
 [node name="Archer_Enemy6" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2574, 951 )
+position = Vector2( 2078, 544 )
 
 [node name="a_e_8" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2417, 1212 )
+position = Vector2( 1824, 888 )
 
 [node name="a_e_9" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2205, 751 )
+position = Vector2( 1760, 28 )
 
 [node name="a_e_10" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1842, 1262 )
+position = Vector2( 1773, 1175 )
 
 [node name="a_e_12" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3454, 1025 )
+position = Vector2( 3386, 1129 )
 
 [node name="a_e_13" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2930, 815 )
+position = Vector2( 2913, 800 )
 
 [node name="a_e_14" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1377, 521 )
+position = Vector2( 997, 398 )
 
 [node name="a_e_15" parent="." instance=ExtResource( 3 )]
-position = Vector2( 4568, 627 )
+position = Vector2( 5335, 667 )
 
 [node name="a_e_16" parent="." instance=ExtResource( 3 )]
-position = Vector2( 936, 1346 )
+position = Vector2( 1281, 1054 )
 
 [node name="a_e_17" parent="." instance=ExtResource( 3 )]
-position = Vector2( 4481, 918 )
+position = Vector2( 4590, 935 )
 
 [node name="a_e_18" parent="." instance=ExtResource( 3 )]
-position = Vector2( 281, 1290 )
+position = Vector2( 262, 829 )
 
 [node name="a_e_19" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1112, 179 )
+position = Vector2( 207, 284 )
 
 [node name="a_e_20" parent="." instance=ExtResource( 3 )]
 position = Vector2( 6075, 721 )
@@ -376,25 +378,25 @@ position = Vector2( 6075, 721 )
 position = Vector2( 3711, 665 )
 
 [node name="a_e_22" parent="." instance=ExtResource( 3 )]
-position = Vector2( 4371, 403 )
+position = Vector2( 4149, 167 )
 
 [node name="a_e_23" parent="." instance=ExtResource( 3 )]
-position = Vector2( 4188, 226 )
+position = Vector2( 3240, -1 )
 
 [node name="a_e_24" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3720, 175 )
+position = Vector2( 3609, 98 )
 
 [node name="a_e_25" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3422, 357 )
+position = Vector2( 3556, 417 )
 
 [node name="a_e_26" parent="." instance=ExtResource( 3 )]
-position = Vector2( 6710, 186 )
+position = Vector2( 4352, 113 )
 
 [node name="a_e_27" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1837, 344 )
+position = Vector2( 1841, 391 )
 
 [node name="a_e_28" parent="." instance=ExtResource( 3 )]
-position = Vector2( 4340, 1294 )
+position = Vector2( 3725, 1087 )
 
 [node name="a_e_29" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1866, 612 )
@@ -409,120 +411,120 @@ position = Vector2( 4405, 1066 )
 position = Vector2( 3958, 557 )
 
 [node name="a_e_33" parent="." instance=ExtResource( 3 )]
-position = Vector2( 6427, 547 )
+position = Vector2( 3258, 189 )
 
 [node name="a_e_34" parent="." instance=ExtResource( 3 )]
-position = Vector2( 6927, 217 )
+position = Vector2( 1190, 607 )
 
 [node name="a_e_35" parent="." instance=ExtResource( 3 )]
-position = Vector2( 4743, 1198 )
+position = Vector2( 4641, 1161 )
 
 [node name="a_e_36" parent="." instance=ExtResource( 3 )]
-position = Vector2( 8263, -20 )
+position = Vector2( 6352, 51 )
 
 [node name="a_e_37" parent="." instance=ExtResource( 3 )]
-position = Vector2( 6968, 1434 )
+position = Vector2( 5669, 291 )
 
 [node name="a_e_38" parent="." instance=ExtResource( 3 )]
-position = Vector2( 7305, 1043 )
+position = Vector2( 1527, 182 )
 
 [node name="a_e_39" parent="." instance=ExtResource( 3 )]
-position = Vector2( 8094, 1138 )
+position = Vector2( 5534, 602 )
 
 [node name="a_e_40" parent="." instance=ExtResource( 3 )]
-position = Vector2( 6741, 1006 )
+position = Vector2( 5431, 233 )
 
 [node name="a_e_41" parent="." instance=ExtResource( 3 )]
-position = Vector2( 6981, 666 )
+position = Vector2( 5339, 505 )
 
 [node name="a_e_42" parent="." instance=ExtResource( 3 )]
-position = Vector2( 7503, 12 )
+position = Vector2( 1716, 740 )
 
 [node name="a_e_43" parent="." instance=ExtResource( 3 )]
-position = Vector2( 7832, 968 )
+position = Vector2( 6203, 909 )
 
 [node name="a_e_44" parent="." instance=ExtResource( 3 )]
-position = Vector2( 8354, 370 )
+position = Vector2( 6535, 185 )
 
 [node name="a_e_45" parent="." instance=ExtResource( 3 )]
-position = Vector2( 7939, 487 )
+position = Vector2( 819, 809 )
 
 [node name="a_e_46" parent="." instance=ExtResource( 3 )]
-position = Vector2( 5269, 1386 )
+position = Vector2( 6190, 1185 )
 
 [node name="a_e_47" parent="." instance=ExtResource( 3 )]
-position = Vector2( 4626, 1446 )
+position = Vector2( 4015, 1183 )
 
 [node name="a_e_48" parent="." instance=ExtResource( 3 )]
-position = Vector2( 7154, 79 )
+position = Vector2( 4860, 262 )
 
 [node name="a_e_49" parent="." instance=ExtResource( 3 )]
-position = Vector2( 4867, 1062 )
+position = Vector2( 4713, 935 )
 
 [node name="a_e_50" parent="." instance=ExtResource( 3 )]
-position = Vector2( 4959, 588 )
+position = Vector2( 4854, 651 )
 
 [node name="a_e_51" parent="." instance=ExtResource( 3 )]
-position = Vector2( 5951, 1254 )
+position = Vector2( 5954, 1175 )
 
 [node name="a_e_52" parent="." instance=ExtResource( 3 )]
-position = Vector2( 8510, 1283 )
+position = Vector2( 5204, 841 )
 
 [node name="a_e_53" parent="." instance=ExtResource( 3 )]
-position = Vector2( 5674, 348 )
+position = Vector2( 5670, 430 )
 
 [node name="a_e_54" parent="." instance=ExtResource( 3 )]
-position = Vector2( 5280, 962 )
+position = Vector2( 5345, 1160 )
 
 [node name="a_e_55" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2907, 1428 )
+position = Vector2( 2538, 1161 )
 
 [node name="a_e_56" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3903, 1148 )
+position = Vector2( 3108, 1025 )
 
 [node name="a_e_57" parent="." instance=ExtResource( 3 )]
-position = Vector2( 7472, 1329 )
+position = Vector2( 5024, 1195 )
 
 [node name="a_e_58" parent="." instance=ExtResource( 3 )]
-position = Vector2( 5270, 267 )
+position = Vector2( 5033, 514 )
 
 [node name="a_e_59" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3916, 1454 )
+position = Vector2( 4212, 419 )
 
 [node name="a_e_60" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2106, 1176 )
+position = Vector2( 1459, 1017 )
 
 [node name="RocketTurret2" parent="." instance=ExtResource( 17 )]
-position = Vector2( 6700, 738 )
+position = Vector2( 6755, 289 )
 
 [node name="RocketTurret3" parent="." instance=ExtResource( 17 )]
-position = Vector2( 7717, 638 )
+position = Vector2( 6750, 1199 )
 
 [node name="Turret2" parent="." instance=ExtResource( 16 )]
 position = Vector2( 5128, 42 )
 
 [node name="Turret3" parent="." instance=ExtResource( 16 )]
-position = Vector2( 5213, 636 )
+position = Vector2( 5110, 270 )
 
 [node name="Turret4" parent="." instance=ExtResource( 16 )]
-position = Vector2( 3945, 861 )
+position = Vector2( 4031, 861 )
 
 [node name="Turret5" parent="." instance=ExtResource( 16 )]
-position = Vector2( 2546, 1379 )
+position = Vector2( 2274, 868 )
 
 [node name="Turret6" parent="." instance=ExtResource( 16 )]
 position = Vector2( 2581, 0 )
 
 [node name="Turret7" parent="." instance=ExtResource( 16 )]
-position = Vector2( 6511, 1465 )
+position = Vector2( 5286, 232 )
 
 [node name="Turret8" parent="." instance=ExtResource( 16 )]
-position = Vector2( 6388, -39 )
+position = Vector2( 6748, -31 )
 
 [node name="Turret9" parent="." instance=ExtResource( 16 )]
-position = Vector2( 7886, 77 )
+position = Vector2( 4447, 426 )
 
 [node name="Turret10" parent="." instance=ExtResource( 16 )]
-position = Vector2( 4803, 102 )
+position = Vector2( 4680, 331 )
 
 [connection signal="timeout" from="HUD/Control/Timer" to="HUD/Control" method="_on_Timer_timeout"]
