@@ -28,7 +28,7 @@ func _physics_process(delta):
 		#print(enemy_vision.collider)
 		if enemy_vision.collider==player:
 			target = enemy_vision.collider.global_transform.origin
-			direction = (target - position).normalized()
+			direction = (target - global_transform.origin).normalized()
 			look_at(target)
 		else:
 			target = self.position
@@ -37,7 +37,7 @@ func _physics_process(delta):
 		target = self.position
 		direction = Vector2.ZERO
 
-	position += direction * speed * delta
+	global_position += direction * speed * delta
 
 
 func handle_hit():

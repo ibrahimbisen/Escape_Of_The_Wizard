@@ -5,7 +5,7 @@ onready var end_of_gun = $EndofGun
 onready var gunpoint = $GunDirection
 
 export (int, LAYERS_2D_NAVIGATION) var nav_layer = 1
-onready var nav = $NavigationAgent2D
+#onready var nav = $NavigationAgent2D
 #var target_reached
 #var can_spot = true
 
@@ -18,7 +18,7 @@ signal shoot
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	target = Vector2.ZERO
-	nav.set_target_location(self.position)
+	#nav.set_target_location(self.position)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -43,8 +43,6 @@ func _physics_process(delta):
 	if enemy_vision:
 		#if enemy_vision.collider==player && can_spot:
 		if enemy_vision.collider == player:
-			target = player.global_transform.origin
-			direction = (target - global_position).normalized()
 			#$GunTimer.start()
 			#nav.set_target_location(target)
 
@@ -66,9 +64,9 @@ func _physics_process(delta):
 	#else:
 	#	direction = (next_location - global_position).normalized()
 	
-	look_at(target)
+	#look_at(target)
 	
-	#position += direction * speed * delta
+	global_position += direction * speed * delta
 
 
 func _on_GunTimer_timeout():
