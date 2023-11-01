@@ -7,11 +7,11 @@ var item_quantity
 func _ready():
 	var rand_val = randi()%3	
 	if rand_val == 0:
-		item_name = "RedOrb"
+		item_name = "Fire Ball"
 	elif rand_val == 1:
-		item_name = "BlueOrb"
+		item_name = "Laser Blast"
 	elif rand_val == 2:
-		item_name = "GreenOrb"
+		item_name = "Crossbow"
 		
 	$TextureRect.texture = load("res://Assets/Inventory/item_icons/" + item_name + ".png")
 	var stack_size = int(JsonData.item_data[item_name]["StackSize"])

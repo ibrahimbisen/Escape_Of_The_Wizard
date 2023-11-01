@@ -1,18 +1,18 @@
 {
-   "BlueOrb": {
+   "Laser Blast": {
       "ItemCategory": "Potions",
       "StackSize": 99,
       "Description": "Laser Blast"
    },
-   "RedOrb": {
+   "Fire Ball": {
       "ItemCategory": "Potions",
       "StackSize": 99,
       "Description": "Fire Ball"
    },
-   "GreenOrb": {
+   "Crossbow": {
       "ItemCategory": "Potions",
       "StackSize": 99,
-      "Description": "Shotgun Blast"
+      "Description": "Crossbow"
    }
     
 }
