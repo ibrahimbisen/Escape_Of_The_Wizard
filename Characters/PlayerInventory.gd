@@ -11,9 +11,9 @@ var active_item_slot = 0
 
 
 var hotbar = {
-	0: ["RedOrb", 10],
-	1: ["BlueOrb", 10],
-	2: ["GreenOrb", 10],
+	0: ["Laser Blast", 0],
+	1: ["Crossbow", 0],
+	2: ["Fire Ball", 0],
 }
 
 
@@ -23,16 +23,9 @@ func add_item(item_name, item_quantity):
 	slot_indices.sort()
 	for item in slot_indices:
 		if hotbar[item][0] == item_name:
-			var stack_size = int(JsonData.item_data[item_name]["StackSize"])
-			var able_to_add = stack_size - hotbar[item][1]
-			if able_to_add >= item_quantity:
-				hotbar[item][1] += item_quantity
-				update_slot_visual(item, hotbar[item][0], hotbar[item][1])
-				return
-			else:
-				hotbar[item][1] += able_to_add
-				update_slot_visual(item, hotbar[item][0], hotbar[item][1])
-				item_quantity = item_quantity - able_to_add
+			hotbar[item][1] += item_quantity
+			update_slot_visual(item, hotbar[item][0], hotbar[item][1])
+				
 	
 	# item doesn't exist in inventory yet, so add it to an empty slot
 
