@@ -4,7 +4,6 @@ onready var startmusic = $StartSFX
 
 func _on_Start_pressed():
 	Global.lives = Global.max_lives
-	startmusic.play()
 	return get_tree().change_scene("res://Main Scenes/Level 1.tscn") 	
 	
 

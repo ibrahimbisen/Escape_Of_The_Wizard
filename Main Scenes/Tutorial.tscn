@@ -358,7 +358,7 @@ wait_time = 0.1
 autostart = true
 
 [node name="Player" parent="." instance=ExtResource( 9 )]
-position = Vector2( 200, 105 )
+position = Vector2( 1848, 98 )
 
 [node name="Archer_Enemy2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 6096, 377 )
