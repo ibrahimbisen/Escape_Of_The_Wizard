@@ -7,3 +7,11 @@
 collision_layer = 2
 collision_mask = 2
 script = ExtResource( 2 )
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2( 2, -1.5 )
+
+[node name="Sprite" parent="." index="1"]
+position = Vector2( 1.89415, -1.33292 )
+scale = Vector2( 0.127769, 0.126678 )
+region_rect = Rect2( 671.721, 162.293, 96.9363, 142.555 )

@@ -37,28 +37,25 @@ stream = ExtResource( 4 )
 autoplay = true
 
 [node name="Start over" type="Button" parent="Menu"]
-self_modulate = Color( 0.494118, 0.654902, 1, 1 )
 margin_right = 380.0
 margin_bottom = 66.0
-custom_colors/font_color = Color( 1, 0.941176, 0.611765, 1 )
+custom_colors/font_color = Color( 1, 0.282353, 0.388235, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Start Over"
 
 [node name="Main Menu" type="Button" parent="Menu"]
-self_modulate = Color( 0.494118, 0.654902, 1, 1 )
 margin_top = 70.0
 margin_right = 380.0
 margin_bottom = 136.0
-custom_colors/font_color = Color( 1, 0.941176, 0.611765, 1 )
+custom_colors/font_color = Color( 1, 0.282353, 0.388235, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Main Menu"
 
 [node name="Quit" type="Button" parent="Menu"]
-self_modulate = Color( 0.494118, 0.654902, 1, 1 )
 margin_top = 140.0
 margin_right = 380.0
 margin_bottom = 206.0
-custom_colors/font_color = Color( 1, 0.941176, 0.611765, 1 )
+custom_colors/font_color = Color( 1, 0.282353, 0.388235, 1 )
 custom_fonts/font = SubResource( 3 )
 text = "Quit"
 
@@ -78,7 +75,7 @@ margin_left = 160.0
 margin_top = 144.0
 margin_right = 860.0
 margin_bottom = 238.0
-custom_colors/font_color = Color( 1, 0.941176, 0.611765, 1 )
+custom_colors/font_color = Color( 1, 0.282353, 0.388235, 1 )
 custom_fonts/font = SubResource( 4 )
 text = "GAME OVER!"
 align = 1
