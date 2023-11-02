@@ -37,7 +37,7 @@ func _physics_process(delta):
 		target = self.position
 		direction = Vector2.ZERO
 
-	global_position += direction * speed * delta
+	position += direction * speed * delta
 
 
 func handle_hit():

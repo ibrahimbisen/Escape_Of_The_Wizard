@@ -5,6 +5,9 @@ extends Node2D
 #connect its signals to the main scene
 onready var player: Player = $Player
 
+onready var key1 = $Key
+onready var door1 = $Door
+
 onready var B1 = $BlueAmmo
 onready var B2 = $B1
 onready var B3 = $B2
@@ -123,7 +126,9 @@ onready var turret10 = $Turret10
 
 
 func _ready():
-	get_tree().call_group("archers", "init_player")
+	key1.connect("key_picked_up", self, "door_open")
+	key1.door = door1
+	#get_tree().call_group("archers", "init_player")
 	enemy.player = player
 	archer.player = player
 	enemy1.player = player
@@ -359,5 +364,6 @@ func handle_laser_spawned(bullet: Laser, a_position: Vector2, direction: Vector2
 	bullet.get_node("Line2D").add_point(Vector2(0,0))
 	bullet.get_node("Line2D").add_point(fire_to-a_position)
 
-
+func door_open(door: door):
+	door.queue_free()
 

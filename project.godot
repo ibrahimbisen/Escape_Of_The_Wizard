@@ -49,6 +49,16 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Projectiles/BlueAmmo.gd"
 }, {
+"base": "KinematicBody2D",
+"class": "door",
+"language": "GDScript",
+"path": "res://Door.gd"
+}, {
+"base": "Area2D",
+"class": "key",
+"language": "GDScript",
+"path": "res://Key.gd"
+}, {
 "base": "Archer_Enemy",
 "class": "turret",
 "language": "GDScript",
@@ -63,6 +73,8 @@ _global_script_class_icons={
 "Laser": "",
 "Player": "",
 "ammo": "",
+"door": "",
+"key": "",
 "turret": ""
 }
 
@@ -196,11 +208,6 @@ scroll_down={
 "deadzone": 0.5,
 "events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":5,"pressed":false,"doubleclick":false,"script":null)
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":50,"unicode":0,"echo":false,"script":null)
- ]
-}
-picked_up_item={
-"deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":69,"unicode":0,"echo":false,"script":null)
  ]
 }
 

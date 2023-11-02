@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Assets/Fonts/alagard_font/alagard.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/GamePause.tscn" type="PackedScene" id=2]
@@ -19,6 +19,8 @@
 [ext_resource path="res://Characters/RocketTurret.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Assets/Audio/In game/Caves/caves-of-dawn-10376.mp3" type="AudioStream" id=18]
 [ext_resource path="res://Characters/HeartCollect.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Key.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Door.tscn" type="PackedScene" id=21]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -51,6 +53,12 @@ position = Vector2( -142, 577 )
 
 [node name="RedAmmo" parent="." instance=ExtResource( 14 )]
 position = Vector2( 15, 575 )
+
+[node name="Door" parent="." instance=ExtResource( 21 )]
+position = Vector2( -237, 575 )
+
+[node name="Key" parent="." instance=ExtResource( 20 )]
+position = Vector2( -333, 551 )
 
 [node name="H1" parent="." instance=ExtResource( 19 )]
 position = Vector2( 1030, 601 )
