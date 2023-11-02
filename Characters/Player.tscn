@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Characters/Player.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Character/White Flash_2.png" type="Texture" id=2]
 [ext_resource path="res://Projectiles/FireBall.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/Audio/Shooting/shooting-star-2-104073.mp3" type="AudioStream" id=4]
 [ext_resource path="res://Assets/Character/wiz01 spritesheet v02.png" type="Texture" id=5]
@@ -143,3 +144,15 @@ anims/Run = SubResource( 9 )
 [node name="Camera2D2" type="Camera2D" parent="."]
 current = true
 zoom = Vector2( 1.2, 1.2 )
+
+[node name="Damage_Sprite" type="Sprite" parent="."]
+visible = false
+position = Vector2( 3, 1 )
+rotation = 1.5708
+scale = Vector2( 0.118521, 0.118521 )
+texture = ExtResource( 2 )
+
+[node name="White_Timer" type="Timer" parent="."]
+wait_time = 0.2
+
+[connection signal="timeout" from="White_Timer" to="." method="_on_White_Timer_timeout"]

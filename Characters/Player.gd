@@ -89,10 +89,13 @@ func Shoot():
 
 func handle_hit():
 	health -= 20
-	#print("player hit", health)
 	
 	# when player is hit, HUD updates with -1 heart
 	Global.lose_heart()
+	$White_Timer.start()
+	$Damage_Sprite.show()
+	$Sprite.hide()
+
 
 func Big_Shoot():
 	var Bigshot = load("res://Projectiles/Big_Shot.tscn")
@@ -139,3 +142,9 @@ func Laser():
 	#laser_instance.global_position = gunpoint.global_position
 	
 	emit_signal("player_fired_laser", laser_instance, gunpoint.global_position, direction)
+
+
+func _on_White_Timer_timeout():
+	$White_Timer.stop()
+	$Sprite.show()
+	$Damage_Sprite.hide()
