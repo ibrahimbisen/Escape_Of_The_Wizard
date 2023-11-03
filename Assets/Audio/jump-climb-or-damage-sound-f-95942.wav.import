@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/jump-climb-or-damage-sound-f-95942.wav-8b01f901b91b5a17f05a0f63f312ba63.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/jump-climb-or-damage-sound-f-95942.wav"
+dest_files=[ "res://.import/jump-climb-or-damage-sound-f-95942.wav-8b01f901b91b5a17f05a0f63f312ba63.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -51,6 +51,7 @@ func _physics_process(delta):
 			#print(dist, can_fire)
 			if ((dist < 500) && (can_fire)):
 				#print(can_fire)
+				$EnemyShoot.play()
 				$GunTimer.start()
 				can_fire = false
 
