@@ -100,6 +100,7 @@ func Shoot():
 
 func handle_hit():
 	health -= 20
+	$Hurt.play()
 	
 	# when player is hit, HUD updates with -1 heart
 	Global.lose_heart()
