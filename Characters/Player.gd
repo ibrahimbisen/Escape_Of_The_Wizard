@@ -67,20 +67,14 @@ func _unhandled_input(event: InputEvent):
 			inv_pos = 0
 		#print(inv_pos)
 		#emit_signal("player_switched_weapon", inv_pos)
-
-
 	if event.is_action_released("Shoot"):
-		
 		if inv_pos == 0 && red_ammo > 0:
-			#magic_shot.play()
 			red_ammo -= 1
 			Shoot()
 		elif inv_pos == 1 && blue_ammo > 0:
-			#magic_shot.play()
 			blue_ammo -= 1
 			Shotgun()
 		elif inv_pos == 2 && green_ammo > 0:
-			#magic_shot.play()
 			green_ammo -= 1
 			Explosive()
 		#elif inv_pos == 3:
@@ -95,10 +89,13 @@ func Shoot():
 
 func handle_hit():
 	health -= 20
-	#print("player hit", health)
 	
 	# when player is hit, HUD updates with -1 heart
 	Global.lose_heart()
+	$White_Timer.start()
+	$Damage_Sprite.show()
+	$Sprite.hide()
+
 
 func Big_Shoot():
 	var Bigshot = load("res://Projectiles/Big_Shot.tscn")
@@ -145,3 +142,9 @@ func Laser():
 	#laser_instance.global_position = gunpoint.global_position
 	
 	emit_signal("player_fired_laser", laser_instance, gunpoint.global_position, direction)
+
+
+func _on_White_Timer_timeout():
+	$White_Timer.stop()
+	$Sprite.show()
+	$Damage_Sprite.hide()
