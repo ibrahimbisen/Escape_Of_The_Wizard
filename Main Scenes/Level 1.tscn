@@ -50,9 +50,12 @@ position = Vector2( 150, 570 )
 
 [node name="GreenAmmo" parent="." instance=ExtResource( 15 )]
 position = Vector2( -142, 577 )
+rotation = 1.5708
+scale = Vector2( 3, 3 )
 
 [node name="RedAmmo" parent="." instance=ExtResource( 14 )]
 position = Vector2( 15, 575 )
+scale = Vector2( 3, 3 )
 
 [node name="Door" parent="." instance=ExtResource( 21 )]
 position = Vector2( -237, 575 )
@@ -537,6 +540,4 @@ position = Vector2( 4447, 426 )
 [node name="Turret10" parent="." instance=ExtResource( 16 )]
 position = Vector2( 4680, 331 )
 
-[connection signal="body_entered" from="GreenAmmo" to="GreenAmmo" method="_on_GreenAmmo_body_entered"]
-[connection signal="body_entered" from="RedAmmo" to="RedAmmo" method="_on_RedAmmo_body_entered"]
 [connection signal="timeout" from="HUD/Control/Timer" to="HUD/Control" method="_on_Timer_timeout"]
