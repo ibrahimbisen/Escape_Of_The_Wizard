@@ -25,8 +25,14 @@ func add_item(item_name, item_quantity):
 		if hotbar[item][0] == item_name:
 			hotbar[item][1] += item_quantity
 			update_slot_visual(item, hotbar[item][0], hotbar[item][1])
-				
-	
+
+func subtract_item(item_name, item_quantity):
+	var slot_indices: Array = hotbar.keys()
+	slot_indices.sort()
+	for item in slot_indices:
+		if hotbar[item][0] == item_name:
+			hotbar[item][1] -= item_quantity
+			update_slot_visual(item, hotbar[item][0], hotbar[item][1])
 	# item doesn't exist in inventory yet, so add it to an empty slot
 
 # TODO: Make compatible with hotbar as well

@@ -10,7 +10,7 @@ var item_name
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	type = 1
+	type = 0
 	item_name = "Laser Blast"
 
 func _on_BlueAmmo_body_entered(body):
