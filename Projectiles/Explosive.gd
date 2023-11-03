@@ -9,6 +9,7 @@ func _ready():
 
 #explodes when fireball timer times out
 func _on_KillTimer_timeout():
+	$Explode.play()
 	$ExplosionTimer.start()
 	$Sprite.hide()
 	self.direction = Vector2.ZERO
@@ -26,6 +27,7 @@ func _on_ExplosionTimer_timeout():
 func _on_FireBall_body_entered(body):
 	if body.has_method("handle_hit"):
 		body.handle_hit()
+		$Explode.play()
 		$ExplosionTimer.start()
 		#$Explosion.show()
 		$Sprite.hide()
@@ -42,6 +44,7 @@ func _on_FireBall_body_entered(body):
 
 #explodes on collision with map item
 func _on_Explosive_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+	$Explode.play()
 	$ExplosionTimer.start()
 	#$Explosion.show()
 	$Sprite.hide()

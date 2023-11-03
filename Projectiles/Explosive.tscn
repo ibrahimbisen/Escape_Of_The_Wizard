@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Projectiles/Explosive.gd" type="Script" id=1]
 [ext_resource path="res://Projectiles/FireBall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Audio/Shooting/mixkit-arcade-game-explosion-2759.wav" type="AudioStream" id=3]
 
 [node name="Explosive" instance=ExtResource( 2 )]
 script = ExtResource( 1 )
@@ -10,6 +11,9 @@ script = ExtResource( 1 )
 scale = Vector2( 0.150452, 0.206602 )
 
 [node name="ExplosionTimer" type="Timer" parent="." index="3"]
+
+[node name="Explode" type="AudioStreamPlayer" parent="." index="4"]
+stream = ExtResource( 3 )
 
 [connection signal="body_shape_entered" from="." to="." method="_on_Explosive_body_shape_entered"]
 [connection signal="timeout" from="ExplosionTimer" to="." method="_on_ExplosionTimer_timeout"]
