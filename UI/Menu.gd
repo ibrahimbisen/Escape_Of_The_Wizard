@@ -19,11 +19,8 @@ func _ready():
 func _on_Start_pressed():
 	Global.lives = Global.max_lives
 	PlayerInventory.active_item_slot = 0
-	return get_tree().change_scene("res://Main Scenes/Level 1.tscn") 
-	# Replace with function body.
-	PlayerInventory.reset_item("Laser Blast", 0)
-	PlayerInventory.reset_item("Crossbow", 0)
-	PlayerInventory.reset_item("Fire Ball", 0)
+	return get_tree().change_scene("res://Main Scenes/Level 1.tscn") # Replace with function body.
+	
 
 func _on_Quit_pressed():
 	return get_tree().quit()
@@ -31,7 +28,7 @@ func _on_Quit_pressed():
 
 func _on_Tutorial_pressed():
 	return get_tree().change_scene("res://Main Scenes/Tutorial.tscn")
-	
+
 
 func _on_Menu_pressed():
 	return get_tree().change_scene("res://UI/Menu.tscn")
