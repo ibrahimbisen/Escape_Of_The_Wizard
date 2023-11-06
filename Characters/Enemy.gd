@@ -42,6 +42,5 @@ func _physics_process(delta):
 
 func handle_hit():
 	health -= 20
-	$EnemyHurt.play()
 	if health <= 0:
 		queue_free()
