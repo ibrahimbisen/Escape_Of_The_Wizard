@@ -1,6 +1,5 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=26 format=2]
 
-[ext_resource path="res://Assets/Fonts/alagard_font/alagard.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/GamePause.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Characters/Archer_Enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://UI/Hotbar.tscn" type="PackedScene" id=4]
@@ -9,8 +8,7 @@
 [ext_resource path="res://Main Scenes/Extraction/Extraction.tscn" type="PackedScene" id=7]
 [ext_resource path="res://UI/HUD.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Main Scenes/Level 1.gd" type="Script" id=10]
-[ext_resource path="res://Main Scenes/Countdown.gd" type="Script" id=11]
+[ext_resource path="res://Main Scenes/Tutorial.gd" type="Script" id=10]
 [ext_resource path="res://UI/UI.gd" type="Script" id=12]
 [ext_resource path="res://Projectiles/BlueAmmo.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Projectiles/RedAmmo.tscn" type="PackedScene" id=14]
@@ -27,18 +25,6 @@
 [ext_resource path="res://Main Scenes/Tutorial Texts/Extraction.png" type="Texture" id=25]
 [ext_resource path="res://Main Scenes/Tutorial Texts/scroll to change weapon.png" type="Texture" id=26]
 [ext_resource path="res://Main Scenes/Tutorial Texts/escape.png" type="Texture" id=27]
-
-[sub_resource type="DynamicFont" id=1]
-size = 40
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=2]
-size = 40
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=3]
-size = 40
-font_data = ExtResource( 1 )
 
 [node name="Main" type="Node2D"]
 position = Vector2( 21, -1623 )
@@ -311,52 +297,6 @@ nav_layer = 1
 
 [node name="HUD" parent="." instance=ExtResource( 8 )]
 
-[node name="Control" type="Control" parent="HUD"]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -134.0
-margin_top = 21.0
-margin_right = 139.0
-margin_bottom = 131.0
-script = ExtResource( 11 )
-minutes = 1
-
-[node name="min" type="RichTextLabel" parent="HUD/Control"]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -76.5
-margin_right = -26.5
-margin_bottom = 100.0
-custom_colors/default_color = Color( 1, 0.282353, 0.388235, 1 )
-custom_fonts/normal_font = SubResource( 1 )
-text = "00"
-fit_content_height = true
-
-[node name="sec" type="RichTextLabel" parent="HUD/Control"]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -20.0
-margin_right = 30.0
-margin_bottom = 100.0
-custom_colors/default_color = Color( 1, 0.282353, 0.388235, 1 )
-custom_fonts/normal_font = SubResource( 2 )
-text = "00"
-
-[node name="dsec" type="RichTextLabel" parent="HUD/Control"]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = 36.5
-margin_right = 86.5
-margin_bottom = 100.0
-custom_colors/default_color = Color( 1, 0.282353, 0.388235, 1 )
-custom_fonts/normal_font = SubResource( 3 )
-text = "00"
-
-[node name="Timer" type="Timer" parent="HUD/Control"]
-process_mode = 0
-wait_time = 0.1
-autostart = true
-
 [node name="Player" parent="." instance=ExtResource( 9 )]
 position = Vector2( 1848, 98 )
 
@@ -571,5 +511,3 @@ position = Vector2( 5571, 5124 )
 
 [node name="Turret10" parent="." instance=ExtResource( 16 )]
 position = Vector2( 5804, 5029 )
-
-[connection signal="timeout" from="HUD/Control/Timer" to="HUD/Control" method="_on_Timer_timeout"]
