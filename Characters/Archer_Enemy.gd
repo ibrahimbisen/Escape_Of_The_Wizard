@@ -51,6 +51,7 @@ func _physics_process(delta):
 			#print(dist, can_fire)
 			if ((dist < 500) && (can_fire)):
 				#print(can_fire)
+				$EnemyShoot.play()
 				$GunTimer.start()
 				can_fire = false
 
@@ -77,7 +78,20 @@ func _on_GunTimer_timeout():
 	$GunTimer.stop()
 
 
-
+func handle_hit():
+	health -= 20
+	$EnemyHurt.play()
+	$Damage_Enemy.show()
+	$Sprite.hide()
+	$White_Timer.start()
+	if health <= 0:
+		queue_free()
 #func _on_NavigationTimer_timeout():
 #	can_spot = true
 #	$NavigationTimer.stop()
+
+
+func _on_White_Timer_timeout():
+	$Damage_Enemy.hide()
+	$Sprite.show()
+	$White_Timer.stop()
