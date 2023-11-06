@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://UI/Menu.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Logo/title logo pixelized.png.png" type="Texture" id=2]
+[ext_resource path="res://Assets/title logo pixelized.png.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Fonts/alagard_font/alagard.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/Audio/Menu/Story Music/inspiring-cinematic-ambient-116199.mp3" type="AudioStream" id=4]
+[ext_resource path="res://Assets/SFX/UI/Resume.wav" type="AudioStream" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 36
@@ -25,9 +27,13 @@ pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
 
+[node name="Menu Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+autoplay = true
+
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 1024.0
-margin_bottom = 600.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 color = Color( 0.00392157, 0.0117647, 0.117647, 1 )
 
 [node name="Menu" type="VBoxContainer" parent="."]
@@ -65,24 +71,30 @@ custom_colors/font_color = Color( 1, 0.941176, 0.611765, 1 )
 custom_fonts/font = SubResource( 3 )
 text = "QUIT"
 
+[node name="Click" type="AudioStreamPlayer" parent="Menu"]
+stream = ExtResource( 5 )
+
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_left = 312.0
-margin_top = 88.0
-margin_right = 360.0
-margin_bottom = 136.0
-rect_scale = Vector2( 7.5, 7.5 )
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 395.0
+margin_top = 156.0
+margin_right = -581.0
+margin_bottom = -396.0
+rect_scale = Vector2( 5, 5 )
 texture = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -350.0
-margin_top = 60.0
 margin_right = 350.0
-margin_bottom = 135.0
+margin_bottom = 75.0
 custom_colors/font_color = Color( 1, 0.941176, 0.611765, 1 )
 custom_fonts/font = SubResource( 4 )
-text = "ESCAPE OF THE WIZARD"
+text = "
+ESCAPE OF THE WIZARD"
 
 [connection signal="pressed" from="Menu/Start" to="Menu" method="_on_Start_pressed"]
 [connection signal="pressed" from="Menu/Tutorial" to="Menu" method="_on_Tutorial_pressed"]
