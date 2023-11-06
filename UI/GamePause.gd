@@ -27,7 +27,7 @@ func _on_Menu_pressed():
 	resumem.play()
 	get_tree().change_scene("res://UI/Menu.tscn")
 	self.is_paused = !is_paused
-	
+
 
 func _on_Quit_pressed():
 	resumem.play()
@@ -38,7 +38,6 @@ func _on_Resume_pressed():
 	resumem.play()
 	self.is_paused = !is_paused
 	get_tree().paused = false
-	
 
 
 func _on_Options_pressed():

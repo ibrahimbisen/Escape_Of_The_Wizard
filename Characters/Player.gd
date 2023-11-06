@@ -17,7 +17,7 @@ onready var magic_shot = $Magic_Shoot
 onready var animPlayer = $AnimationPlayer
 
 onready var blue_ammo = 0
-onready var red_ammo = 0
+onready var red_ammo = 21
 onready var green_ammo = 0
 onready var inv_pos = 0
 
@@ -72,22 +72,14 @@ func _unhandled_input(event: InputEvent):
 			$Magic_Shoot.play()
 			red_ammo -= 1
 			Shoot()
-			PlayerInventory.subtract_item("Laser Blast", 1)
-			
 		elif inv_pos == 1 && blue_ammo > 0:
 			$Magic_Shoot.play()
 			blue_ammo -= 1
 			Shotgun()
-			PlayerInventory.subtract_item("Crossbow", 1)
-			
 		elif inv_pos == 2 && green_ammo > 0:
 			$Magic_Shoot.play()
 			green_ammo -= 1
 			Explosive()
-			PlayerInventory.subtract_item("Fire Ball", 1)
-			
-			
-			
 		#elif inv_pos == 3:
 		#	Laser()
 
@@ -96,11 +88,10 @@ func Shoot():
 	var fireball_instance = Fireball.instance()
 	var direction = (gunpoint.global_transform.origin - end_of_gun.global_transform.origin).normalized()
 	emit_signal("player_fired_bullet", fireball_instance,end_of_gun.global_position, direction)
-	
+
 
 func handle_hit():
 	health -= 20
-	$Hurt.play()
 	
 	# when player is hit, HUD updates with -1 heart
 	Global.lose_heart()
