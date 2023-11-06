@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Fonts/alagard_font/alagard.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://UI/Countdown.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+font_data = ExtResource( 1 )
+
+[node name="Countdown" type="Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -134.0
+margin_top = 21.0
+margin_right = 139.0
+margin_bottom = 131.0
+script = ExtResource( 2 )
+minutes = 5
+
+[node name="min" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -76.5
+margin_right = -26.5
+margin_bottom = 100.0
+custom_colors/default_color = Color( 1, 0.941176, 0.611765, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+text = "00"
+fit_content_height = true
+
+[node name="sec" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -20.0
+margin_right = 30.0
+margin_bottom = 100.0
+custom_colors/default_color = Color( 1, 0.941176, 0.611765, 1 )
+custom_fonts/normal_font = SubResource( 2 )
+text = "00"
+
+[node name="dsec" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 36.5
+margin_right = 86.5
+margin_bottom = 100.0
+custom_colors/default_color = Color( 1, 0.941176, 0.611765, 1 )
+custom_fonts/normal_font = SubResource( 3 )
+text = "00"
+
+[node name="Timer" type="Timer" parent="."]
+process_mode = 0
+wait_time = 0.1
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

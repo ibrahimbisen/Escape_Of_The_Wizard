@@ -19,6 +19,27 @@ onready var B8 = $B7
 onready var B9 = $B8
 onready var B10 = $B9
 onready var B11 = $B10
+onready var B12 = $B11
+onready var B13 = $B12
+onready var B14 = $B13
+onready var B15 = $B14
+onready var B16 = $B15
+onready var B17 = $B16
+onready var B18 = $B17
+onready var B19 = $B18
+onready var B20 = $B19
+onready var B21 = $B20
+onready var B22 = $B21
+onready var B23 = $B22
+onready var B24 = $B23
+onready var B25 = $B23
+onready var B26 = $B24
+onready var B27 = $B25
+onready var B28 = $B26
+
+
+
+
 onready var R1 = $RedAmmo
 onready var R2 = $R1
 onready var R3 = $R2
@@ -33,12 +54,7 @@ onready var R11 = $R10
 onready var R12 = $R11
 onready var R13 = $R12
 onready var R14 = $R13
-onready var R15 = $R14
-onready var R16 = $R15
-onready var R17 = $R16
-onready var R18 = $R17
-onready var R19 = $R18
-onready var R20 = $R19
+
 onready var G1 = $GreenAmmo
 onready var G2 = $G1
 onready var G3 = $G2
@@ -222,6 +238,25 @@ func _ready():
 	B8.connect("picked_up", self, "ammo_pick_up")
 	B9.connect("picked_up", self, "ammo_pick_up")
 	B10.connect("picked_up", self, "ammo_pick_up")
+	B11.connect("picked_up", self, "ammo_pick_up")
+	B12.connect("picked_up", self, "ammo_pick_up")
+	B13.connect("picked_up", self, "ammo_pick_up")
+	B14.connect("picked_up", self, "ammo_pick_up")
+	B15.connect("picked_up", self, "ammo_pick_up")
+	B16.connect("picked_up", self, "ammo_pick_up")
+	B17.connect("picked_up", self, "ammo_pick_up")
+	B18.connect("picked_up", self, "ammo_pick_up")
+	B19.connect("picked_up", self, "ammo_pick_up")
+	B20.connect("picked_up", self, "ammo_pick_up")
+	B21.connect("picked_up", self, "ammo_pick_up")
+	B22.connect("picked_up", self, "ammo_pick_up")
+	B23.connect("picked_up", self, "ammo_pick_up")
+	B24.connect("picked_up", self, "ammo_pick_up")
+	B25.connect("picked_up", self, "ammo_pick_up")
+	B26.connect("picked_up", self, "ammo_pick_up")
+	B27.connect("picked_up", self, "ammo_pick_up")
+	B28.connect("picked_up", self, "ammo_pick_up")
+	
 	R1.connect("picked_up", self, "ammo_pick_up")
 	R2.connect("picked_up", self, "ammo_pick_up")
 	R3.connect("picked_up", self, "ammo_pick_up")
@@ -236,11 +271,6 @@ func _ready():
 	R12.connect("picked_up", self, "ammo_pick_up")
 	R13.connect("picked_up", self, "ammo_pick_up")
 	R14.connect("picked_up", self, "ammo_pick_up")
-	R15.connect("picked_up", self, "ammo_pick_up")
-	R16.connect("picked_up", self, "ammo_pick_up")
-	R17.connect("picked_up", self, "ammo_pick_up")
-	R18.connect("picked_up", self, "ammo_pick_up")
-	R19.connect("picked_up", self, "ammo_pick_up")
 	G1.connect("picked_up", self, "ammo_pick_up")
 	G2.connect("picked_up", self, "ammo_pick_up")
 	G3.connect("picked_up", self, "ammo_pick_up")
@@ -344,11 +374,11 @@ func handle_enemy_bullet_spawned(bullet: EnemyShot, a_position: Vector2, directi
 
 func ammo_pick_up(type: int):
 	if type == 0:
-		player.red_ammo += 6
+		player.red_ammo += 2
 	elif type == 1:
-		player.blue_ammo += 7
+		player.blue_ammo += 5
 	elif type == 2:
-		player.green_ammo += 20	
+		player.green_ammo += 10	
 
 func handle_switched_weapon(weapon: int):
 	pass

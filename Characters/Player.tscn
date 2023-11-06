@@ -122,6 +122,7 @@ position = Vector2( 23, 20 )
 
 [node name="Magic_Shoot" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+volume_db = -3.0
 pitch_scale = 1.92
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -162,5 +163,6 @@ stream = ExtResource( 6 )
 
 [node name="Hurt" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
+volume_db = 3.0
 
 [connection signal="timeout" from="White_Timer" to="." method="_on_White_Timer_timeout"]

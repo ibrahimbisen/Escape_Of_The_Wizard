@@ -10,7 +10,7 @@
 [ext_resource path="res://UI/HUD.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Main Scenes/Level 1.gd" type="Script" id=10]
-[ext_resource path="res://Main Scenes/Countdown.gd" type="Script" id=11]
+[ext_resource path="res://UI/Countdown.gd" type="Script" id=11]
 [ext_resource path="res://UI/UI.gd" type="Script" id=12]
 [ext_resource path="res://Projectiles/BlueAmmo.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Projectiles/RedAmmo.tscn" type="PackedScene" id=14]
@@ -46,7 +46,7 @@ autoplay = true
 [node name="Level 1 Map" parent="." instance=ExtResource( 5 )]
 
 [node name="BlueAmmo" parent="." instance=ExtResource( 13 )]
-position = Vector2( 150, 570 )
+position = Vector2( 148, 575 )
 
 [node name="GreenAmmo" parent="." instance=ExtResource( 15 )]
 position = Vector2( -142, 577 )
@@ -193,6 +193,54 @@ position = Vector2( 5784, 164 )
 [node name="B10" parent="." instance=ExtResource( 13 )]
 position = Vector2( 3520, 840 )
 
+[node name="B11" parent="." instance=ExtResource( 13 )]
+position = Vector2( 6000, 1537 )
+
+[node name="B12" parent="." instance=ExtResource( 13 )]
+position = Vector2( 4270, 734 )
+
+[node name="B13" parent="." instance=ExtResource( 13 )]
+position = Vector2( 5409, 1063 )
+
+[node name="B14" parent="." instance=ExtResource( 13 )]
+position = Vector2( 4626, 473 )
+
+[node name="B15" parent="." instance=ExtResource( 13 )]
+position = Vector2( 6110, 1054 )
+
+[node name="B16" parent="." instance=ExtResource( 13 )]
+position = Vector2( 4126, 548 )
+
+[node name="B17" parent="." instance=ExtResource( 13 )]
+position = Vector2( 2595, 422 )
+
+[node name="B18" parent="." instance=ExtResource( 13 )]
+position = Vector2( 2469, 543 )
+
+[node name="B19" parent="." instance=ExtResource( 13 )]
+position = Vector2( 2721, 552 )
+
+[node name="B20" parent="." instance=ExtResource( 13 )]
+position = Vector2( 2591, 677 )
+
+[node name="B21" parent="." instance=ExtResource( 13 )]
+position = Vector2( 2017, 764 )
+
+[node name="B22" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1425, -11 )
+
+[node name="B23" parent="." instance=ExtResource( 13 )]
+position = Vector2( 385, 581 )
+
+[node name="B24" parent="." instance=ExtResource( 13 )]
+position = Vector2( 667, 968 )
+
+[node name="B25" parent="." instance=ExtResource( 13 )]
+position = Vector2( 349, 54 )
+
+[node name="B26" parent="." instance=ExtResource( 13 )]
+position = Vector2( 257, 575 )
+
 [node name="R1" parent="." instance=ExtResource( 14 )]
 position = Vector2( 4306, 250 )
 
@@ -232,24 +280,6 @@ position = Vector2( 4515, 326 )
 [node name="R13" parent="." instance=ExtResource( 14 )]
 position = Vector2( 3193, 727 )
 
-[node name="R14" parent="." instance=ExtResource( 14 )]
-position = Vector2( 3468, 631 )
-
-[node name="R15" parent="." instance=ExtResource( 14 )]
-position = Vector2( 1254, 740 )
-
-[node name="R16" parent="." instance=ExtResource( 14 )]
-position = Vector2( 5037, 655 )
-
-[node name="R17" parent="." instance=ExtResource( 14 )]
-position = Vector2( 5212, 584 )
-
-[node name="R18" parent="." instance=ExtResource( 14 )]
-position = Vector2( 3007, 636 )
-
-[node name="R19" parent="." instance=ExtResource( 14 )]
-position = Vector2( 4960, 798 )
-
 [node name="UI" type="CanvasLayer" parent="."]
 pause_mode = 2
 script = ExtResource( 12 )
@@ -283,7 +313,7 @@ collision_mask = 2
 
 [node name="HUD" parent="." instance=ExtResource( 8 )]
 
-[node name="Control" type="Control" parent="HUD"]
+[node name="Countdown" type="Control" parent="HUD"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -134.0
@@ -293,7 +323,7 @@ margin_bottom = 131.0
 script = ExtResource( 11 )
 minutes = 5
 
-[node name="min" type="RichTextLabel" parent="HUD/Control"]
+[node name="min" type="RichTextLabel" parent="HUD/Countdown"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -76.5
@@ -304,7 +334,7 @@ custom_fonts/normal_font = SubResource( 1 )
 text = "00"
 fit_content_height = true
 
-[node name="sec" type="RichTextLabel" parent="HUD/Control"]
+[node name="sec" type="RichTextLabel" parent="HUD/Countdown"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -20.0
@@ -314,7 +344,7 @@ custom_colors/default_color = Color( 1, 0.941176, 0.611765, 1 )
 custom_fonts/normal_font = SubResource( 2 )
 text = "00"
 
-[node name="dsec" type="RichTextLabel" parent="HUD/Control"]
+[node name="dsec" type="RichTextLabel" parent="HUD/Countdown"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = 36.5
@@ -324,7 +354,7 @@ custom_colors/default_color = Color( 1, 0.941176, 0.611765, 1 )
 custom_fonts/normal_font = SubResource( 3 )
 text = "00"
 
-[node name="Timer" type="Timer" parent="HUD/Control"]
+[node name="Timer" type="Timer" parent="HUD/Countdown"]
 process_mode = 0
 wait_time = 0.1
 autostart = true
@@ -544,4 +574,4 @@ position = Vector2( 4447, 426 )
 [node name="Turret10" parent="." instance=ExtResource( 16 )]
 position = Vector2( 4680, 331 )
 
-[connection signal="timeout" from="HUD/Control/Timer" to="HUD/Control" method="_on_Timer_timeout"]
+[connection signal="timeout" from="HUD/Countdown/Timer" to="HUD/Countdown" method="_on_Timer_timeout"]
