@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://UI/Menu.gd" type="Script" id=1]
-[ext_resource path="res://Assets/title logo pixelized.png.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Logo/title logo pixelized.png.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Fonts/alagard_font/alagard.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
@@ -28,7 +28,7 @@ anchor_bottom = 1.0
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 1024.0
 margin_bottom = 600.0
-color = Color( 0.760784, 0.764706, 0.741176, 1 )
+color = Color( 0.00392157, 0.0117647, 0.117647, 1 )
 
 [node name="Menu" type="VBoxContainer" parent="."]
 pause_mode = 2
