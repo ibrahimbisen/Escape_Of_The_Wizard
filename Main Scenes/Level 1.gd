@@ -126,6 +126,9 @@ onready var turret10 = $Turret10
 
 
 func _ready():
+	PlayerInventory.reset_item("Laser Blast", 0)
+	PlayerInventory.reset_item("Crossbow", 0)
+	PlayerInventory.reset_item("Fire Ball", 0)
 	key1.connect("key_picked_up", self, "door_open")
 	key1.door = door1
 	#get_tree().call_group("archers", "init_player")
@@ -341,11 +344,11 @@ func handle_enemy_bullet_spawned(bullet: EnemyShot, a_position: Vector2, directi
 
 func ammo_pick_up(type: int):
 	if type == 0:
-		player.red_ammo += 20
+		player.red_ammo += 6
 	elif type == 1:
 		player.blue_ammo += 7
 	elif type == 2:
-		player.green_ammo += 6
+		player.green_ammo += 20	
 
 func handle_switched_weapon(weapon: int):
 	pass
