@@ -3,7 +3,7 @@
 [ext_resource path="res://Assets/Fonts/alagard_font/alagard.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/GamePause.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Characters/Archer_Enemy.tscn" type="PackedScene" id=3]
-[ext_resource path="res://UI/Hotbar.tscn" type="PackedScene" id=4]
+[ext_resource path="res://UI/HotBar.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Map/Level 1.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Characters/Enemy.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Main Scenes/Extraction/Extraction.tscn" type="PackedScene" id=7]
@@ -35,7 +35,7 @@ size = 40
 font_data = ExtResource( 1 )
 
 [node name="Main" type="Node2D"]
-position = Vector2( 21, -1623 )
+position = Vector2( -74, -1618 )
 script = ExtResource( 10 )
 
 [node name="Main Music" type="AudioStreamPlayer" parent="."]
@@ -288,10 +288,10 @@ script = ExtResource( 12 )
 pause_mode = 2
 visible = false
 
-[node name="Hotbar" parent="UI" instance=ExtResource( 4 )]
-position = Vector2( 429, -206 )
-
 [node name="GamePauseSFX" type="AudioStreamPlayer" parent="UI"]
+
+[node name="Hotbar" parent="UI" instance=ExtResource( 4 )]
+position = Vector2( 778, 27 )
 
 [node name="Enemy" parent="." instance=ExtResource( 6 )]
 position = Vector2( 9232, 655 )
