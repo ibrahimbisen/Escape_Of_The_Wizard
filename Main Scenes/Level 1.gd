@@ -126,6 +126,9 @@ onready var turret10 = $Turret10
 
 
 func _ready():
+	PlayerInventory.reset_item("Laser Blast", 0)
+	PlayerInventory.reset_item("Crossbow", 0)
+	PlayerInventory.reset_item("Fire Ball", 0)
 	key1.connect("key_picked_up", self, "door_open")
 	key1.door = door1
 	#get_tree().call_group("archers", "init_player")
