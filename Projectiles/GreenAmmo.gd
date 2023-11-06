@@ -15,4 +15,4 @@ func _ready():
 func _on_GreenAmmo_body_entered(body):
 	queue_free()
 	emit_signal("picked_up", type)
-	PlayerInventory.add_item(item_name, 7)
+	PlayerInventory.add_item(item_name, 5)

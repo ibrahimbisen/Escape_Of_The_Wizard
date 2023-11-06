@@ -106,11 +106,11 @@ func handle_enemy_bullet_spawned(bullet: EnemyShot, a_position: Vector2, directi
 
 func ammo_pick_up(type: int):
 	if type == 0:
-		player.red_ammo += 2
+		player.red_ammo += 10
 	elif type == 1:
 		player.blue_ammo += 5
 	elif type == 2:
-		player.green_ammo += 10
+		player.green_ammo += 2
 
 func handle_switched_weapon(weapon: int):
 	pass

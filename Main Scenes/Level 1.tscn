@@ -65,7 +65,7 @@ scale = Vector2( 2.68, 2.65 )
 
 [node name="Key" parent="." instance=ExtResource( 20 )]
 modulate = Color( 0.278431, 0.0745098, 0.262745, 1 )
-position = Vector2( -417, 786 )
+position = Vector2( -413, 832 )
 
 [node name="H1" parent="." instance=ExtResource( 19 )]
 position = Vector2( 1030, 601 )
@@ -360,7 +360,7 @@ wait_time = 0.1
 autostart = true
 
 [node name="Player" parent="." instance=ExtResource( 9 )]
-position = Vector2( -468, 565 )
+position = Vector2( -423, 576 )
 
 [node name="Archer_Enemy3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 839, 50 )

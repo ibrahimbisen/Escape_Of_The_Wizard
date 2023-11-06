@@ -18,4 +18,4 @@ func _ready():
 func _on_RedAmmo_body_entered(body):
 	queue_free()
 	emit_signal("picked_up", type)
-	PlayerInventory.add_item(item_name, 20)
+	PlayerInventory.add_item(item_name, 2)

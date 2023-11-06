@@ -17,4 +17,4 @@ func _on_BlueAmmo_body_entered(body):
 	#print("*(())")
 	queue_free()
 	emit_signal("picked_up", type)
-	PlayerInventory.add_item(item_name, 6)
+	PlayerInventory.add_item(item_name, 10)
