@@ -46,7 +46,7 @@ onready var turret3 = $Turret3
 
 
 func _ready():
-	get_tree().call_group("archers", "init_player")
+	Global.current_scene = 1
 
 	enemy1.player = player
 
