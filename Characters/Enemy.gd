@@ -7,7 +7,7 @@ var direction = Vector2.ZERO
 var target
 onready var player
 
-var see_thru = [self]
+onready var see_thru = [self]
 
 
 func _physics_process(delta):
