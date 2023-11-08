@@ -32,7 +32,6 @@ script = ExtResource( 10 )
 light_mask = 3
 position = Vector2( 6270, 30 )
 z_index = 1
-collision_mask = 3
 
 [node name="Door" parent="." instance=ExtResource( 6 )]
 position = Vector2( 4748, 97 )
@@ -206,21 +205,21 @@ position = Vector2( 421, -202 )
 position = Vector2( 4337, 119 )
 z_index = 2
 
-[node name="Archer_Enemy2" parent="." instance=ExtResource( 3 )]
+[node name="a_e_1" parent="." instance=ExtResource( 3 )]
 position = Vector2( 5920, 31 )
 
-[node name="Archer_Enemy4" parent="." instance=ExtResource( 3 )]
+[node name="a_e_2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 5438, 370 )
 
-[node name="Archer_Enemy6" parent="." instance=ExtResource( 3 )]
+[node name="a_e_3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 4916, 98 )
 
-[node name="a_e_7" parent="." instance=ExtResource( 3 )]
+[node name="a_e_4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 5100, 391 )
 
-[node name="RocketTurret2" parent="." instance=ExtResource( 17 )]
+[node name="RT1" parent="." instance=ExtResource( 17 )]
 position = Vector2( 5402, -306 )
 nav_layer = 1
 
-[node name="Turret3" parent="." instance=ExtResource( 16 )]
+[node name="T1" parent="." instance=ExtResource( 16 )]
 position = Vector2( 5087, 129 )
