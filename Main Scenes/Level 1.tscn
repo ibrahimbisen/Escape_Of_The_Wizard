@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Assets/Fonts/alagard_font/alagard.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/GamePause.tscn" type="PackedScene" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://Characters/HeartCollect.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Key.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Door.tscn" type="PackedScene" id=21]
+[ext_resource path="res://UI/GameOver.tscn" type="PackedScene" id=22]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -279,19 +280,6 @@ position = Vector2( 4515, 326 )
 
 [node name="R13" parent="." instance=ExtResource( 14 )]
 position = Vector2( 3193, 727 )
-
-[node name="UI" type="CanvasLayer" parent="."]
-pause_mode = 2
-script = ExtResource( 12 )
-
-[node name="GamePause" parent="UI" instance=ExtResource( 2 )]
-pause_mode = 2
-visible = false
-
-[node name="Hotbar" parent="UI" instance=ExtResource( 4 )]
-position = Vector2( 429, -206 )
-
-[node name="GamePauseSFX" type="AudioStreamPlayer" parent="UI"]
 
 [node name="Enemy" parent="." instance=ExtResource( 6 )]
 position = Vector2( 9232, 655 )
@@ -573,5 +561,21 @@ position = Vector2( 4447, 426 )
 
 [node name="Turret10" parent="." instance=ExtResource( 16 )]
 position = Vector2( 4680, 331 )
+
+[node name="UI" type="CanvasLayer" parent="."]
+pause_mode = 2
+script = ExtResource( 12 )
+
+[node name="GamePause" parent="UI" instance=ExtResource( 2 )]
+pause_mode = 2
+visible = false
+
+[node name="Hotbar" parent="UI" instance=ExtResource( 4 )]
+position = Vector2( 429, -206 )
+
+[node name="GamePauseSFX" type="AudioStreamPlayer" parent="UI"]
+
+[node name="GameOver" parent="UI" instance=ExtResource( 22 )]
+visible = false
 
 [connection signal="timeout" from="HUD/Countdown/Timer" to="HUD/Countdown" method="_on_Timer_timeout"]

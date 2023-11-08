@@ -142,6 +142,7 @@ onready var turret10 = $Turret10
 
 
 func _ready():
+	Global.current_scene = 0
 	PlayerInventory.reset_item("Laser Blast", 0)
 	PlayerInventory.reset_item("Crossbow", 0)
 	PlayerInventory.reset_item("Fire Ball", 0)
@@ -354,7 +355,6 @@ func _ready():
 	enemy58.connect("shoot", self, "handle_enemy_bullet_spawned")
 	enemy59.connect("shoot", self, "handle_enemy_bullet_spawned")
 
-
 func handle_enemy_rocket_spawned(bullet: Explosive, a_position: Vector2, direction: Vector2):
 	add_child(bullet)
 	bullet.global_position = a_position
@@ -374,6 +374,7 @@ func handle_enemy_bullet_spawned(bullet: EnemyShot, a_position: Vector2, directi
 
 func ammo_pick_up(type: int):
 	if type == 0:
+		
 		player.red_ammo += 10
 	elif type == 1:
 		player.blue_ammo += 5
@@ -399,4 +400,3 @@ func handle_laser_spawned(bullet: Laser, a_position: Vector2, direction: Vector2
 
 func door_open(door: door):
 	door.queue_free()
-

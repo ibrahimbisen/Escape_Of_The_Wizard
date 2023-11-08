@@ -4,7 +4,6 @@ extends Node2D
 #a variable and then connecting it to the current player instance and
 #connect its signals to the main scene
 onready var player: Player = $Player
-
 onready var B1 = $BlueAmmo
 onready var B2 = $B1
 onready var B3 = $B2
@@ -43,6 +42,7 @@ onready var turret3 = $Turret3
 
 
 func _ready():
+	Global.current_scene = 1
 	get_tree().call_group("archers", "init_player")
 
 	enemy1.player = player
@@ -128,6 +128,4 @@ func handle_laser_spawned(bullet: Laser, a_position: Vector2, direction: Vector2
 	#The origin is now the wand point, so the laser is drawn starting from origin
 	bullet.get_node("Line2D").add_point(Vector2(0,0))
 	bullet.get_node("Line2D").add_point(fire_to-a_position)
-
-
 
