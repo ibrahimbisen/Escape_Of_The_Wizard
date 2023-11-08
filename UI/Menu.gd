@@ -19,7 +19,7 @@ func _ready():
 func _on_Start_pressed():
 	$Click.play()
 	Global.lives = Global.max_lives
-	#PlayerInventory.active_item_slot = 0
+	PlayerInventory.active_item_slot = 0
 	return get_tree().change_scene("res://Main Scenes/Level 1.tscn") # Replace with function body.
 	
 
