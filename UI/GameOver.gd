@@ -1,4 +1,5 @@
 extends VBoxContainer
+var current_scene
 
 func _ready():
 	pass # Replace with function body.
@@ -15,4 +16,7 @@ func _on_Start_over_pressed():
 	$Click.play()
 	Global.lives = Global.max_lives
 	PlayerInventory.active_item_slot = 0
-	return get_tree().change_scene("res://Main Scenes/Level 1.tscn") 
+	if Global.current_scene == 0:
+		return get_tree().change_scene("res://Main Scenes/Level 1.tscn") 
+	elif Global.current_scene == 1:
+		return get_tree().change_scene("res://Main Scenes/Tutorial.tscn") 

@@ -3,6 +3,7 @@ extends Node
 var max_lives = 10
 var lives = max_lives
 var hud
+var current_scene
 
 # Global lose heart function and load HUD to show this change
 func lose_heart():

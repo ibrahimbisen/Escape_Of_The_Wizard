@@ -142,6 +142,8 @@ onready var turret10 = $Turret10
 
 
 func _ready():
+	Global.current_scene = 0
+	
 	PlayerInventory.reset_item("Laser Blast", 0)
 	PlayerInventory.reset_item("Crossbow", 0)
 	PlayerInventory.reset_item("Fire Ball", 0)
