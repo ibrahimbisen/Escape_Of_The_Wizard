@@ -203,7 +203,7 @@ position = Vector2( 421, -202 )
 [node name="HUD" parent="." instance=ExtResource( 8 )]
 
 [node name="Player" parent="." instance=ExtResource( 9 )]
-position = Vector2( 160, 94 )
+position = Vector2( 4337, 119 )
 z_index = 2
 
 [node name="Archer_Enemy2" parent="." instance=ExtResource( 3 )]
