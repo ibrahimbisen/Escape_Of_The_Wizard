@@ -56,7 +56,6 @@ func _physics_process(delta):
 				can_fire = false
 
 				var fire_direction = (gunpoint.global_transform.origin - end_of_gun.global_transform.origin).normalized()
-				#var arrow = 
 				see_thru.append(Projectile.instance())
 				emit_signal("shoot", Projectile.instance(), global_position, fire_direction)
 
