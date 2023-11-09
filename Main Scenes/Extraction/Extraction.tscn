@@ -8,6 +8,8 @@ extents = Vector2( 168.938, 215.188 )
 
 [node name="Extraction" type="Area2D"]
 position = Vector2( 463, 278 )
+collision_layer = 3
+collision_mask = 3
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -21,6 +23,4 @@ texture = ExtResource( 1 )
 
 [connection signal="body_entered" from="." to="." method="_on_Extraction_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_Extraction_body_exited"]
-[connection signal="body_shape_entered" from="." to="." method="_on_Extraction_body_shape_entered"]
-[connection signal="body_shape_exited" from="." to="." method="_on_Extraction_body_shape_exited"]
 [connection signal="timeout" from="ExtractionTimer" to="." method="_on_Timer_timeout"]

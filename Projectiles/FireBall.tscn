@@ -20,7 +20,7 @@ rotation = 1.5708
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 159.618, 124.843, 166.907, 231.815 )
+region_rect = Rect2( 182.859, 153.787, 113.508, 155.854 )
 
 [node name="KillTimer" type="Timer" parent="."]
 wait_time = 2.0
