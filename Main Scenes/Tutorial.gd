@@ -5,6 +5,8 @@ extends Node2D
 #connect its signals to the main scene
 onready var player: Player = $Player
 
+onready var boss = $Boss
+
 onready var key1 = $Key
 onready var door1 = $Door
 
@@ -13,7 +15,7 @@ onready var B3 = $B2
 onready var B4 = $B3
 onready var B5 = $B4
 onready var B6 = $B5
- 
+
 onready var R2 = $R1
 onready var R3 = $R2
 onready var R4 = $R3
@@ -23,28 +25,42 @@ onready var G2 = $G1
 onready var G3 = $G2
 onready var G4 = $G3
 
-onready var a_e_1 = $a_e_1
-onready var a_e_2 = $a_e_2
-onready var a_e_3 = $a_e_3
-onready var a_e_4 = $a_e_4
+onready var enemy4 = $a_e_1
+onready var enemy5 = $a_e_2
+onready var enemy6 = $a_e_3
+onready var enemy7 = $a_e_4
 
 
-onready var rocket1 = $RT1
+onready var rocket2 = $RT1
+#onready var rocket3 = $RocketTurret3
 
-onready var turret1 = $T1
+onready var turret2 = $T1
+#onready var turret3 = $Turret3
+#var EnemyArray = Array()
 
 
 func _ready():
 	Global.current_scene = 1
 
-	a_e_1.player = player
-	a_e_2.player = player
-	a_e_3.player = player
-	a_e_4.player = player
+	boss.player = player
+	$Boss/BackTurret.player = player
+	$Boss/Turret.player = player
+	$Boss/Turret2.player = player
+	$Boss/RocketTurret.player = player
+	$Boss/RocketTurret2.player = player
+	#print(boss.player)
+	#print(player)
+
+	enemy4.player = player
+	enemy5.player = player
+	enemy6.player = player
+	enemy7.player = player
 	
-	rocket1.player = player
-	turret1.player = player
+
+	rocket2.player = player
 	
+	turret2.player = player
+
 	key1.door = door1
 	key1.connect("key_picked_up", self, "door_open")
 	
@@ -68,13 +84,13 @@ func _ready():
 	G4.connect("picked_up", self, "ammo_pick_up")
 	
 	
-	rocket1.connect("rocket", self, "handle_enemy_rocket_spawned")
-	turret1.connect("shoot", self, "handle_enemy_bullet_spawned")
+	rocket2.connect("rocket", self, "handle_enemy_rocket_spawned")
+	turret2.connect("shoot", self, "handle_enemy_bullet_spawned")
 	
-	a_e_1.connect("shoot", self, "handle_enemy_bullet_spawned")
-	a_e_2.connect("shoot", self, "handle_enemy_bullet_spawned")
-	a_e_3.connect("shoot", self, "handle_enemy_bullet_spawned")
-	a_e_4.connect("shoot", self, "handle_enemy_bullet_spawned")
+	enemy4.connect("shoot", self, "handle_enemy_bullet_spawned")
+	enemy5.connect("shoot", self, "handle_enemy_bullet_spawned")
+	enemy6.connect("shoot", self, "handle_enemy_bullet_spawned")
+	enemy7.connect("shoot", self, "handle_enemy_bullet_spawned")
 
 
 func handle_enemy_rocket_spawned(bullet: Explosive, a_position: Vector2, direction: Vector2):

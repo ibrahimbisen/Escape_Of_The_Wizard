@@ -34,8 +34,9 @@ func _physics_process(delta):
 				var fire_direction = (gunpoint.global_transform.origin - end_of_gun.global_transform.origin).normalized()
 
 				if (proj_type == 0):
-					see_thru.append(Projectile.instance())
-					emit_signal("shoot", Projectile.instance(), global_position, fire_direction)
+					var arrow = Projectile.instance()
+					see_thru.append(arrow)
+					emit_signal("shoot", arrow, global_position, fire_direction)
 				elif (proj_type == 1):
 					var Fireball = load("res://Projectiles/EnemyExplosive.tscn")
 					var fireball_instance = Fireball.instance()
