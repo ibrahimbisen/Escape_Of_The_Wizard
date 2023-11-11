@@ -117,7 +117,7 @@ func Big_Shoot():
 	
 
 func Shotgun():
-	var Fireball = load("res://Projectiles/FireBall.tscn")
+	var Fireball = load("res://Projectiles/Arrow.tscn")
 	var fireball_instance1 = Fireball.instance()
 	var fireball_instance2 = Fireball.instance()
 	var fireball_instance3 = Fireball.instance()
