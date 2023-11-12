@@ -5,16 +5,9 @@
 
 [node name="RocketTurret" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
-nav_layer = null
 
 [node name="Sprite" parent="." index="0"]
 modulate = Color( 1, 0.180392, 0.180392, 1 )
-
-[node name="CollisionShape2D" parent="." index="1"]
-position = Vector2( -0.999998, 0.500004 )
-
-[node name="EndofGun" parent="." index="2"]
-position = Vector2( 10, -3.62396e-05 )
 
 [node name="GunTimer" parent="." index="4"]
 wait_time = 1.0

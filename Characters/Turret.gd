@@ -45,4 +45,17 @@ func _physics_process(delta):
 	look_at(target)
 
 
+func handle_hit():
+	health -= 20
+	$EnemyHurt.play()
+	$DamageFlash.show()
+	$Sprite.hide()
+	$White_Timer.start()
+	if health <= 0:
+		queue_free()
 
+
+func _on_White_Timer_timeout():
+	$DamageFlash.hide()
+	$Sprite.show()
+	$White_Timer.stop()
