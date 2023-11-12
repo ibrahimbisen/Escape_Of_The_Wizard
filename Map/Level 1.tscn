@@ -1,20 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Map/Background.tres" type="TileSet" id=1]
 [ext_resource path="res://Map/Buildings.tres" type="TileSet" id=2]
 [ext_resource path="res://Map/Items.tres" type="TileSet" id=3]
 [ext_resource path="res://Map/Dungeon.tres" type="TileSet" id=4]
 [ext_resource path="res://Map/Dungeon Walls.tres" type="TileSet" id=5]
 
 [node name="Level1" type="Node2D"]
-
-[node name="Background" type="TileMap" parent="."]
-rotation = 0.00129447
-tile_set = ExtResource( 1 )
-collision_layer = 0
-collision_mask = 0
-bake_navigation = true
-format = 1
 
 [node name="Buildings" type="TileMap" parent="."]
 modulate = Color( 0.466667, 0.509804, 0.639216, 1 )
