@@ -93,6 +93,7 @@ PlayerInventory="*res://Characters/PlayerInventory.gd"
 
 [display]
 
+mouse_cursor/custom_image="res://Assets/Crosshair/crosshair008.png"
 mouse_cursor/custom_image_hotspot=Vector2( 32, 32 )
 
 [gui]
@@ -160,6 +161,7 @@ move_right={
 Shoot={
 "deadzone": 0.5,
 "events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
  ]
 }
 pause={
