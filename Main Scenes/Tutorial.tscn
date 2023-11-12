@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Assets/Fonts/m5x7.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/GamePause.tscn" type="PackedScene" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://Characters/RocketTurret.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Assets/Audio/In game/Forest/magic-in-the-air-43177.mp3" type="AudioStream" id=18]
 [ext_resource path="res://Characters/HeartCollect.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Boss.tscn" type="PackedScene" id=20]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -202,7 +203,7 @@ position = Vector2( 421, -202 )
 [node name="HUD" parent="." instance=ExtResource( 8 )]
 
 [node name="Player" parent="." instance=ExtResource( 9 )]
-position = Vector2( 4337, 119 )
+position = Vector2( 4214, 112 )
 z_index = 2
 
 [node name="a_e_1" parent="." instance=ExtResource( 3 )]
@@ -223,3 +224,6 @@ nav_layer = 1
 
 [node name="T1" parent="." instance=ExtResource( 16 )]
 position = Vector2( 5087, 129 )
+
+[node name="Boss" parent="." instance=ExtResource( 20 )]
+position = Vector2( 571, 111 )

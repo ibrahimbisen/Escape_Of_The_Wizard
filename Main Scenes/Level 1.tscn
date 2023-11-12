@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Assets/Fonts/alagard_font/alagard.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/GamePause.tscn" type="PackedScene" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://Characters/HeartCollect.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Key.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Door.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Spawner.tscn" type="PackedScene" id=22]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -573,5 +574,9 @@ position = Vector2( 4447, 426 )
 
 [node name="Turret10" parent="." instance=ExtResource( 16 )]
 position = Vector2( 4680, 331 )
+
+[node name="TestSpawner" parent="." instance=ExtResource( 22 )]
+position = Vector2( -507, 288 )
+scale = Vector2( 1, 1 )
 
 [connection signal="timeout" from="HUD/Countdown/Timer" to="HUD/Countdown" method="_on_Timer_timeout"]
