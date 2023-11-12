@@ -38,6 +38,9 @@ font_data = ExtResource( 1 )
 position = Vector2( 21, -1623 )
 script = ExtResource( 10 )
 
+[node name="Player" parent="." instance=ExtResource( 9 )]
+position = Vector2( -423, 576 )
+
 [node name="Main Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 18 )
 volume_db = -5.0
@@ -319,7 +322,7 @@ anchor_right = 0.5
 margin_left = -134.0
 margin_top = 21.0
 margin_right = 139.0
-margin_bottom = 131.0
+margin_bottom = 57.0
 script = ExtResource( 11 )
 minutes = 5
 
@@ -328,7 +331,7 @@ anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -76.5
 margin_right = -26.5
-margin_bottom = 100.0
+margin_bottom = 42.0
 custom_colors/default_color = Color( 1, 0.941176, 0.611765, 1 )
 custom_fonts/normal_font = SubResource( 1 )
 text = "00"
@@ -337,9 +340,9 @@ fit_content_height = true
 [node name="sec" type="RichTextLabel" parent="HUD/Countdown"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -20.0
-margin_right = 30.0
-margin_bottom = 100.0
+margin_left = -19.5
+margin_right = 30.5
+margin_bottom = 42.0
 custom_colors/default_color = Color( 1, 0.941176, 0.611765, 1 )
 custom_fonts/normal_font = SubResource( 2 )
 text = "00"
@@ -349,7 +352,7 @@ anchor_left = 0.5
 anchor_right = 0.5
 margin_left = 36.5
 margin_right = 86.5
-margin_bottom = 100.0
+margin_bottom = 39.0
 custom_colors/default_color = Color( 1, 0.941176, 0.611765, 1 )
 custom_fonts/normal_font = SubResource( 3 )
 text = "00"
@@ -358,9 +361,6 @@ text = "00"
 process_mode = 0
 wait_time = 0.1
 autostart = true
-
-[node name="Player" parent="." instance=ExtResource( 9 )]
-position = Vector2( -423, 576 )
 
 [node name="Archer_Enemy3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 839, 50 )

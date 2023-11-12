@@ -68,6 +68,7 @@ func _unhandled_input(event: InputEvent):
 		#print(inv_pos)
 		#emit_signal("player_switched_weapon", inv_pos)
 	if event.is_action_released("Shoot"):
+		print("&")
 		if inv_pos == 0 && red_ammo > 0:
 			$Magic_Shoot.play()
 			red_ammo -= 1
