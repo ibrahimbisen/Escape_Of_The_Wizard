@@ -11,20 +11,24 @@ onready var backturret = $BackTurret
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	health = 200
-	#spawner.player = player
+	spawner.boss = self
+	#print(player, self.player)
+	health = 300
+	#spawner.player = self.player
+	#print("***",spawner.player)
 	#print(player)
-	turret1.player = self.player
-	turret2.player = self.player
+	#turret1.player = self.player
+	#print(")))", turret1.player)
+	#turret2.player = self.player
 	turret1.connect("shoot", self, "handle_enemy_bullet_spawned")
 	turret2.connect("shoot", self, "handle_enemy_bullet_spawned")
 	
-	rocket1.player = self.player
-	rocket2.player = self.player
+	#rocket1.player = self.player
+	#rocket2.player = self.player
 	rocket1.connect("rocket", self, "handle_enemy_rocket_spawned")
 	rocket2.connect("rocket", self, "handle_enemy_rocket_spawned")
 	
-	backturret.player = self.player
+	#backturret.player = self.player
 	backturret.connect("shoot", self, "handle_enemy_bullet_spawned")
 
 

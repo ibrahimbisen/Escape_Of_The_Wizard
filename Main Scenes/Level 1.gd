@@ -63,7 +63,7 @@ onready var G5 = $G4
 onready var G6 = $G5
 onready var G7 = $G6
 
-onready var spawn1 = $Spawner
+onready var spawn1 = $TestSpawner
 
 onready var enemy = $Enemy
 onready var archer = $Archer_Enemy

@@ -1,6 +1,7 @@
 extends Node2D
 onready var player
 var can_spawn = true
+var boss = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,7 +15,8 @@ func _physics_process(delta):
 		$SpawnTimer.start()
 		var spawn = load("res://Characters/Archer_Enemy.tscn")
 		var new_spawn = spawn.instance()
-		new_spawn.player = player
+		new_spawn.player = self.player
+		new_spawn.see_thru.append(boss)
 		new_spawn.connect("shoot", self, "handle_enemy_bullet_spawned")
 		add_child(new_spawn)
 

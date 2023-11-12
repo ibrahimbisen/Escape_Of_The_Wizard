@@ -48,6 +48,7 @@ func _ready():
 	$Boss/Turret2.player = player
 	$Boss/RocketTurret.player = player
 	$Boss/RocketTurret2.player = player
+	$Boss/Spawner.player = player
 	#print(boss.player)
 	#print(player)
 
