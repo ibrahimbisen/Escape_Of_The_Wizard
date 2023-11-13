@@ -308,7 +308,6 @@ position = Vector2( 525, 310 )
 
 [node name="RocketTurret" parent="." instance=ExtResource( 17 )]
 position = Vector2( 1062, 816 )
-nav_layer = 1
 
 [node name="Extraction" parent="." instance=ExtResource( 7 )]
 position = Vector2( 6562, 607 )
@@ -542,11 +541,9 @@ position = Vector2( 1459, 1017 )
 
 [node name="RocketTurret2" parent="." instance=ExtResource( 17 )]
 position = Vector2( 6755, 289 )
-nav_layer = 1
 
 [node name="RocketTurret3" parent="." instance=ExtResource( 17 )]
 position = Vector2( 6750, 1199 )
-nav_layer = 1
 
 [node name="Turret2" parent="." instance=ExtResource( 16 )]
 position = Vector2( 5128, 42 )
