@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://UI/Menu.gd" type="Script" id=1]
 [ext_resource path="res://Assets/title logo pixelized.png.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Fonts/alagard_font/alagard.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Assets/Audio/Menu/Story Music/inspiring-cinematic-ambient-116199.mp3" type="AudioStream" id=4]
 [ext_resource path="res://Assets/SFX/UI/Resume.wav" type="AudioStream" id=5]
+[ext_resource path="res://Assets/Fonts/m5x7.ttf" type="DynamicFontData" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 36
@@ -17,6 +18,16 @@ font_data = ExtResource( 3 )
 [sub_resource type="DynamicFont" id=3]
 size = 36
 font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 22
+font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 64
@@ -46,6 +57,7 @@ margin_left = -120.0
 margin_top = -160.0
 margin_right = 120.0
 margin_bottom = 10.0
+rect_pivot_offset = Vector2( -582, -519 )
 script = ExtResource( 1 )
 
 [node name="Start" type="Button" parent="Menu"]
@@ -74,6 +86,112 @@ text = "QUIT"
 [node name="Click" type="AudioStreamPlayer" parent="Menu"]
 stream = ExtResource( 5 )
 
+[node name="Options" type="Control" parent="Menu"]
+margin_top = 132.0
+margin_right = 240.0
+margin_bottom = 132.0
+
+[node name="FullScreen" type="CheckBox" parent="Menu/Options"]
+margin_left = -363.0
+margin_top = -77.0
+margin_right = -278.0
+margin_bottom = -53.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_fonts/font = SubResource( 5 )
+text = "Full Screen"
+
+[node name="Volume" type="CheckBox" parent="Menu/Options"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -485.0
+margin_top = -37.0
+margin_right = -432.0
+margin_bottom = -13.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_fonts/font = SubResource( 6 )
+keep_pressed_outside = true
+text = "Mute"
+
+[node name="Volume2" type="Label" parent="Menu/Options"]
+margin_left = 463.0
+margin_top = -23.0
+margin_right = 587.0
+rect_pivot_offset = Vector2( 33, 8 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Volume"
+
+[node name="Master Slider" type="HSlider" parent="Menu/Options"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 369.0
+margin_top = -47.0
+margin_right = 369.0
+margin_bottom = -31.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+value = 50.0
+
+[node name="Music" type="CheckBox" parent="Menu/Options"]
+visible = false
+margin_left = 26.0
+margin_top = 64.0
+margin_right = 50.0
+margin_bottom = 88.0
+
+[node name="Music" type="Label" parent="Menu/Options/Music"]
+margin_left = 21.8906
+margin_top = 4.0
+margin_right = 91.8906
+margin_bottom = 18.0
+rect_pivot_offset = Vector2( 33, 8 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Music"
+
+[node name="Music Slider" type="HSlider" parent="Menu/Options"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 89.0
+margin_top = 70.0
+margin_right = 89.0
+margin_bottom = 86.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+value = 50.0
+
+[node name="SFX" type="CheckBox" parent="Menu/Options"]
+visible = false
+margin_left = 26.0
+margin_top = 102.0
+margin_right = 50.0
+margin_bottom = 126.0
+
+[node name="SFX" type="Label" parent="Menu/Options/SFX"]
+margin_left = 22.8906
+margin_top = 4.0
+margin_right = 92.8906
+margin_bottom = 18.0
+rect_pivot_offset = Vector2( 33, 8 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "SFX"
+
+[node name="SFX Slider" type="HSlider" parent="Menu/Options"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 90.0
+margin_top = 105.0
+margin_right = 90.0
+margin_bottom = 121.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+value = 50.0
+
 [node name="TextureRect" type="TextureRect" parent="."]
 use_parent_material = true
 anchor_right = 1.0
@@ -99,3 +217,6 @@ ESCAPE OF THE WIZARD"
 [connection signal="pressed" from="Menu/Start" to="Menu" method="_on_Start_pressed"]
 [connection signal="pressed" from="Menu/Tutorial" to="Menu" method="_on_Tutorial_pressed"]
 [connection signal="pressed" from="Menu/Quit" to="Menu" method="_on_Quit_pressed"]
+[connection signal="toggled" from="Menu/Options/FullScreen" to="Menu" method="_on_FullScreen_toggled"]
+[connection signal="toggled" from="Menu/Options/Volume" to="Menu" method="_on_Volume_toggled"]
+[connection signal="value_changed" from="Menu/Options/Master Slider" to="Menu" method="_on_Master_Slider_value_changed"]
