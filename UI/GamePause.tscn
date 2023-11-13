@@ -1,8 +1,15 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://UI/GamePause.gd" type="Script" id=1]
 [ext_resource path="res://Assets/SFX/UI/Resume.wav" type="AudioStream" id=2]
 [ext_resource path="res://Assets/Fonts/m5x7.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.00392157, 0.0117647, 0.117647, 0.878431 )
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
 
 [sub_resource type="DynamicFont" id=1]
 size = 36
@@ -45,16 +52,12 @@ stream = ExtResource( 2 )
 [node name="Options" type="Control" parent="GamePause"]
 margin_right = 240.0
 
-[node name="ColorRect" type="ColorRect" parent="GamePause/Options"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -139.0
+[node name="Panel" type="Panel" parent="GamePause/Options"]
+margin_left = -19.0
 margin_top = -136.0
-margin_right = 139.0
+margin_right = 259.0
 margin_bottom = 174.0
-color = Color( 0.639216, 0.639216, 0.639216, 0.584314 )
+custom_styles/panel = SubResource( 10 )
 
 [node name="Resume" type="Button" parent="GamePause/Options"]
 margin_top = -117.0
@@ -86,6 +89,7 @@ margin_top = 23.0
 margin_right = 139.0
 margin_bottom = 47.0
 rect_scale = Vector2( 1.5, 1.5 )
+custom_colors/font_color = Color( 1, 0.941176, 0.611765, 1 )
 custom_fonts/font = SubResource( 8 )
 text = "Full Screen"
 
@@ -99,6 +103,7 @@ margin_top = 62.0
 margin_right = -13.0
 margin_bottom = 86.0
 rect_scale = Vector2( 1.5, 1.5 )
+custom_colors/font_color = Color( 1, 0.941176, 0.611765, 1 )
 custom_fonts/font = SubResource( 9 )
 keep_pressed_outside = true
 text = "Mute"
@@ -109,7 +114,7 @@ margin_top = 130.0
 margin_right = 141.0
 margin_bottom = 153.0
 rect_pivot_offset = Vector2( 33, 8 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 0.941176, 0.611765, 1 )
 custom_fonts/font = SubResource( 7 )
 text = "Volume"
 

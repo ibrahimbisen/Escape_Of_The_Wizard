@@ -255,6 +255,7 @@ func _ready():
 	rocket6.player = player
 	rocket7.player = player
 	rocket8.player = player
+	rocket9.player = player
 	rocket10.player = player
 	rocket11.player = player
 	rocket12.player = player
