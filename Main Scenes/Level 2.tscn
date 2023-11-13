@@ -173,7 +173,6 @@ position = Vector2( 4108, 1151 )
 
 [node name="G6" parent="." instance=ExtResource( 15 )]
 position = Vector2( 1665, 1160 )
-scale = Vector2( 2.7, 3 )
 
 [node name="G7" parent="." instance=ExtResource( 15 )]
 position = Vector2( 2459, 1033 )
