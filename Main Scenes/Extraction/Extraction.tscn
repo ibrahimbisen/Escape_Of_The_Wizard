@@ -4,21 +4,23 @@
 [ext_resource path="res://Main Scenes/Extraction/Extraction.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 168.938, 215.188 )
+extents = Vector2( 185.969, 257.594 )
 
 [node name="Extraction" type="Area2D"]
+light_mask = 7
 position = Vector2( 463, 278 )
 collision_layer = 3
 collision_mask = 3
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 1 )
+light_mask = 7
 shape = SubResource( 1 )
 
 [node name="ExtractionTimer" type="Timer" parent="."]
 
 [node name="Sprite" type="Sprite" parent="."]
+light_mask = 7
 texture = ExtResource( 1 )
 
 [connection signal="body_entered" from="." to="." method="_on_Extraction_body_entered"]
