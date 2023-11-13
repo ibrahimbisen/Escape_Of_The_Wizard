@@ -41,7 +41,7 @@ position = Vector2( 21, -1623 )
 script = ExtResource( 10 )
 
 [node name="Player" parent="." instance=ExtResource( 9 )]
-position = Vector2( 6282, 613 )
+position = Vector2( -413, 578 )
 z_index = 2
 
 [node name="Extraction" parent="." instance=ExtResource( 7 )]
