@@ -1,7 +1,7 @@
-extends Node2D
+extends KinematicBody2D
 onready var player
 var can_spawn = true
-var boss = null
+var health = 100
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,7 +16,7 @@ func _physics_process(delta):
 		var spawn = load("res://Characters/Archer_Enemy.tscn")
 		var new_spawn = spawn.instance()
 		new_spawn.player = self.player
-		new_spawn.see_thru.append(boss)
+		new_spawn.see_thru.append(self)
 		new_spawn.connect("shoot", self, "handle_enemy_bullet_spawned")
 		add_child(new_spawn)
 
@@ -30,3 +30,10 @@ func handle_enemy_bullet_spawned(bullet: EnemyShot, a_position: Vector2, directi
 	add_child(bullet)
 	bullet.global_position = a_position
 	bullet.set_direction(direction)
+
+
+func handle_hit():
+	print("*")
+	health -= 20
+	if health <= 0:
+		queue_free()
