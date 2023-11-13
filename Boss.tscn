@@ -4,12 +4,12 @@
 [ext_resource path="res://Characters/RocketTurret.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Characters/Turret.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Boss.gd" type="Script" id=4]
-[ext_resource path="res://Assets/PNG/Default (64px)/bed_luxurious.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Character/boss.png" type="Texture" id=5]
 [ext_resource path="res://Spawner.tscn" type="PackedScene" id=6]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 132.0
-height = 96.0
+radius = 107.778
+height = 7.11115
 
 [node name="Boss" type="KinematicBody2D"]
 scale = Vector2( 0.9, 0.9 )
@@ -18,31 +18,36 @@ collision_mask = 9
 script = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -8.33335, -17.2222 )
+position = Vector2( 9.53674e-07, 3.8147e-06 )
 rotation = 1.5708
-scale = Vector2( 5.74653, 6.16319 )
+scale = Vector2( 2, 2 )
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -4.76837e-07, 0 )
 rotation = 1.5708
 shape = SubResource( 1 )
 
 [node name="Turret" parent="." instance=ExtResource( 3 )]
-position = Vector2( 166.667, -62.2222 )
+position = Vector2( -54.4444, 124.444 )
 
 [node name="Turret2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 175.556, 41.1111 )
+position = Vector2( 125.556, 0 )
 
 [node name="RocketTurret" parent="." instance=ExtResource( 2 )]
-position = Vector2( 21.1111, 136.667 )
+position = Vector2( 55.5556, 124.444 )
 
 [node name="RocketTurret2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 6.66667, -130 )
+position = Vector2( 55.5556, -124.444 )
 
 [node name="BackTurret" parent="." instance=ExtResource( 3 )]
-position = Vector2( -174.444, -1.11113 )
+position = Vector2( -114.444, 0 )
+
+[node name="BackTurret2" parent="." instance=ExtResource( 3 )]
+position = Vector2( -55.5556, -125.556 )
 
 [node name="EnemyHurt" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
 
 [node name="Spawner" parent="." instance=ExtResource( 6 )]
+position = Vector2( 0, 1.52588e-05 )
