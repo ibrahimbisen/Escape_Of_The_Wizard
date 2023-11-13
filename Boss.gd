@@ -8,6 +8,7 @@ onready var rocket1 = $RocketTurret
 onready var rocket2 = $RocketTurret2
 
 onready var backturret = $BackTurret
+onready var backturret2 = $BackTurret2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -30,6 +31,7 @@ func _ready():
 	
 	#backturret.player = self.player
 	backturret.connect("shoot", self, "handle_enemy_bullet_spawned")
+	backturret2.connect("shoot", self, "handle_enemy_bullet_spawned")
 
 
 func handle_enemy_rocket_spawned(bullet: Explosive, a_position: Vector2, direction: Vector2):

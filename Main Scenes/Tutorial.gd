@@ -5,7 +5,6 @@ extends Node2D
 #connect its signals to the main scene
 onready var player: Player = $Player
 
-onready var boss = $Boss
 
 onready var key1 = $Key
 onready var door1 = $Door
@@ -42,15 +41,7 @@ onready var turret2 = $T1
 func _ready():
 	Global.current_scene = 1
 
-	boss.player = player
-	$Boss/BackTurret.player = player
-	$Boss/Turret.player = player
-	$Boss/Turret2.player = player
-	$Boss/RocketTurret.player = player
-	$Boss/RocketTurret2.player = player
-	$Boss/Spawner.player = player
-	#print(boss.player)
-	#print(player)
+
 
 	enemy4.player = player
 	enemy5.player = player

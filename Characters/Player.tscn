@@ -98,8 +98,8 @@ tracks/1/keys = {
 
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( 56, 142 )
-collision_layer = 2
-collision_mask = 2
+collision_layer = 15
+collision_mask = 15
 script = ExtResource( 1 )
 Fireball = ExtResource( 3 )
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Assets/Fonts/alagard_font/alagard.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/GamePause.tscn" type="PackedScene" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://Key.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Door.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Spawner.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Main Scenes/Extraction/L1Extraction.gd" type="Script" id=23]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -40,7 +41,16 @@ position = Vector2( 21, -1623 )
 script = ExtResource( 10 )
 
 [node name="Player" parent="." instance=ExtResource( 9 )]
-position = Vector2( -423, 576 )
+position = Vector2( 6282, 613 )
+z_index = 2
+
+[node name="Extraction" parent="." instance=ExtResource( 7 )]
+light_mask = 0
+position = Vector2( 6548, 604 )
+z_index = 1
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 23 )
 
 [node name="Main Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 18 )
@@ -198,7 +208,7 @@ position = Vector2( 5784, 164 )
 position = Vector2( 3520, 840 )
 
 [node name="B11" parent="." instance=ExtResource( 13 )]
-position = Vector2( 6000, 1537 )
+position = Vector2( 3553, 1055 )
 
 [node name="B12" parent="." instance=ExtResource( 13 )]
 position = Vector2( 4270, 734 )
@@ -297,23 +307,6 @@ position = Vector2( 429, -206 )
 
 [node name="GamePauseSFX" type="AudioStreamPlayer" parent="UI"]
 
-[node name="Enemy" parent="." instance=ExtResource( 6 )]
-position = Vector2( 9232, 655 )
-
-[node name="Archer_Enemy" parent="." instance=ExtResource( 3 )]
-position = Vector2( 6742, 1009 )
-
-[node name="Turret" parent="." instance=ExtResource( 16 )]
-position = Vector2( 525, 310 )
-
-[node name="RocketTurret" parent="." instance=ExtResource( 17 )]
-position = Vector2( 1062, 816 )
-
-[node name="Extraction" parent="." instance=ExtResource( 7 )]
-position = Vector2( 6562, 607 )
-collision_layer = 2
-collision_mask = 2
-
 [node name="HUD" parent="." instance=ExtResource( 8 )]
 
 [node name="Countdown" type="Control" parent="HUD"]
@@ -361,6 +354,18 @@ text = "00"
 process_mode = 0
 wait_time = 0.1
 autostart = true
+
+[node name="Enemy" parent="." instance=ExtResource( 6 )]
+position = Vector2( 9232, 655 )
+
+[node name="Archer_Enemy" parent="." instance=ExtResource( 3 )]
+position = Vector2( 6742, 1009 )
+
+[node name="Turret" parent="." instance=ExtResource( 16 )]
+position = Vector2( 525, 310 )
+
+[node name="RocketTurret" parent="." instance=ExtResource( 17 )]
+position = Vector2( 1062, 816 )
 
 [node name="Archer_Enemy3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 839, 50 )
@@ -573,7 +578,7 @@ position = Vector2( 4447, 426 )
 position = Vector2( 4680, 331 )
 
 [node name="TestSpawner" parent="." instance=ExtResource( 22 )]
-position = Vector2( -507, 288 )
+position = Vector2( 6984, 1061 )
 scale = Vector2( 1, 1 )
 
 [connection signal="timeout" from="HUD/Countdown/Timer" to="HUD/Countdown" method="_on_Timer_timeout"]

@@ -13,9 +13,11 @@ script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -2 )
+scale = Vector2( 2, 2 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
 
 [connection signal="body_entered" from="." to="." method="_on_HeartCollect_body_entered"]
