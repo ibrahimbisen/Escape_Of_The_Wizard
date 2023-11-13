@@ -4,8 +4,7 @@ var is_paused = false setget set_is_paused
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
+	pass
 func set_is_paused(value):
 	$resumemusic.play()
 	is_paused = value
@@ -39,3 +38,26 @@ func _on_Resume_pressed():
 func _on_Options_pressed():
 	$resumemusic.play()
 	pass # Replace with function body.
+
+
+
+func volume(bus_index, value):
+	AudioServer.set_bus_volume_db(bus_index, linear2db(value)-30)
+
+func _on_Master_Slider_value_changed(value):
+	volume(0,value)
+	#SaveData.master_vol = value
+ 
+
+func _on_Music_Slider_value_changed(value):
+	volume(1,value)
+	#SaveData.music_vol = value
+
+func _on_SFX_Slider_value_changed(value):
+	volume(2,value)
+	#SaveData.soundfx_vol = value
+func _on_FullScreen_toggled(button_pressed):
+	OS.set_window_fullscreen(button_pressed)
+
+func _on_Volume_toggled(button_pressed):
+	AudioServer.set_bus_mute(0,button_pressed)
