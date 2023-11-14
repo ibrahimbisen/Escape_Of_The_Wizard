@@ -39,6 +39,7 @@ func _on_KillTimer_timeout():
 
 func _on_FireBall_body_entered(body):
 	if body.has_method("handle_hit"):
+		print("))")
 		body.handle_hit()
 	queue_free()
 	emit_signal("gone")
