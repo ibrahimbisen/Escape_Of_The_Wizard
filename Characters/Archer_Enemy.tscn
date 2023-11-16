@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Characters/Archer_Enemy.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Character/enemies4.png" type="Texture" id=2]
@@ -8,6 +8,11 @@
 [ext_resource path="res://Assets/Character/enemies_whiteflash.png" type="Texture" id=6]
 
 [sub_resource type="CircleShape2D" id=1]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.937255, 0.0823529, 0.0823529, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
 
 [node name="Archer_Enemy" type="KinematicBody2D" groups=["archers"]]
 rotation = 1.5708
@@ -57,6 +62,19 @@ texture = ExtResource( 6 )
 
 [node name="White_Timer" type="Timer" parent="."]
 wait_time = 0.2
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+margin_left = -16.0
+margin_top = 13.0
+margin_right = 10.0
+margin_bottom = 20.0
+rect_rotation = -90.0
+rect_scale = Vector2( 1, 0.5 )
+custom_styles/fg = SubResource( 2 )
+custom_styles/bg = SubResource( 3 )
+max_value = 30.0
+value = 30.0
+percent_visible = false
 
 [connection signal="timeout" from="GunTimer" to="." method="_on_GunTimer_timeout"]
 [connection signal="timeout" from="NavigationTimer" to="." method="_on_NavigationTimer_timeout"]
