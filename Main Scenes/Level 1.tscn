@@ -545,10 +545,10 @@ position = Vector2( 4212, 419 )
 position = Vector2( 1459, 1017 )
 
 [node name="RocketTurret2" parent="." instance=ExtResource( 17 )]
-position = Vector2( 6755, 289 )
+position = Vector2( 6147, 263 )
 
 [node name="RocketTurret3" parent="." instance=ExtResource( 17 )]
-position = Vector2( 6750, 1199 )
+position = Vector2( 6435, 1055 )
 
 [node name="Turret2" parent="." instance=ExtResource( 16 )]
 position = Vector2( 5128, 42 )

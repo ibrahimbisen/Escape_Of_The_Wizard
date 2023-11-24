@@ -29,7 +29,7 @@ func _physics_process(delta):
 		if enemy_vision.collider==player:
 			target = enemy_vision.collider.global_transform.origin
 			direction = (target - global_transform.origin).normalized()
-			look_at(target)
+			turner(turn_calc())
 		else:
 			target = self.position
 			direction = Vector2.ZERO
@@ -45,3 +45,16 @@ func handle_hit():
 	$EnemyHurt.play()
 	if health <= 0:
 		queue_free()
+
+func turn_calc():
+	#print((get_angle_to(player.global_position)))
+	return (get_angle_to(player.global_position))
+	
+func turner(rot: float):
+	#print(rot, " &&& ", rotation)
+	#var to_rot = rot - rotation
+	#print(to_rot)
+	if rot > 0.06:
+		self.rotation += 0.06
+	elif rot < -0.06:
+		self.rotation -= 0.06

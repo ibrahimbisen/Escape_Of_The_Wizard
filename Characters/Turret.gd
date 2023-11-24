@@ -41,8 +41,6 @@ func _physics_process(delta):
 					var Fireball = load("res://Projectiles/EnemyExplosive.tscn")
 					var fireball_instance = Fireball.instance()
 					emit_signal("rocket", fireball_instance, global_position, fire_direction)
-	
-	look_at(target)
 
 
 func handle_hit():

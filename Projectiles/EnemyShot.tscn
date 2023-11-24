@@ -4,8 +4,8 @@
 [ext_resource path="res://Projectiles/EnemyShot.gd" type="Script" id=2]
 
 [node name="EnemyShot" instance=ExtResource( 1 )]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 18
+collision_mask = 18
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" parent="." index="0"]
