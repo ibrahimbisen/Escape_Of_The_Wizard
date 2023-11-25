@@ -3,7 +3,7 @@ onready var animPlayer = $AnimationPlayer
 
 class_name Enemy
 var health: int = 30
-var speed = 50
+var speed = 40
 var direction = Vector2.ZERO
 var target
 var turning_speed = 0.05

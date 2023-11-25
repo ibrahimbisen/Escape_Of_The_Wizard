@@ -55,5 +55,4 @@ func handle_enemy_bullet_spawned(bullet: EnemyShot, a_position: Vector2, directi
 	bullet.set_direction(direction)
 
 func _physics_process(delta):
-	print("1tick")
 	position += direction * speed * delta
