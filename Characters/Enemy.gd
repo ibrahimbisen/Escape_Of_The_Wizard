@@ -6,7 +6,7 @@ var health: int = 30
 var speed = 50
 var direction = Vector2.ZERO
 var target
-var turning_speed = 0.06
+var turning_speed = 0.05
 onready var player
 
 var see_thru = [self]
