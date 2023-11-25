@@ -38,6 +38,7 @@ func _physics_process(delta):
 					see_thru.append(arrow)
 					emit_signal("shoot", arrow, global_position, fire_direction)
 				elif (proj_type == 1):
+					print("*")
 					var Fireball = load("res://Projectiles/EnemyExplosive.tscn")
 					var fireball_instance = Fireball.instance()
 					emit_signal("rocket", fireball_instance, global_position, fire_direction)

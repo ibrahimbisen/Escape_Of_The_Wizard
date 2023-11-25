@@ -8,6 +8,12 @@ onready var player: Player = $Player
 onready var key1 = $Key
 onready var door1 = $Door
 
+onready var key2 = $Key2
+onready var door2 = $Door2
+
+onready var key3 = $Key3
+onready var door3 = $Door3
+
 onready var B1 = $BlueAmmo
 onready var B2 = $B1
 onready var B3 = $B2
@@ -36,8 +42,9 @@ onready var B25 = $B23
 onready var B26 = $B24
 onready var B27 = $B25
 onready var B28 = $B26
-
-
+onready var B29 = $B27
+onready var B30 = $B28
+onready var B31 = $B29
 
 
 onready var R1 = $RedAmmo
@@ -54,6 +61,7 @@ onready var R11 = $R10
 onready var R12 = $R11
 onready var R13 = $R12
 onready var R14 = $R13
+onready var R15 = $R14
 
 onready var G1 = $GreenAmmo
 onready var G2 = $G1
@@ -72,7 +80,11 @@ onready var G14 = $G13
 onready var G15 = $G14
 onready var G16 = $G15
 onready var G17 = $G16
-
+onready var G18 = $G17
+onready var G19 = $G18
+onready var G20 = $G19
+onready var G21 = $G20
+onready var G22 = $G21
 
 onready var spawn2 = $Spawner
 onready var spawn1 = $TestSpawner
@@ -184,9 +196,23 @@ func _ready():
 	PlayerInventory.reset_item("Fire Ball", 0)
 	key1.connect("key_picked_up", self, "door_open")
 	key1.door = door1
+	
+	key2.connect("key_picked_up", self, "door_open")
+	key2.door = door2
+	
+	key3.connect("key_picked_up", self, "door_open")
+	key3.door = door3
 	#get_tree().call_group("archers", "init_player")
 	spawn1.player = player
 	spawn2.player = player
+	
+	$Boss.player = player
+	$Boss/BackTurret.player = player
+	$Boss/BackTurret2.player = player
+	$Boss/Turret.player = player
+	$Boss/Turret2.player = player
+	$Boss/RocketTurret.player = player
+	$Boss/Turret3.player = player
 	
 	enemy.player = player
 	archer.player = player
@@ -317,6 +343,9 @@ func _ready():
 	B26.connect("picked_up", self, "ammo_pick_up")
 	B27.connect("picked_up", self, "ammo_pick_up")
 	B28.connect("picked_up", self, "ammo_pick_up")
+	B29.connect("picked_up", self, "ammo_pick_up")
+	B30.connect("picked_up", self, "ammo_pick_up")
+	B31.connect("picked_up", self, "ammo_pick_up")
 	
 	R1.connect("picked_up", self, "ammo_pick_up")
 	R2.connect("picked_up", self, "ammo_pick_up")
@@ -332,6 +361,7 @@ func _ready():
 	R12.connect("picked_up", self, "ammo_pick_up")
 	R13.connect("picked_up", self, "ammo_pick_up")
 	R14.connect("picked_up", self, "ammo_pick_up")
+	R15.connect("picked_up", self, "ammo_pick_up")
 	
 	G1.connect("picked_up", self, "ammo_pick_up")
 	G2.connect("picked_up", self, "ammo_pick_up")
@@ -350,7 +380,11 @@ func _ready():
 	G15.connect("picked_up", self, "ammo_pick_up")
 	G16.connect("picked_up", self, "ammo_pick_up")
 	G17.connect("picked_up", self, "ammo_pick_up")
-	
+	G18.connect("picked_up", self, "ammo_pick_up")
+	G19.connect("picked_up", self, "ammo_pick_up")
+	G20.connect("picked_up", self, "ammo_pick_up")
+	G21.connect("picked_up", self, "ammo_pick_up")
+	G22.connect("picked_up", self, "ammo_pick_up")
 	
 	rocket1.connect("rocket", self, "handle_enemy_rocket_spawned")
 	rocket2.connect("rocket", self, "handle_enemy_rocket_spawned")
