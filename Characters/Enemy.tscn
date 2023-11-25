@@ -30,3 +30,11 @@ position = Vector2( 23, 19 )
 
 [node name="EnemyHurt" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+margin_left = -28.0
+margin_top = 39.0
+margin_right = 30.0
+margin_bottom = 53.0
+max_value = 30.0
+value = 30.0

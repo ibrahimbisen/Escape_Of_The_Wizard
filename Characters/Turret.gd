@@ -46,11 +46,12 @@ func _physics_process(delta):
 
 
 func handle_hit():
-	health -= 20
+	health -= 15
 	$EnemyHurt.play()
 	$DamageFlash.show()
 	$Sprite.hide()
 	$White_Timer.start()
+	$ProgressBar.set_value(health)
 	if health <= 0:
 		queue_free()
 

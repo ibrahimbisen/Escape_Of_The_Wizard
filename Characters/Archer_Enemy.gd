@@ -79,11 +79,12 @@ func _on_GunTimer_timeout():
 
 
 func handle_hit():
-	health -= 20
+	health -= 15
 	$EnemyHurt.play()
 	$Damage_Enemy.show()
 	$Sprite.hide()
 	$White_Timer.start()
+	$ProgressBar.set_value(health)
 	if health <= 0:
 		queue_free()
 #func _on_NavigationTimer_timeout():
