@@ -37,6 +37,7 @@ position = Vector2( 1.50003, 7.99999 )
 position = Vector2( 5.00003, 7.99998 )
 
 [node name="GunTimer" type="Timer" parent="."]
+wait_time = 1.1
 script = ExtResource( 3 )
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]

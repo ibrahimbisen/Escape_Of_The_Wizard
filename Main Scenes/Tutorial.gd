@@ -41,7 +41,9 @@ onready var turret2 = $T1
 func _ready():
 	Global.current_scene = 1
 
-
+	PlayerInventory.reset_item("Laser Blast", 0)
+	PlayerInventory.reset_item("Crossbow", 0)
+	PlayerInventory.reset_item("Fire Ball", 0)
 
 	enemy4.player = player
 	enemy5.player = player
