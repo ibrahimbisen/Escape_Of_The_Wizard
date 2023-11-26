@@ -6,6 +6,7 @@ var entered = false
 
 
 func _on_Timer_timeout():
+	PlayerInventory.active_item_slot = 0
 	get_tree().change_scene("res://UI/Menu.tscn")
 
 
