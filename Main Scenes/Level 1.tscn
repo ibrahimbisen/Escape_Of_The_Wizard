@@ -41,8 +41,10 @@ position = Vector2( 21, -1623 )
 script = ExtResource( 10 )
 
 [node name="Player" parent="." instance=ExtResource( 9 )]
-position = Vector2( -409, 582 )
+position = Vector2( -448, 580 )
 z_index = 2
+collision_layer = 31
+collision_mask = 31
 
 [node name="Extraction" parent="." instance=ExtResource( 7 )]
 light_mask = 0
@@ -60,7 +62,7 @@ autoplay = true
 [node name="Level 1 Map" parent="." instance=ExtResource( 5 )]
 
 [node name="BlueAmmo" parent="." instance=ExtResource( 13 )]
-position = Vector2( 148, 575 )
+position = Vector2( 137, 575 )
 
 [node name="GreenAmmo" parent="." instance=ExtResource( 15 )]
 position = Vector2( -142, 577 )

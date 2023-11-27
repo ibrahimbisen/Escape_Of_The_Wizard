@@ -1,0 +1,98 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Assets/Fonts/alagard_font/alagard.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://UI/GameOver.gd" type="Script" id=2]
+[ext_resource path="res://Assets/SFX/UI/Resume.wav" type="AudioStream" id=3]
+[ext_resource path="res://Assets/title logo pixelized.png.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Audio/Menu/Story Music/inspiring-cinematic-ambient-116199.mp3" type="AudioStream" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+outline_color = Color( 1, 0.282353, 0.388235, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 64
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 64
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 100
+font_data = ExtResource( 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.760784, 0.764706, 0.741176, 1 )
+
+[node name="GameOver" type="VBoxContainer" parent="ColorRect"]
+margin_left = 318.0
+margin_top = 300.0
+margin_right = 702.0
+margin_bottom = 509.0
+rect_pivot_offset = Vector2( -295, -148 )
+script = ExtResource( 2 )
+
+[node name="main music" type="AudioStreamPlayer" parent="ColorRect/GameOver"]
+stream = ExtResource( 5 )
+autoplay = true
+
+[node name="Start over" type="Button" parent="ColorRect/GameOver"]
+margin_right = 384.0
+margin_bottom = 66.0
+custom_colors/font_color_disabled = Color( 1, 0.282353, 0.388235, 1 )
+custom_colors/font_color_focus = Color( 1, 0.282353, 0.388235, 1 )
+custom_colors/font_color = Color( 1, 0.282353, 0.388235, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Play Again"
+
+[node name="Main Menu" type="Button" parent="ColorRect/GameOver"]
+margin_top = 70.0
+margin_right = 384.0
+margin_bottom = 136.0
+custom_colors/font_color = Color( 1, 0.282353, 0.388235, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Main Menu"
+
+[node name="Quit" type="Button" parent="ColorRect/GameOver"]
+margin_top = 140.0
+margin_right = 384.0
+margin_bottom = 206.0
+custom_colors/font_color = Color( 1, 0.282353, 0.388235, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Quit"
+
+[node name="Click" type="AudioStreamPlayer" parent="ColorRect/GameOver"]
+stream = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+visible = false
+margin_left = 320.0
+margin_top = 80.0
+margin_right = 368.0
+margin_bottom = 128.0
+rect_scale = Vector2( 8, 8 )
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="ColorRect"]
+margin_left = 160.0
+margin_top = 144.0
+margin_right = 860.0
+margin_bottom = 238.0
+custom_colors/font_color = Color( 1, 0.282353, 0.388235, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "YOU WON!!"
+align = 1
+
+[connection signal="pressed" from="ColorRect/GameOver/Start over" to="ColorRect/GameOver" method="_on_Start_over_pressed"]
+[connection signal="pressed" from="ColorRect/GameOver/Main Menu" to="ColorRect/GameOver" method="_on_Main_Menu_pressed"]
+[connection signal="pressed" from="ColorRect/GameOver/Quit" to="ColorRect/GameOver" method="_on_Quit_pressed"]

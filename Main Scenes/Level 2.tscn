@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Assets/Fonts/alagard_font/alagard.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/GamePause.tscn" type="PackedScene" id=2]
@@ -24,6 +24,7 @@
 [ext_resource path="res://Spawner.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Map/Level 2.gd" type="Script" id=23]
 [ext_resource path="res://Boss.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Main Scenes/Extraction/L2Extraction.gd" type="Script" id=25]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -48,9 +49,10 @@ script = ExtResource( 23 )
 position = Vector2( 7743, 1375 )
 collision_layer = 2
 collision_mask = 2
+script = ExtResource( 25 )
 
 [node name="Player" parent="." instance=ExtResource( 9 )]
-position = Vector2( 392, 1294 )
+position = Vector2( 367, 1275 )
 
 [node name="Main Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 18 )
@@ -663,7 +665,7 @@ position = Vector2( 1722, 1033 )
 position = Vector2( 1339, 767 )
 
 [node name="RocketTurret3" parent="." instance=ExtResource( 17 )]
-position = Vector2( 1035, 1077 )
+position = Vector2( 1683, -80 )
 
 [node name="RocketTurret4" parent="." instance=ExtResource( 17 )]
 position = Vector2( 901, 1867 )

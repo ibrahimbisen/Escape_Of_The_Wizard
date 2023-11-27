@@ -32,7 +32,7 @@ onready var B21 = $B20
 onready var B22 = $B21
 onready var B23 = $B22
 onready var B24 = $B23
-onready var B25 = $B23
+#onready var B25 = $B23
 onready var B26 = $B24
 onready var B27 = $B25
 onready var B28 = $B26
@@ -258,7 +258,7 @@ func _ready():
 	B22.connect("picked_up", self, "ammo_pick_up")
 	B23.connect("picked_up", self, "ammo_pick_up")
 	B24.connect("picked_up", self, "ammo_pick_up")
-	B25.connect("picked_up", self, "ammo_pick_up")
+	#B25.connect("picked_up", self, "ammo_pick_up")
 	B26.connect("picked_up", self, "ammo_pick_up")
 	B27.connect("picked_up", self, "ammo_pick_up")
 	B28.connect("picked_up", self, "ammo_pick_up")
