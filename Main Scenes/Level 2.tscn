@@ -139,7 +139,7 @@ position = Vector2( 1811, 1406 )
 position = Vector2( 3967, -461 )
 
 [node name="H21" parent="." instance=ExtResource( 19 )]
-position = Vector2( 3295, 731 )
+position = Vector2( 3243, 735 )
 
 [node name="H22" parent="." instance=ExtResource( 19 )]
 position = Vector2( 2711, 681 )
@@ -155,6 +155,69 @@ position = Vector2( 3968, -539 )
 
 [node name="H26" parent="." instance=ExtResource( 19 )]
 position = Vector2( 4038, -541 )
+
+[node name="H27" parent="." instance=ExtResource( 19 )]
+position = Vector2( 1947, 783 )
+
+[node name="H28" parent="." instance=ExtResource( 19 )]
+position = Vector2( 1987, 1023 )
+
+[node name="H29" parent="." instance=ExtResource( 19 )]
+position = Vector2( 1683, 2023 )
+
+[node name="H30" parent="." instance=ExtResource( 19 )]
+position = Vector2( 2291, 911 )
+
+[node name="H31" parent="." instance=ExtResource( 19 )]
+position = Vector2( 2571, 1183 )
+
+[node name="H32" parent="." instance=ExtResource( 19 )]
+position = Vector2( 4139, 1695 )
+
+[node name="H33" parent="." instance=ExtResource( 19 )]
+position = Vector2( 4051, 1895 )
+
+[node name="H34" parent="." instance=ExtResource( 19 )]
+position = Vector2( 3251, 1439 )
+
+[node name="H36" parent="." instance=ExtResource( 19 )]
+position = Vector2( 2587, 1847 )
+
+[node name="H37" parent="." instance=ExtResource( 19 )]
+position = Vector2( 4411, 1231 )
+
+[node name="H38" parent="." instance=ExtResource( 19 )]
+position = Vector2( 211, 1399 )
+
+[node name="H39" parent="." instance=ExtResource( 19 )]
+position = Vector2( 211, 1175 )
+
+[node name="H40" parent="." instance=ExtResource( 19 )]
+position = Vector2( 211, 1287 )
+
+[node name="H41" parent="." instance=ExtResource( 19 )]
+position = Vector2( 3891, 975 )
+
+[node name="H42" parent="." instance=ExtResource( 19 )]
+position = Vector2( 1403, 1151 )
+
+[node name="H43" parent="." instance=ExtResource( 19 )]
+position = Vector2( 5075, 1807 )
+
+[node name="H44" parent="." instance=ExtResource( 19 )]
+position = Vector2( 5171, 799 )
+
+[node name="H45" parent="." instance=ExtResource( 19 )]
+position = Vector2( 4571, 815 )
+
+[node name="H46" parent="." instance=ExtResource( 19 )]
+position = Vector2( 315, 1447 )
+
+[node name="H47" parent="." instance=ExtResource( 19 )]
+position = Vector2( 315, 1119 )
+
+[node name="H48" parent="." instance=ExtResource( 19 )]
+position = Vector2( 4819, 1519 )
 
 [node name="G1" parent="." instance=ExtResource( 15 )]
 position = Vector2( 612, 1314 )
@@ -178,7 +241,7 @@ position = Vector2( 1665, 1160 )
 position = Vector2( 2459, 1033 )
 
 [node name="G8" parent="." instance=ExtResource( 15 )]
-position = Vector2( 2804, 1579 )
+position = Vector2( 2819, 1671 )
 
 [node name="G9" parent="." instance=ExtResource( 15 )]
 position = Vector2( 1620, 1410 )
@@ -223,7 +286,7 @@ position = Vector2( 4622, 1702 )
 position = Vector2( 3427, 1153 )
 
 [node name="B7" parent="." instance=ExtResource( 13 )]
-position = Vector2( 1924, 1097 )
+position = Vector2( 2051, 1167 )
 
 [node name="B8" parent="." instance=ExtResource( 13 )]
 position = Vector2( 4594, 1153 )
@@ -386,13 +449,13 @@ wait_time = 0.1
 autostart = true
 
 [node name="Archer_Enemy" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1042, 1396 )
+position = Vector2( 6435, 2215 )
 
 [node name="Archer_Enemy2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 892, 633 )
 
 [node name="Archer_Enemy3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1345, 1358 )
+position = Vector2( 6507, 1471 )
 
 [node name="Archer_Enemy4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1471, 961 )
@@ -404,13 +467,13 @@ position = Vector2( 1615, 1667 )
 position = Vector2( 1783, 1661 )
 
 [node name="a_e_7" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1047, 1880 )
+position = Vector2( 1067, 1447 )
 
 [node name="a_e_8" parent="." instance=ExtResource( 3 )]
 position = Vector2( 887, 1876 )
 
 [node name="a_e_9" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2130, 1324 )
+position = Vector2( 1891, 1327 )
 
 [node name="a_e_10" parent="." instance=ExtResource( 3 )]
 position = Vector2( 2289, 1322 )
@@ -440,16 +503,16 @@ position = Vector2( 3705, 1176 )
 position = Vector2( 3546, 1471 )
 
 [node name="a_e_19" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3771, 1908 )
+position = Vector2( 3691, 1887 )
 
 [node name="a_e_20" parent="." instance=ExtResource( 3 )]
 position = Vector2( 4433, 707 )
 
 [node name="a_e_21" parent="." instance=ExtResource( 3 )]
-position = Vector2( 5189, 1582 )
+position = Vector2( 5091, 1575 )
 
 [node name="a_e_22" parent="." instance=ExtResource( 3 )]
-position = Vector2( 4960, 1951 )
+position = Vector2( 6939, 2207 )
 
 [node name="a_e_23" parent="." instance=ExtResource( 3 )]
 position = Vector2( 5466, 1320 )
@@ -458,10 +521,10 @@ position = Vector2( 5466, 1320 )
 position = Vector2( 5468, 1829 )
 
 [node name="a_e_25" parent="." instance=ExtResource( 3 )]
-position = Vector2( 4858, 900 )
+position = Vector2( 6947, 551 )
 
 [node name="a_e_26" parent="." instance=ExtResource( 3 )]
-position = Vector2( 5283, 861 )
+position = Vector2( 4987, 1415 )
 
 [node name="a_e_27" parent="." instance=ExtResource( 3 )]
 position = Vector2( 4977, 688 )
@@ -488,7 +551,7 @@ position = Vector2( 4804, 1144 )
 position = Vector2( 3455, 2049 )
 
 [node name="a_e_35" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3232, 802 )
+position = Vector2( 3027, 935 )
 
 [node name="a_e_36" parent="." instance=ExtResource( 3 )]
 position = Vector2( 4201, -1184 )
@@ -497,10 +560,10 @@ position = Vector2( 4201, -1184 )
 position = Vector2( 2989, 78 )
 
 [node name="a_e_38" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3267, -132 )
+position = Vector2( 1939, -553 )
 
 [node name="a_e_39" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3065, 721 )
+position = Vector2( 3115, 1175 )
 
 [node name="a_e_40" parent="." instance=ExtResource( 3 )]
 position = Vector2( 5335, 370 )
@@ -509,16 +572,16 @@ position = Vector2( 5335, 370 )
 position = Vector2( 5763, -376 )
 
 [node name="a_e_42" parent="." instance=ExtResource( 3 )]
-position = Vector2( 6037, -485 )
+position = Vector2( 6811, -465 )
 
 [node name="a_e_43" parent="." instance=ExtResource( 3 )]
 position = Vector2( 5194, -843 )
 
 [node name="a_e_44" parent="." instance=ExtResource( 3 )]
-position = Vector2( 5497, -1140 )
+position = Vector2( 5331, -1185 )
 
 [node name="a_e_45" parent="." instance=ExtResource( 3 )]
-position = Vector2( 4875, -1280 )
+position = Vector2( 6763, -849 )
 
 [node name="a_e_46" parent="." instance=ExtResource( 3 )]
 position = Vector2( 4607, -1347 )
@@ -530,13 +593,13 @@ position = Vector2( 3380, -1176 )
 position = Vector2( 2964, -630 )
 
 [node name="a_e_49" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3526, 276 )
+position = Vector2( 3107, 31 )
 
 [node name="a_e_50" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3400, 521 )
+position = Vector2( 3427, 471 )
 
 [node name="a_e_51" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3607, -1069 )
+position = Vector2( 6507, 1255 )
 
 [node name="a_e_52" parent="." instance=ExtResource( 3 )]
 position = Vector2( 4577, -1061 )
@@ -551,7 +614,7 @@ position = Vector2( 5378, -465 )
 position = Vector2( 5673, -938 )
 
 [node name="a_e_56" parent="." instance=ExtResource( 3 )]
-position = Vector2( 5326, -184 )
+position = Vector2( 6435, 559 )
 
 [node name="a_e_57" parent="." instance=ExtResource( 3 )]
 position = Vector2( 6558, 354 )
@@ -569,7 +632,7 @@ position = Vector2( 6817, 2403 )
 position = Vector2( 1731, 1075 )
 
 [node name="RocketTurret2" parent="." instance=ExtResource( 17 )]
-position = Vector2( 1368, 740 )
+position = Vector2( 1339, 767 )
 
 [node name="RocketTurret3" parent="." instance=ExtResource( 17 )]
 position = Vector2( 1035, 1077 )
@@ -590,25 +653,29 @@ position = Vector2( 1986, 795 )
 position = Vector2( 2557, 803 )
 
 [node name="RocketTurret9" parent="." instance=ExtResource( 17 )]
-position = Vector2( 3124, 1183 )
+position = Vector2( 3123, 695 )
 
 [node name="RocketTurret10" parent="." instance=ExtResource( 17 )]
-position = Vector2( 2311, 1112 )
+position = Vector2( 2291, 1135 )
+rotation = 0.0
 
 [node name="RocketTurret11" parent="." instance=ExtResource( 17 )]
-position = Vector2( 3904, 1227 )
+position = Vector2( 3907, 1231 )
+rotation = 0.0
 
 [node name="RocketTurret12" parent="." instance=ExtResource( 17 )]
-position = Vector2( 5189, 1151 )
+position = Vector2( 5203, 1127 )
 
 [node name="RocketTurret13" parent="." instance=ExtResource( 17 )]
-position = Vector2( 4989, 1586 )
+position = Vector2( 5403, 1383 )
 
 [node name="RocketTurret14" parent="." instance=ExtResource( 17 )]
 position = Vector2( 5176, 1938 )
+rotation = -1.5708
 
 [node name="RocketTurret15" parent="." instance=ExtResource( 17 )]
 position = Vector2( 4558, 1857 )
+rotation = 0.0
 
 [node name="RocketTurret16" parent="." instance=ExtResource( 17 )]
 position = Vector2( 4804, 1405 )
@@ -635,7 +702,7 @@ position = Vector2( 1678, 1883 )
 position = Vector2( 1316, 1561 )
 
 [node name="Turret4" parent="." instance=ExtResource( 16 )]
-position = Vector2( 4980, 1425 )
+position = Vector2( 5195, -185 )
 
 [node name="Turret5" parent="." instance=ExtResource( 16 )]
 position = Vector2( 3954, 1939 )
@@ -647,7 +714,7 @@ position = Vector2( 4816, 1607 )
 position = Vector2( 1249, 1184 )
 
 [node name="Turret8" parent="." instance=ExtResource( 16 )]
-position = Vector2( 2050, 1159 )
+position = Vector2( 2027, -161 )
 
 [node name="Turret9" parent="." instance=ExtResource( 16 )]
 position = Vector2( 3411, 1313 )
@@ -655,8 +722,24 @@ position = Vector2( 3411, 1313 )
 [node name="Turret10" parent="." instance=ExtResource( 16 )]
 position = Vector2( 3132, 1727 )
 
+[node name="Turret11" parent="." instance=ExtResource( 16 )]
+position = Vector2( 4851, -1281 )
+
+[node name="Turret12" parent="." instance=ExtResource( 16 )]
+position = Vector2( 3267, -121 )
+
 [node name="TestSpawner" parent="." instance=ExtResource( 22 )]
-position = Vector2( 4647, 3619 )
+position = Vector2( 6819, 1183 )
+scale = Vector2( 1, 1 )
+
+[node name="HeartCollect" parent="." instance=ExtResource( 19 )]
+position = Vector2( 5067, 1335 )
+
+[node name="HeartCollect2" parent="." instance=ExtResource( 19 )]
+position = Vector2( 4731, 1847 )
+
+[node name="Spawner" parent="." instance=ExtResource( 22 )]
+position = Vector2( 6819, 1567 )
 scale = Vector2( 1, 1 )
 
 [connection signal="timeout" from="HUD/Countdown/Timer" to="HUD/Countdown" method="_on_Timer_timeout"]

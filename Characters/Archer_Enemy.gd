@@ -67,8 +67,6 @@ func _physics_process(delta):
 	#else:
 	#	direction = (next_location - global_position).normalized()
 	
-	look_at(target)
-	
 	position += direction * speed * delta
 
 

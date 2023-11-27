@@ -74,7 +74,7 @@ onready var G16 = $G15
 onready var G17 = $G16
 
 
-
+onready var spawn2 = $Spawner
 onready var spawn1 = $TestSpawner
 
 onready var enemy = $Enemy
@@ -171,6 +171,8 @@ onready var turret7 = $Turret7
 onready var turret8 = $Turret8
 onready var turret9 = $Turret9
 onready var turret10 = $Turret10
+onready var turret12 = $Turret12
+onready var turret11 = $Turret11
 #var EnemyArray = Array()
 
 
@@ -184,6 +186,7 @@ func _ready():
 	key1.door = door1
 	#get_tree().call_group("archers", "init_player")
 	spawn1.player = player
+	spawn2.player = player
 	
 	enemy.player = player
 	archer.player = player
@@ -279,6 +282,8 @@ func _ready():
 	turret8.player = player
 	turret9.player = player
 	turret10.player = player
+	turret11.player = player
+	turret12.player = player
 	
 	player.connect("player_fired_bullet", self, "handle_bullet_spawned")
 	player.connect("player_fired_laser", self, "handle_laser_spawned")
@@ -377,6 +382,8 @@ func _ready():
 	turret8.connect("shoot", self, "handle_enemy_bullet_spawned")
 	turret9.connect("shoot", self, "handle_enemy_bullet_spawned")
 	turret10.connect("shoot", self, "handle_enemy_bullet_spawned")
+	turret11.connect("shoot", self, "handle_enemy_bullet_spawned")
+	turret12.connect("shoot", self, "handle_enemy_bullet_spawned")
 	
 	archer.connect("shoot", self, "handle_enemy_bullet_spawned")
 	enemy1.connect("shoot", self, "handle_enemy_bullet_spawned")
