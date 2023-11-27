@@ -54,7 +54,7 @@ func _physics_process(delta):
 	
 	look_at(get_global_mouse_position())
 
-func _unhandled_input(event: InputEvent):
+func _input(event: InputEvent):
 	if event.is_action_released("scroll_up"):
 		inv_pos -= 1
 		if inv_pos < 0:
