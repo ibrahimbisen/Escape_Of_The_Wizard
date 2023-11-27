@@ -17,7 +17,6 @@ var first_collision_ignored = false  # <-- Flag for first collision
 func _on_Extraction_body_entered(body: PhysicsBody2D):
 	if not first_collision_ignored:
 		first_collision_ignored = true 
-		return
 	entered = true
 	if entered:
 		print("Entered the extraction area.")

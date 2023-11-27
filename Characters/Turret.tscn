@@ -9,20 +9,20 @@
 collision_layer = 8
 script = ExtResource( 3 )
 
-[node name="Sprite" parent="." index="0"]
+[node name="Sprite" parent="." index="1"]
 rotation = 3.14159
 texture = ExtResource( 2 )
 
-[node name="CollisionShape2D" parent="." index="1"]
+[node name="CollisionShape2D" parent="." index="2"]
 position = Vector2( -0.999998, 0.500004 )
 
-[node name="EndofGun" parent="." index="2"]
+[node name="EndofGun" parent="." index="3"]
 position = Vector2( 10, -3.62396e-05 )
 
-[node name="GunDirection" parent="." index="3"]
+[node name="GunDirection" parent="." index="4"]
 position = Vector2( 15, -5.43594e-05 )
 
-[node name="GunTimer" parent="." index="4"]
+[node name="GunTimer" parent="." index="5"]
 wait_time = 0.5
 script = null
 
