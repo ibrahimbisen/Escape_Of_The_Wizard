@@ -1,7 +1,8 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Assets/Inventory/item_icons/BlueOrb.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Inventory/Item Icon_Masters/BlueOrb.png" type="Texture" id=1]
 [ext_resource path="res://Projectiles/BlueAmmo.gd" type="Script" id=2]
+
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
