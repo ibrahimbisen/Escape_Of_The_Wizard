@@ -1,7 +1,16 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Assets/Inventory/item_icons/BlueOrb.png" type="Texture" id=1]
 [ext_resource path="res://Projectiles/BlueAmmo.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+corner_radius_top_left = 64
+corner_radius_top_right = 64
+corner_radius_bottom_right = 64
+corner_radius_bottom_left = 64
+shadow_color = Color( 0.498039, 0.686275, 1, 0.819608 )
+shadow_size = 8
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 6.0
@@ -12,9 +21,15 @@ collision_layer = 0
 collision_mask = 2
 script = ExtResource( 2 )
 
+[node name="Shadow" type="Panel" parent="."]
+margin_left = -5.71429
+margin_top = -6.07143
+margin_right = 6.28571
+margin_bottom = 5.92857
+custom_styles/panel = SubResource( 2 )
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -2.12874e-08, 0 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
