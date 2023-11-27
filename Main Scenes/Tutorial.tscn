@@ -59,130 +59,130 @@ autoplay = true
 [node name="Tutorial Map" parent="." instance=ExtResource( 5 )]
 
 [node name="Door" type="Label" parent="Tutorial Map"]
-margin_left = 4389.0
-margin_top = -139.0
-margin_right = 4722.0
-margin_bottom = -72.0
+margin_left = 4366.0
+margin_top = -113.0
+margin_right = 4706.0
+margin_bottom = -46.0
 rect_pivot_offset = Vector2( -431, -758 )
 custom_fonts/font = SubResource( 1 )
-text = "You need to Pick up the 
-Key to Open the door"
+text = "Use keys to unlock doors!"
 
 [node name="Extract" type="Label" parent="Tutorial Map"]
-margin_left = 6107.0
-margin_top = 129.0
-margin_right = 6382.0
-margin_bottom = 231.0
+margin_left = 6122.0
+margin_top = 147.0
+margin_right = 6397.0
+margin_bottom = 249.0
 rect_pivot_offset = Vector2( -431, -758 )
 custom_fonts/font = SubResource( 1 )
-text = "Enter the Extraction
- Zone to Finish the
-       Tutorial"
+text = "Enter the portal
+to escape!"
+align = 1
 
 [node name="Shoot" type="Label" parent="Tutorial Map"]
-margin_left = 2041.0
-margin_top = -106.0
-margin_right = 2527.0
-margin_bottom = -74.0
+margin_left = 2289.0
+margin_top = -168.0
+margin_right = 2775.0
+margin_bottom = -136.0
 rect_pivot_offset = Vector2( -431, -758 )
 custom_fonts/font = SubResource( 1 )
 text = "Press \"Left Mouse Button\" to Shoot!"
 
 [node name="Run" type="Label" parent="Tutorial Map"]
-margin_left = 1326.0
-margin_top = -114.0
-margin_right = 1598.0
-margin_bottom = -82.0
+margin_left = 1252.0
+margin_top = 338.0
+margin_right = 1524.0
+margin_bottom = 370.0
 rect_pivot_offset = Vector2( -431, -758 )
 custom_fonts/font = SubResource( 1 )
 text = "Press \"Shift\" to run!"
 
 [node name="Campfire" type="Label" parent="Tutorial Map"]
-margin_left = 3762.0
-margin_top = -107.0
-margin_right = 4332.0
-margin_bottom = -75.0
+margin_left = 3714.0
+margin_top = -178.0
+margin_right = 4284.0
+margin_bottom = -146.0
 rect_pivot_offset = Vector2( -1706, -21 )
 custom_fonts/font = SubResource( 1 )
-text = "Campfires will have more ammo and health"
+text = "Campfires provide ammo and health..."
 
 [node name="Scroll" type="Label" parent="Tutorial Map"]
-margin_left = 1652.0
-margin_top = -108.0
-margin_right = 1976.0
-margin_bottom = -76.0
+margin_left = 1628.0
+margin_top = -173.0
+margin_right = 1952.0
+margin_bottom = -141.0
 rect_pivot_offset = Vector2( -1706, -21 )
 custom_fonts/font = SubResource( 1 )
-text = "Scroll to Change Weapon"
+text = "Scroll to Change Weapons"
 
 [node name="Mouse" type="Label" parent="Tutorial Map"]
-margin_left = 867.0
-margin_top = -118.0
-margin_right = 1471.0
-margin_bottom = -69.0
+margin_left = 859.0
+margin_top = -174.0
+margin_right = 1463.0
+margin_bottom = -125.0
 custom_fonts/font = SubResource( 1 )
 text = "Use the Mouse to look around"
 
 [node name="Mouse2" type="Label" parent="Tutorial Map"]
-margin_left = 1003.0
-margin_top = 276.0
-margin_right = 1439.0
-margin_bottom = 325.0
+visible = false
+margin_left = 1000.0
+margin_top = 331.0
+margin_right = 1436.0
+margin_bottom = 380.0
 custom_fonts/font = SubResource( 1 )
 text = "You cannot go through the walls"
 
 [node name="Mouse3" type="Label" parent="Tutorial Map"]
-margin_left = 3201.0
-margin_top = -107.0
-margin_right = 3715.0
-margin_bottom = -58.0
+margin_left = 3347.0
+margin_top = 590.0
+margin_right = 4080.0
+margin_bottom = 639.0
 custom_fonts/font = SubResource( 1 )
-text = "These are the enemies you might face"
+text = "These are the enemies you may face on your journey..."
 
 [node name="Mouse5" type="Label" parent="Tutorial Map"]
-margin_left = 4371.0
-margin_top = 275.0
-margin_right = 4718.0
-margin_bottom = 377.0
+margin_left = 4430.0
+margin_top = 329.0
+margin_right = 4777.0
+margin_bottom = 501.0
 custom_fonts/font = SubResource( 1 )
-text = "There are three enemies 
-to practice on when you
-get through the door"
+text = "There are
+enemies beyond...
+good luck!"
 
 [node name="Mouse4" type="Label" parent="Tutorial Map"]
-margin_left = 2543.0
-margin_top = -107.0
-margin_right = 3157.0
-margin_bottom = -58.0
+margin_left = 2320.0
+margin_top = 254.0
+margin_right = 3183.0
+margin_bottom = 303.0
 custom_fonts/font = SubResource( 1 )
-text = "These are the things you can pick up in game"
+text = "These are the things you can pick up to help Mr. Wizard escape!"
 
 [node name="ESC" type="Label" parent="Tutorial Map"]
-margin_left = 119.0
-margin_top = 281.0
-margin_right = 485.0
-margin_bottom = 313.0
+margin_left = 126.0
+margin_top = 329.0
+margin_right = 492.0
+margin_bottom = 361.0
 custom_fonts/font = SubResource( 1 )
 text = "Use ESC to Pause the Game"
 
 [node name="WASD" type="Label" parent="Tutorial Map"]
-margin_left = 176.0
-margin_top = -120.0
-margin_right = 544.0
-margin_bottom = -71.0
+margin_left = 153.0
+margin_top = -172.0
+margin_right = 521.0
+margin_bottom = -123.0
 custom_fonts/font = SubResource( 1 )
 text = "Use WASD to Move"
 
 [node name="Goal" type="Label" parent="Tutorial Map"]
-margin_left = -237.0
-margin_top = 35.0
-margin_right = -34.0
-margin_bottom = 172.0
+margin_left = -308.0
+margin_top = 31.0
+margin_right = -87.0
+margin_bottom = 168.0
 custom_fonts/font = SubResource( 1 )
-text = "Reach to the
-Extraction 
-Zone to Finish 
-the Tutorial"
+text = "Mr. Wizard
+needs your help!
+Reach the portal
+to escape!"
 
 [node name="crossbow" type="Label" parent="Tutorial Map"]
 margin_left = 2354.0

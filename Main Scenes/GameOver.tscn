@@ -29,7 +29,7 @@ rect_pivot_offset = Vector2( -311, -69 )
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 1025.0
 margin_bottom = 604.0
-color = Color( 0.760784, 0.764706, 0.741176, 1 )
+color = Color( 0.027451, 0.0313726, 0.0509804, 1 )
 
 [node name="GameOver" type="VBoxContainer" parent="."]
 margin_left = 318.0
