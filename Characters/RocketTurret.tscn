@@ -6,8 +6,8 @@
 [node name="RocketTurret" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 
-[node name="Sprite" parent="." index="0"]
+[node name="Sprite" parent="." index="1"]
 modulate = Color( 1, 0.180392, 0.180392, 1 )
 
-[node name="GunTimer" parent="." index="4"]
+[node name="GunTimer" parent="." index="5"]
 wait_time = 1.0
