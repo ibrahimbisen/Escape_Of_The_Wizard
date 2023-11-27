@@ -42,10 +42,12 @@ func _physics_process(delta):
 
 
 func handle_hit():
-	health -= 20
+	health -= 15
 	$EnemyHurt.play()
+	$ProgressBar.set_value(health)
 	if health <= 0:
 		queue_free()
+
 
 func turn_calc():
 	#print((get_angle_to(player.global_position)))
@@ -55,7 +57,9 @@ func turner(rot: float):
 	#print(rot, " &&& ", rotation)
 	#var to_rot = rot - rotation
 	#print(to_rot)
+
 	if rot > turning_speed:
 		self.rotation += turning_speed
 	elif rot < -turning_speed:
 		self.rotation -= turning_speed
+

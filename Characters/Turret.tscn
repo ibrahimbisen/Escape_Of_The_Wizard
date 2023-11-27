@@ -23,7 +23,7 @@ position = Vector2( 10, -3.62396e-05 )
 position = Vector2( 15, -5.43594e-05 )
 
 [node name="GunTimer" parent="." index="4"]
-wait_time = 0.3
+wait_time = 0.5
 script = null
 
 [node name="DamageFlash" type="Sprite" parent="." index="11"]
