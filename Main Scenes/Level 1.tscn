@@ -578,7 +578,7 @@ position = Vector2( 4447, 426 )
 position = Vector2( 4680, 331 )
 
 [node name="TestSpawner" parent="." instance=ExtResource( 22 )]
-position = Vector2( 6984, 1061 )
+position = Vector2( 8523, 1383 )
 scale = Vector2( 1, 1 )
 
 [connection signal="timeout" from="HUD/Countdown/Timer" to="HUD/Countdown" method="_on_Timer_timeout"]

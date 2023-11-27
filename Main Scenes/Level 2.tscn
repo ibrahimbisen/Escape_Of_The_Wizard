@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Assets/Fonts/alagard_font/alagard.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/GamePause.tscn" type="PackedScene" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://Door.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Spawner.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Map/Level 2.gd" type="Script" id=23]
+[ext_resource path="res://Boss.tscn" type="PackedScene" id=24]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -49,7 +50,7 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="Player" parent="." instance=ExtResource( 9 )]
-position = Vector2( 373, 1279 )
+position = Vector2( 379, 1271 )
 
 [node name="Main Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 18 )
@@ -267,6 +268,21 @@ position = Vector2( 4106, -548 )
 [node name="G16" parent="." instance=ExtResource( 15 )]
 position = Vector2( 4040, -465 )
 
+[node name="G17" parent="." instance=ExtResource( 15 )]
+position = Vector2( 5419, 1495 )
+
+[node name="G18" parent="." instance=ExtResource( 15 )]
+position = Vector2( 4771, 1519 )
+
+[node name="G19" parent="." instance=ExtResource( 15 )]
+position = Vector2( 5987, 1383 )
+
+[node name="G20" parent="." instance=ExtResource( 15 )]
+position = Vector2( 4499, 815 )
+
+[node name="G21" parent="." instance=ExtResource( 15 )]
+position = Vector2( 4987, 1823 )
+
 [node name="B1" parent="." instance=ExtResource( 13 )]
 position = Vector2( 546, 1252 )
 
@@ -345,6 +361,15 @@ position = Vector2( 3966, -682 )
 [node name="B26" parent="." instance=ExtResource( 13 )]
 position = Vector2( 4035, -391 )
 
+[node name="B27" parent="." instance=ExtResource( 13 )]
+position = Vector2( 3883, 1423 )
+
+[node name="B28" parent="." instance=ExtResource( 13 )]
+position = Vector2( 5699, 1671 )
+
+[node name="B29" parent="." instance=ExtResource( 13 )]
+position = Vector2( 5475, 1663 )
+
 [node name="R1" parent="." instance=ExtResource( 14 )]
 position = Vector2( 3326, 972 )
 
@@ -383,6 +408,9 @@ position = Vector2( 3892, -617 )
 
 [node name="R13" parent="." instance=ExtResource( 14 )]
 position = Vector2( 3970, -391 )
+
+[node name="R14" parent="." instance=ExtResource( 14 )]
+position = Vector2( 5915, 1375 )
 
 [node name="UI" type="CanvasLayer" parent="."]
 pause_mode = 2
@@ -455,7 +483,7 @@ position = Vector2( 6435, 2215 )
 position = Vector2( 892, 633 )
 
 [node name="Archer_Enemy3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 6507, 1471 )
+position = Vector2( 6987, 1479 )
 
 [node name="Archer_Enemy4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1471, 961 )
@@ -599,7 +627,7 @@ position = Vector2( 3107, 31 )
 position = Vector2( 3427, 471 )
 
 [node name="a_e_51" parent="." instance=ExtResource( 3 )]
-position = Vector2( 6507, 1255 )
+position = Vector2( 6995, 1247 )
 
 [node name="a_e_52" parent="." instance=ExtResource( 3 )]
 position = Vector2( 4577, -1061 )
@@ -729,7 +757,7 @@ position = Vector2( 4851, -1281 )
 position = Vector2( 3267, -121 )
 
 [node name="TestSpawner" parent="." instance=ExtResource( 22 )]
-position = Vector2( 6819, 1183 )
+position = Vector2( 7011, 927 )
 scale = Vector2( 1, 1 )
 
 [node name="HeartCollect" parent="." instance=ExtResource( 19 )]
@@ -739,7 +767,28 @@ position = Vector2( 5067, 1335 )
 position = Vector2( 4731, 1847 )
 
 [node name="Spawner" parent="." instance=ExtResource( 22 )]
-position = Vector2( 6819, 1567 )
+position = Vector2( 7011, 1823 )
 scale = Vector2( 1, 1 )
+
+[node name="Boss" parent="." instance=ExtResource( 24 )]
+position = Vector2( 6835, 1367 )
+
+[node name="Key2" parent="." instance=ExtResource( 20 )]
+position = Vector2( 6683, 495 )
+scale = Vector2( 2, 2 )
+
+[node name="Door2" parent="." instance=ExtResource( 21 )]
+position = Vector2( 7435, 1375 )
+rotation = 1.5708
+scale = Vector2( 4, 1 )
+
+[node name="Key3" parent="." instance=ExtResource( 20 )]
+position = Vector2( 6691, 2279 )
+scale = Vector2( 2, 2 )
+
+[node name="Door3" parent="." instance=ExtResource( 21 )]
+position = Vector2( 7355, 1375 )
+rotation = 1.5708
+scale = Vector2( 4, 1 )
 
 [connection signal="timeout" from="HUD/Countdown/Timer" to="HUD/Countdown" method="_on_Timer_timeout"]

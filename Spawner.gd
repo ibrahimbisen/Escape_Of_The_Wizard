@@ -33,7 +33,6 @@ func handle_enemy_bullet_spawned(bullet: EnemyShot, a_position: Vector2, directi
 
 
 func handle_hit():
-	print("*")
 	health -= 20
 	if health <= 0:
 		queue_free()

@@ -3,9 +3,10 @@ onready var animPlayer = $AnimationPlayer
 
 class_name Enemy
 var health: int = 30
-var speed = 50
+var speed = 40
 var direction = Vector2.ZERO
 var target
+var turning_speed = 0.05
 onready var player
 
 var see_thru = [self]
@@ -56,8 +57,9 @@ func turner(rot: float):
 	#print(rot, " &&& ", rotation)
 	#var to_rot = rot - rotation
 	#print(to_rot)
-	if rot > 0.06:
-		self.rotation += 0.06
-	elif rot < -0.06:
-		self.rotation -= 0.06
+
+	if rot > turning_speed:
+		self.rotation += turning_speed
+	elif rot < -turning_speed:
+		self.rotation -= turning_speed
 
