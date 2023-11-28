@@ -21,7 +21,7 @@ Made in Godot
 
 # Download the game
 
-# Watch gameplay
+# Watch gameplay 
 
 </div>
 
@@ -36,6 +36,8 @@ Made in Godot
 
 # Introduction
 
+This is a 
+
 # Features
 
 # Background
@@ -43,24 +45,16 @@ Made in Godot
 # Quick gameplay instructions
 You can reconfigure all bindings by going to Settings->Controls tab.
 
-- WSAD: move around
-- Shift
-- Space
-- Left control
-- B
-- M
-- G
-- H
-- E 
-- C
-- Wheel Down - quickly throw a knife (or another melee weapon you happen to have). Note you can throw a knife during any activity, even when reloading or planting a bomb.
-- Wheel Up - quickly throw two knives (or other melee weapons you happen to have).
-- Middle mouse button - quickly throw a Force grenade.
-- Q - quickly switch to the most recently drawn weapon - or any other at your disposal. Can fail if you have no space in your inventory for the currently held weapon! 
-- 0, 1, 2, ..., 9 - choose weapons from the hotbar.
-- TAB
-- LMB 
-- RMB
+- WSAD - move around
+- Shift - run
+- Space -  
+- Left Mouse Button - Select, Shoot
+- Wheel Down - scroll through your weapons
+- Wheel Up - scroll through your weapons
+- 1 - scroll through your weapons
+- 2 - scroll through your weapons
+- ESC - Menu
+
 
 ## Windows download instructions
 

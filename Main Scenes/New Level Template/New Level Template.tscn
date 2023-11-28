@@ -11,7 +11,7 @@
 [ext_resource path="res://Door.tscn" type="PackedScene" id=9]
 [ext_resource path="res://UI/GamePause.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Characters/Archer_Enemy.tscn" type="PackedScene" id=11]
-[ext_resource path="res://UI/Hotbar.tscn" type="PackedScene" id=12]
+[ext_resource path="res://UI/HotBar.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Main Scenes/Extraction/Extraction.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Map/Level 2.tscn" type="PackedScene" id=15]
