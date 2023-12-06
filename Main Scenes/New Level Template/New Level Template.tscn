@@ -11,18 +11,18 @@
 [ext_resource path="res://Door.tscn" type="PackedScene" id=9]
 [ext_resource path="res://UI/GamePause.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Characters/Archer_Enemy.tscn" type="PackedScene" id=11]
-[ext_resource path="res://UI/HotBar.tscn" type="PackedScene" id=12]
+[ext_resource path="res://UI/Hotbar.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Main Scenes/Extraction/Extraction.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Map/Level 2.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Characters/Enemy.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Projectiles/RedAmmo.tscn" type="PackedScene" id=17]
+[ext_resource path="res://UI/RedAmmo.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Characters/Turret.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Characters/HeartCollect.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Projectiles/BlueAmmo.tscn" type="PackedScene" id=20]
+[ext_resource path="res://UI/BlueAmmo.tscn" type="PackedScene" id=20]
 [ext_resource path="res://UI/HUD.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Characters/RocketTurret.tscn" type="PackedScene" id=22]
-[ext_resource path="res://Projectiles/GreenAmmo.tscn" type="PackedScene" id=23]
+[ext_resource path="res://UI/GreenAmmo.tscn" type="PackedScene" id=23]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -295,12 +295,12 @@ position = Vector2( 3436, 3837 )
 pause_mode = 2
 script = ExtResource( 5 )
 
+[node name="Hotbar" parent="UI" instance=ExtResource( 12 )]
+position = Vector2( 412, -181 )
+
 [node name="GamePause" parent="UI" instance=ExtResource( 10 )]
 pause_mode = 2
 visible = false
-
-[node name="Hotbar" parent="UI" instance=ExtResource( 12 )]
-position = Vector2( 429, -206 )
 
 [node name="GamePauseSFX" type="AudioStreamPlayer" parent="UI"]
 

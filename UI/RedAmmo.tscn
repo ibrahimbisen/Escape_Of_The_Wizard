@@ -1,8 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Assets/Inventory/Item Icon_Masters/BlueOrb.png" type="Texture" id=1]
-[ext_resource path="res://Projectiles/BlueAmmo.gd" type="Script" id=2]
-
+[ext_resource path="res://Assets/Inventory/item_icons/Fire Ball.png" type="Texture" id=1]
+[ext_resource path="res://UI/RedAmmo.gd" type="Script" id=2]
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
@@ -10,13 +9,13 @@ corner_radius_top_left = 64
 corner_radius_top_right = 64
 corner_radius_bottom_right = 64
 corner_radius_bottom_left = 64
-shadow_color = Color( 0.498039, 0.686275, 1, 0.819608 )
+shadow_color = Color( 0.698039, 0.290196, 0.407843, 0.819608 )
 shadow_size = 8
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 6.0
 
-[node name="BlueAmmo" type="Area2D"]
+[node name="RedAmmo" type="Area2D"]
 scale = Vector2( 2.8, 2.8 )
 collision_layer = 0
 collision_mask = 2
@@ -29,13 +28,10 @@ margin_right = 6.28571
 margin_bottom = 5.92857
 custom_styles/panel = SubResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -2.12874e-08, 0 )
-shape = SubResource( 1 )
-
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 0.25, 0 )
-scale = Vector2( 1.04545, 1 )
 texture = ExtResource( 1 )
 
-[connection signal="body_entered" from="." to="." method="_on_BlueAmmo_body_entered"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[connection signal="body_entered" from="." to="." method="_on_RedAmmo_body_entered"]

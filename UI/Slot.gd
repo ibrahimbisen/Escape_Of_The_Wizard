@@ -36,11 +36,9 @@ func refresh_style():
 		set('custom_styles/panel', default_style)
 	
 func initialize_item(item_name, item_quantity):
-	if item == null:
-		item = ItemClass.instance()
-		add_child(item)
-		item.set_item(item_name, item_quantity)
-	else:
-		item.set_item(item_name, item_quantity)
+	item = ItemClass.instance()
+	add_child(item)
+	item.set_item(item_name, item_quantity)
+
 	refresh_style()
 

@@ -47,7 +47,7 @@ _global_script_classes=[ {
 "base": "Area2D",
 "class": "ammo",
 "language": "GDScript",
-"path": "res://Projectiles/BlueAmmo.gd"
+"path": "res://UI/BlueAmmo.gd"
 }, {
 "base": "KinematicBody2D",
 "class": "door",
