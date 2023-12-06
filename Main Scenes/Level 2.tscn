@@ -720,6 +720,7 @@ position = Vector2( 5298, 642 )
 
 [node name="RocketTurret18" parent="." instance=ExtResource( 17 )]
 position = Vector2( 4656, 894 )
+rotation = -1.5708
 
 [node name="RocketTurret19" parent="." instance=ExtResource( 17 )]
 position = Vector2( 3794, 1428 )
