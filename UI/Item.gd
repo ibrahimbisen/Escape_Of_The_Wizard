@@ -23,9 +23,7 @@ func set_item(nm, qt):
 	item_quantity = qt
 	$TextureRect.texture = load("res://Assets/Inventory/item_icons/" + item_name + ".png")
 
-	#$TextureRect.texture = load("res://Assets/Inventory/item_icons/" + item_name + ".png")
-	
-	#var stack_size = int(JsonData.item_data[item_name]["StackSize"])
+
 	item_quantity = qt
 	
 	$Label.text = String(item_quantity)
